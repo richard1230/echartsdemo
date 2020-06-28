@@ -104196,8 +104196,9 @@ var _echarts = _interopRequireDefault(require("echarts"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// 基于准备好的dom，初始化echarts实例
-var myChart = _echarts.default.init(document.getElementById('main'));
+var main = document.getElementById('main'); // 基于准备好的dom，初始化echarts实例
+
+var myChart = _echarts.default.init(main, "light");
 
 var option = {
   legend: {
