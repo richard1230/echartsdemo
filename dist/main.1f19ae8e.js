@@ -104198,9 +104198,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var main = document.getElementById('main'); // 基于准备好的dom，初始化echarts实例
 
-var myChart = _echarts.default.init(main, "light");
+var myChart = _echarts.default.init(main, "light"); // const option = {
+//   legend: {
+//     data:['bug数量']
+//   },
+//   xAxis: {
+//     type: 'category',
+//     data: ['1', '2', '3', '4', '5', '6']
+//   },
+//   yAxis: {
+//     type: 'value'
+//   },
+//   series: [{
+//     name: 'bug数量',
+//     data: [820, 932, 901, 934, 1290, 1330],
+//     type: 'line'
+//   }]
+// };
+// 使用刚指定的配置项和数据显示图表。
 
-var option = {
+
+myChart.setOption({
   legend: {
     data: ['bug数量']
   },
@@ -104211,14 +104229,21 @@ var option = {
   yAxis: {
     type: 'value'
   },
+  tooltip: {
+    show: true
+  },
   series: [{
+    lineStyle: {
+      color: 'lightgreen'
+    },
+    itemStyle: {
+      borderWidth: 5
+    },
     name: 'bug数量',
     data: [820, 932, 901, 934, 1290, 1330],
     type: 'line'
   }]
-}; // 使用刚指定的配置项和数据显示图表。
-
-myChart.setOption(option);
+});
 },{"echarts":"node_modules/echarts/index.js"}],"../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

@@ -5,24 +5,49 @@ const main = document.getElementById('main');
 var myChart = echarts.init(main,"light");
 
 
-const option = {
-  legend: {
-    data:['bug数量']
-  },
-  xAxis: {
-    type: 'category',
-    data: ['1', '2', '3', '4', '5', '6']
-  },
-  yAxis: {
-    type: 'value'
-  },
-  series: [{
-    name: 'bug数量',
-    data: [820, 932, 901, 934, 1290, 1330],
-    type: 'line'
-  }]
-};
+// const option = {
+//   legend: {
+//     data:['bug数量']
+//   },
+//   xAxis: {
+//     type: 'category',
+//     data: ['1', '2', '3', '4', '5', '6']
+//   },
+//   yAxis: {
+//     type: 'value'
+//   },
+//   series: [{
+//     name: 'bug数量',
+//     data: [820, 932, 901, 934, 1290, 1330],
+//     type: 'line'
+//   }]
+// };
 
 
 // 使用刚指定的配置项和数据显示图表。
-myChart.setOption(option);
+myChart.setOption({
+    legend: {
+      data:['bug数量']
+    },
+    xAxis: {
+      type: 'category',
+      data: ['1', '2', '3', '4', '5', '6']
+    },
+    yAxis: {
+      type: 'value'
+    },
+  tooltip:{
+      show:true
+  },
+    series: [{
+      lineStyle:{
+        color:'lightgreen'
+      },
+      itemStyle:{
+        borderWidth:5
+      },
+      name: 'bug数量',
+      data: [820, 932, 901, 934, 1290, 1330],
+      type: 'line'
+    }]
+  });
