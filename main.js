@@ -4,21 +4,21 @@ var myChart = echarts.init(document.getElementById('main'));
 
 // 指定图表的配置项和数据
 var option = {
-  title: {
-    text: 'ECharts 入门示例'
-  },
+  // title: {
+  //   text: 'ECharts 入门示例'
+  // },
   tooltip: {},
   legend: {
-    data:['销量']
+    data:['bug数量']
   },
   xAxis: {
-    data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+    data: ["小明","小红","方方","小圆","倩倩"]
   },
   yAxis: {},
   series: [{
-    name: '销量',
+    name: 'bug数量',
     type: 'bar',
-    data: [5, 20, 36, 10, 10, 20]
+    data: [5, 20, 36, 10, 8]
   }]
 };
 
