@@ -19,9 +19,9 @@ function createValue() {
   return m
 }
 
-const xData =[createKey(),createKey(),createKey(),createKey(),createKey(),createKey()]
+let xData =[createKey(),createKey(),createKey(),createKey(),createKey(),createKey()]
 
-const valueold = [createValue(),createValue(),createValue(),createValue(),createValue(),createValue()]
+let values = [createValue(),createValue(),createValue(),createValue(),createValue(),createValue()]
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption({
     legend: {
@@ -45,7 +45,7 @@ myChart.setOption({
         borderWidth:5
       },
       name: '金额',
-      data: valueold,
+      data: values,
       type: 'line'
     }]
   });
@@ -53,14 +53,16 @@ myChart.setOption({
 loadMoreButton.addEventListener('click',()=>{
   const key = createKey()
   const value = createValue()
+  xData = [...xData,key]
+  values = [...values,value]
   console.log(key,value);
   myChart.setOption({
     xAxis:{
-      data :[...xData,key]
+      data : xData
     },
     series:[
       {
-        data:[...valueold,value]
+        data:values
       }
     ]
   })
