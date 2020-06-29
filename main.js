@@ -3,6 +3,13 @@ import echarts from 'echarts'
 const main = document.getElementById('main');
 
 const loadMoreButton = document.getElementById('loadMore')
+
+
+//下面这句话需要背下来
+const width = document.documentElement.clientWidth
+main.style.width=`${width}px`
+main.style.height = `${width * 1.2}px`
+
 // 基于准备好的dom，初始化echarts实例
 var myChart = echarts.init(main,"light");
 
@@ -24,8 +31,15 @@ let xData =[createKey(),createKey(),createKey(),createKey(),createKey(),createKe
 let values = [createValue(),createValue(),createValue(),createValue(),createValue(),createValue()]
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption({
+  baseOption: {
+    title: {
+      show: true,
+      text: '销量',
+      right: 20,
+    },
+
     legend: {
-      data:['bug数量']
+      data: ['金额']
     },
     xAxis: {
       type: 'category',
@@ -34,21 +48,35 @@ myChart.setOption({
     yAxis: {
       type: 'value'
     },
-  tooltip:{
-      show:true
-  },
+    tooltip: {
+      show: true
+    },
     series: [{
-      lineStyle:{
-        color:'lightgreen'
-      },
-      itemStyle:{
-        borderWidth:5
+      lineStyle: {
+        color: 'lightgreen'
       },
       name: '金额',
       data: values,
       type: 'line'
     }]
-  });
+  },
+  media:[
+    {
+      query:{
+        maxWidth:500
+      },
+      option:{
+        series: [{
+          itemStyle: {
+            borderWidth: 5
+          },
+        }]
+      }
+    }
+  ]
+
+})
+
 
 let  isLoading = false
 loadMoreButton.addEventListener('click',()=>{
@@ -75,7 +103,7 @@ if(isLoading===true){return}
     })
     myChart.hideLoading()
     isLoading = false
-  },1000)
+  },500)
 })
 
 myChart.on("click",(e)=>{
