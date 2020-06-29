@@ -76,5 +76,12 @@ if(isLoading===true){return}
     myChart.hideLoading()
     isLoading = false
   },1000)
+})
+
+myChart.on("click",(e)=>{
+  console.log(e);
+  console.log(e.name);
+  console.log(e.dataindex);
+  console.log(e.data);
 
 })
