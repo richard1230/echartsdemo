@@ -1,29 +1,27 @@
 import echarts from 'echarts'
 
 const main = document.getElementById('main');
+
+const loadMoreButton = document.getElementById('loadMore')
 // 基于准备好的dom，初始化echarts实例
 var myChart = echarts.init(main,"light");
 
+let n = 0
+let m = 0
 
-// const option = {
-//   legend: {
-//     data:['bug数量']
-//   },
-//   xAxis: {
-//     type: 'category',
-//     data: ['1', '2', '3', '4', '5', '6']
-//   },
-//   yAxis: {
-//     type: 'value'
-//   },
-//   series: [{
-//     name: 'bug数量',
-//     data: [820, 932, 901, 934, 1290, 1330],
-//     type: 'line'
-//   }]
-// };
+function createKey() {
+  n+= 1
+  return `2020-1-${n}`
+}
 
+function createValue() {
+ m+=1
+  return m
+}
 
+const xData =[createKey(),createKey(),createKey(),createKey(),createKey(),createKey()]
+
+const valueold = [createValue(),createValue(),createValue(),createValue(),createValue(),createValue()]
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption({
     legend: {
@@ -31,7 +29,7 @@ myChart.setOption({
     },
     xAxis: {
       type: 'category',
-      data: ['1', '2', '3', '4', '5', '6']
+      data: xData
     },
     yAxis: {
       type: 'value'
@@ -46,8 +44,24 @@ myChart.setOption({
       itemStyle:{
         borderWidth:5
       },
-      name: 'bug数量',
-      data: [820, 932, 901, 934, 1290, 1330],
+      name: '金额',
+      data: valueold,
       type: 'line'
     }]
   });
+
+loadMoreButton.addEventListener('click',()=>{
+  const key = createKey()
+  const value = createValue()
+  console.log(key,value);
+  myChart.setOption({
+    xAxis:{
+      data :[...xData,key]
+    },
+    series:[
+      {
+        data:[...valueold,value]
+      }
+    ]
+  })
+})

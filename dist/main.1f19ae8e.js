@@ -104196,27 +104196,26 @@ var _echarts = _interopRequireDefault(require("echarts"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var main = document.getElementById('main'); // 基于准备好的dom，初始化echarts实例
+var main = document.getElementById('main');
+var loadMoreButton = document.getElementById('loadMore'); // 基于准备好的dom，初始化echarts实例
 
-var myChart = _echarts.default.init(main, "light"); // const option = {
-//   legend: {
-//     data:['bug数量']
-//   },
-//   xAxis: {
-//     type: 'category',
-//     data: ['1', '2', '3', '4', '5', '6']
-//   },
-//   yAxis: {
-//     type: 'value'
-//   },
-//   series: [{
-//     name: 'bug数量',
-//     data: [820, 932, 901, 934, 1290, 1330],
-//     type: 'line'
-//   }]
-// };
-// 使用刚指定的配置项和数据显示图表。
+var myChart = _echarts.default.init(main, "light");
 
+var n = 0;
+var m = 0;
+
+function createKey() {
+  n += 1;
+  return "2020-1-".concat(n);
+}
+
+function createValue() {
+  m += 1;
+  return m;
+}
+
+var xData = [createKey(), createKey(), createKey(), createKey(), createKey(), createKey()];
+var valueold = [createValue(), createValue(), createValue(), createValue(), createValue(), createValue()]; // 使用刚指定的配置项和数据显示图表。
 
 myChart.setOption({
   legend: {
@@ -104224,7 +104223,7 @@ myChart.setOption({
   },
   xAxis: {
     type: 'category',
-    data: ['1', '2', '3', '4', '5', '6']
+    data: xData
   },
   yAxis: {
     type: 'value'
@@ -104239,10 +104238,23 @@ myChart.setOption({
     itemStyle: {
       borderWidth: 5
     },
-    name: 'bug数量',
-    data: [820, 932, 901, 934, 1290, 1330],
+    name: '金额',
+    data: valueold,
     type: 'line'
   }]
+});
+loadMoreButton.addEventListener('click', function () {
+  var key = createKey();
+  var value = createValue();
+  console.log(key, value);
+  myChart.setOption({
+    xAxis: {
+      data: [].concat(xData, [key])
+    },
+    series: [{
+      data: [].concat(valueold, [value])
+    }]
+  });
 });
 },{"echarts":"node_modules/echarts/index.js"}],"../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -104272,7 +104284,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60318" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54245" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
