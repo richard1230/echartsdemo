@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/echarts/lib/config.js":[function(require,module,exports) {
+})({"../node_modules/echarts/lib/config.js":[function(require,module,exports) {
 var global = arguments[3];
 
 /*
@@ -177,7 +177,7 @@ if (typeof dev === 'undefined') {
 
 var __DEV__ = dev;
 exports.__DEV__ = __DEV__;
-},{}],"node_modules/zrender/lib/core/guid.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/core/guid.js":[function(require,module,exports) {
 /**
  * zrender: 生成唯一id
  *
@@ -190,7 +190,7 @@ function _default() {
 }
 
 module.exports = _default;
-},{}],"node_modules/zrender/lib/core/env.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/core/env.js":[function(require,module,exports) {
 /**
  * echarts设备环境识别
  *
@@ -361,7 +361,7 @@ function detect(ua) {
 
 
 module.exports = _default;
-},{}],"node_modules/zrender/lib/core/util.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/core/util.js":[function(require,module,exports) {
 /**
  * @module zrender/core/util
  */
@@ -1102,7 +1102,7 @@ exports.isPrimitive = isPrimitive;
 exports.createHashMap = createHashMap;
 exports.concatArray = concatArray;
 exports.noop = noop;
-},{}],"node_modules/zrender/lib/core/vector.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/core/vector.js":[function(require,module,exports) {
 /* global Float32Array */
 var ArrayCtor = typeof Float32Array === 'undefined' ? Array : Float32Array;
 /**
@@ -1417,7 +1417,7 @@ exports.lerp = lerp;
 exports.applyTransform = applyTransform;
 exports.min = min;
 exports.max = max;
-},{}],"node_modules/zrender/lib/mixin/Draggable.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/mixin/Draggable.js":[function(require,module,exports) {
 // TODO Draggable for group
 // FIXME Draggable on element which has parent rotation or scale
 function Draggable() {
@@ -1504,7 +1504,7 @@ function param(target, e) {
 
 var _default = Draggable;
 module.exports = _default;
-},{}],"node_modules/zrender/lib/mixin/Eventful.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/mixin/Eventful.js":[function(require,module,exports) {
 /**
  * Event Mixin
  * @module zrender/mixin/Eventful
@@ -1876,7 +1876,7 @@ function on(eventful, event, query, handler, context, isOnce) {
 
 var _default = Eventful;
 module.exports = _default;
-},{}],"node_modules/zrender/lib/core/fourPointsTransform.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/core/fourPointsTransform.js":[function(require,module,exports) {
 /**
  * The algoritm is learnt from
  * https://franklinta.com/2014/09/08/computing-css-matrix3d-transforms/
@@ -1971,7 +1971,7 @@ function buildTransformer(src, dest) {
 }
 
 exports.buildTransformer = buildTransformer;
-},{}],"node_modules/zrender/lib/core/dom.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/core/dom.js":[function(require,module,exports) {
 var env = require("./env");
 
 var _fourPointsTransform = require("./fourPointsTransform");
@@ -2110,7 +2110,7 @@ function isCanvasEl(el) {
 exports.transformLocalCoord = transformLocalCoord;
 exports.transformCoordWithViewport = transformCoordWithViewport;
 exports.isCanvasEl = isCanvasEl;
-},{"./env":"node_modules/zrender/lib/core/env.js","./fourPointsTransform":"node_modules/zrender/lib/core/fourPointsTransform.js"}],"node_modules/zrender/lib/core/event.js":[function(require,module,exports) {
+},{"./env":"../node_modules/zrender/lib/core/env.js","./fourPointsTransform":"../node_modules/zrender/lib/core/fourPointsTransform.js"}],"../node_modules/zrender/lib/core/event.js":[function(require,module,exports) {
 var Eventful = require("../mixin/Eventful");
 
 exports.Dispatcher = Eventful;
@@ -2381,7 +2381,7 @@ exports.removeEventListener = removeEventListener;
 exports.stop = stop;
 exports.isMiddleOrRightButtonOnMouseUpDown = isMiddleOrRightButtonOnMouseUpDown;
 exports.notLeftMouse = notLeftMouse;
-},{"../mixin/Eventful":"node_modules/zrender/lib/mixin/Eventful.js","./env":"node_modules/zrender/lib/core/env.js","./dom":"node_modules/zrender/lib/core/dom.js"}],"node_modules/zrender/lib/core/GestureMgr.js":[function(require,module,exports) {
+},{"../mixin/Eventful":"../node_modules/zrender/lib/mixin/Eventful.js","./env":"../node_modules/zrender/lib/core/env.js","./dom":"../node_modules/zrender/lib/core/dom.js"}],"../node_modules/zrender/lib/core/GestureMgr.js":[function(require,module,exports) {
 var eventUtil = require("./event");
 
 /**
@@ -2481,7 +2481,7 @@ var recognizers = {
 };
 var _default = GestureMgr;
 module.exports = _default;
-},{"./event":"node_modules/zrender/lib/core/event.js"}],"node_modules/zrender/lib/Handler.js":[function(require,module,exports) {
+},{"./event":"../node_modules/zrender/lib/core/event.js"}],"../node_modules/zrender/lib/Handler.js":[function(require,module,exports) {
 var util = require("./core/util");
 
 var vec2 = require("./core/vector");
@@ -2917,7 +2917,7 @@ util.mixin(Handler, Eventful);
 util.mixin(Handler, Draggable);
 var _default = Handler;
 module.exports = _default;
-},{"./core/util":"node_modules/zrender/lib/core/util.js","./core/vector":"node_modules/zrender/lib/core/vector.js","./mixin/Draggable":"node_modules/zrender/lib/mixin/Draggable.js","./mixin/Eventful":"node_modules/zrender/lib/mixin/Eventful.js","./core/event":"node_modules/zrender/lib/core/event.js","./core/GestureMgr":"node_modules/zrender/lib/core/GestureMgr.js"}],"node_modules/zrender/lib/core/matrix.js":[function(require,module,exports) {
+},{"./core/util":"../node_modules/zrender/lib/core/util.js","./core/vector":"../node_modules/zrender/lib/core/vector.js","./mixin/Draggable":"../node_modules/zrender/lib/mixin/Draggable.js","./mixin/Eventful":"../node_modules/zrender/lib/mixin/Eventful.js","./core/event":"../node_modules/zrender/lib/core/event.js","./core/GestureMgr":"../node_modules/zrender/lib/core/GestureMgr.js"}],"../node_modules/zrender/lib/core/matrix.js":[function(require,module,exports) {
 /**
  * 3x2矩阵操作类
  * @exports zrender/tool/matrix
@@ -3103,7 +3103,7 @@ exports.rotate = rotate;
 exports.scale = scale;
 exports.invert = invert;
 exports.clone = clone;
-},{}],"node_modules/zrender/lib/mixin/Transformable.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/mixin/Transformable.js":[function(require,module,exports) {
 var matrix = require("../core/matrix");
 
 var vector = require("../core/vector");
@@ -3428,7 +3428,7 @@ Transformable.getLocalTransform = function (target, m) {
 
 var _default = Transformable;
 module.exports = _default;
-},{"../core/matrix":"node_modules/zrender/lib/core/matrix.js","../core/vector":"node_modules/zrender/lib/core/vector.js"}],"node_modules/zrender/lib/animation/easing.js":[function(require,module,exports) {
+},{"../core/matrix":"../node_modules/zrender/lib/core/matrix.js","../core/vector":"../node_modules/zrender/lib/core/vector.js"}],"../node_modules/zrender/lib/animation/easing.js":[function(require,module,exports) {
 /**
  * 缓动代码来自 https://github.com/sole/tween.js/blob/master/src/Tween.js
  * @see http://sole.github.io/tween.js/examples/03_graphs.html
@@ -3807,7 +3807,7 @@ var easing = {
 };
 var _default = easing;
 module.exports = _default;
-},{}],"node_modules/zrender/lib/animation/Clip.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/animation/Clip.js":[function(require,module,exports) {
 var easingFuncs = require("./easing");
 
 /**
@@ -3909,7 +3909,7 @@ Clip.prototype = {
 };
 var _default = Clip;
 module.exports = _default;
-},{"./easing":"node_modules/zrender/lib/animation/easing.js"}],"node_modules/zrender/lib/core/LRU.js":[function(require,module,exports) {
+},{"./easing":"../node_modules/zrender/lib/animation/easing.js"}],"../node_modules/zrender/lib/core/LRU.js":[function(require,module,exports) {
 // Simple LRU cache use doubly linked list
 // @module zrender/core/LRU
 
@@ -4112,7 +4112,7 @@ LRUProto.clear = function () {
 
 var _default = LRU;
 module.exports = _default;
-},{}],"node_modules/zrender/lib/tool/color.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/tool/color.js":[function(require,module,exports) {
 var LRU = require("../core/LRU");
 
 var kCSSColorTable = {
@@ -4740,7 +4740,7 @@ exports.mapToColor = mapToColor;
 exports.modifyHSL = modifyHSL;
 exports.modifyAlpha = modifyAlpha;
 exports.stringify = stringify;
-},{"../core/LRU":"node_modules/zrender/lib/core/LRU.js"}],"node_modules/zrender/lib/animation/Animator.js":[function(require,module,exports) {
+},{"../core/LRU":"../node_modules/zrender/lib/core/LRU.js"}],"../node_modules/zrender/lib/animation/Animator.js":[function(require,module,exports) {
 var Clip = require("./Clip");
 
 var color = require("../tool/color");
@@ -5385,7 +5385,7 @@ Animator.prototype = {
 };
 var _default = Animator;
 module.exports = _default;
-},{"./Clip":"node_modules/zrender/lib/animation/Clip.js","../tool/color":"node_modules/zrender/lib/tool/color.js","../core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/zrender/lib/config.js":[function(require,module,exports) {
+},{"./Clip":"../node_modules/zrender/lib/animation/Clip.js","../tool/color":"../node_modules/zrender/lib/tool/color.js","../core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/zrender/lib/config.js":[function(require,module,exports) {
 var dpr = 1; // If in browser environment
 
 if (typeof window !== 'undefined') {
@@ -5409,7 +5409,7 @@ var debugMode = 0; // retina 屏幕优化
 var devicePixelRatio = dpr;
 exports.debugMode = debugMode;
 exports.devicePixelRatio = devicePixelRatio;
-},{}],"node_modules/zrender/lib/core/log.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/core/log.js":[function(require,module,exports) {
 var _config = require("../config");
 
 var debugMode = _config.debugMode;
@@ -5422,7 +5422,7 @@ if (debugMode === 1) {
 
 var _default = logError;
 module.exports = _default;
-},{"../config":"node_modules/zrender/lib/config.js"}],"node_modules/zrender/lib/mixin/Animatable.js":[function(require,module,exports) {
+},{"../config":"../node_modules/zrender/lib/config.js"}],"../node_modules/zrender/lib/mixin/Animatable.js":[function(require,module,exports) {
 var Animator = require("../animation/Animator");
 
 var logError = require("../core/log");
@@ -5698,7 +5698,7 @@ function setAttrByPath(el, path, name, value) {
 
 var _default = Animatable;
 module.exports = _default;
-},{"../animation/Animator":"node_modules/zrender/lib/animation/Animator.js","../core/log":"node_modules/zrender/lib/core/log.js","../core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/zrender/lib/Element.js":[function(require,module,exports) {
+},{"../animation/Animator":"../node_modules/zrender/lib/animation/Animator.js","../core/log":"../node_modules/zrender/lib/core/log.js","../core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/zrender/lib/Element.js":[function(require,module,exports) {
 var guid = require("./core/guid");
 
 var Eventful = require("./mixin/Eventful");
@@ -5968,7 +5968,7 @@ zrUtil.mixin(Element, Transformable);
 zrUtil.mixin(Element, Eventful);
 var _default = Element;
 module.exports = _default;
-},{"./core/guid":"node_modules/zrender/lib/core/guid.js","./mixin/Eventful":"node_modules/zrender/lib/mixin/Eventful.js","./mixin/Transformable":"node_modules/zrender/lib/mixin/Transformable.js","./mixin/Animatable":"node_modules/zrender/lib/mixin/Animatable.js","./core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/zrender/lib/core/BoundingRect.js":[function(require,module,exports) {
+},{"./core/guid":"../node_modules/zrender/lib/core/guid.js","./mixin/Eventful":"../node_modules/zrender/lib/mixin/Eventful.js","./mixin/Transformable":"../node_modules/zrender/lib/mixin/Transformable.js","./mixin/Animatable":"../node_modules/zrender/lib/mixin/Animatable.js","./core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/zrender/lib/core/BoundingRect.js":[function(require,module,exports) {
 var vec2 = require("./vector");
 
 var matrix = require("./matrix");
@@ -6152,7 +6152,7 @@ BoundingRect.create = function (rect) {
 
 var _default = BoundingRect;
 module.exports = _default;
-},{"./vector":"node_modules/zrender/lib/core/vector.js","./matrix":"node_modules/zrender/lib/core/matrix.js"}],"node_modules/zrender/lib/container/Group.js":[function(require,module,exports) {
+},{"./vector":"../node_modules/zrender/lib/core/vector.js","./matrix":"../node_modules/zrender/lib/core/matrix.js"}],"../node_modules/zrender/lib/container/Group.js":[function(require,module,exports) {
 var zrUtil = require("../core/util");
 
 var Element = require("../Element");
@@ -6465,7 +6465,7 @@ Group.prototype = {
 zrUtil.inherits(Group, Element);
 var _default = Group;
 module.exports = _default;
-},{"../core/util":"node_modules/zrender/lib/core/util.js","../Element":"node_modules/zrender/lib/Element.js","../core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js"}],"node_modules/zrender/lib/core/timsort.js":[function(require,module,exports) {
+},{"../core/util":"../node_modules/zrender/lib/core/util.js","../Element":"../node_modules/zrender/lib/Element.js","../core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js"}],"../node_modules/zrender/lib/core/timsort.js":[function(require,module,exports) {
 // https://github.com/mziccard/node-timsort
 var DEFAULT_MIN_MERGE = 32;
 var DEFAULT_MIN_GALLOPING = 7;
@@ -7132,7 +7132,7 @@ function sort(array, compare, lo, hi) {
 }
 
 module.exports = sort;
-},{}],"node_modules/zrender/lib/Storage.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/Storage.js":[function(require,module,exports) {
 var util = require("./core/util");
 
 var env = require("./core/env");
@@ -7365,7 +7365,7 @@ Storage.prototype = {
 };
 var _default = Storage;
 module.exports = _default;
-},{"./core/util":"node_modules/zrender/lib/core/util.js","./core/env":"node_modules/zrender/lib/core/env.js","./container/Group":"node_modules/zrender/lib/container/Group.js","./core/timsort":"node_modules/zrender/lib/core/timsort.js"}],"node_modules/zrender/lib/graphic/helper/fixShadow.js":[function(require,module,exports) {
+},{"./core/util":"../node_modules/zrender/lib/core/util.js","./core/env":"../node_modules/zrender/lib/core/env.js","./container/Group":"../node_modules/zrender/lib/container/Group.js","./core/timsort":"../node_modules/zrender/lib/core/timsort.js"}],"../node_modules/zrender/lib/graphic/helper/fixShadow.js":[function(require,module,exports) {
 var SHADOW_PROPS = {
   'shadowBlur': 1,
   'shadowOffsetX': 1,
@@ -7387,7 +7387,7 @@ function _default(ctx, propName, value) {
 }
 
 module.exports = _default;
-},{}],"node_modules/zrender/lib/graphic/constant.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/graphic/constant.js":[function(require,module,exports) {
 var ContextCachedBy = {
   NONE: 0,
   STYLE_BIND: 1,
@@ -7397,7 +7397,7 @@ var ContextCachedBy = {
 var WILL_BE_RESTORED = 9;
 exports.ContextCachedBy = ContextCachedBy;
 exports.WILL_BE_RESTORED = WILL_BE_RESTORED;
-},{}],"node_modules/zrender/lib/graphic/Style.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/graphic/Style.js":[function(require,module,exports) {
 var fixShadow = require("./helper/fixShadow");
 
 var _constant = require("./constant");
@@ -7875,7 +7875,7 @@ for (var i = 0; i < STYLE_COMMON_PROPS.length; i++) {
 Style.getGradient = styleProto.getGradient;
 var _default = Style;
 module.exports = _default;
-},{"./helper/fixShadow":"node_modules/zrender/lib/graphic/helper/fixShadow.js","./constant":"node_modules/zrender/lib/graphic/constant.js"}],"node_modules/zrender/lib/graphic/Pattern.js":[function(require,module,exports) {
+},{"./helper/fixShadow":"../node_modules/zrender/lib/graphic/helper/fixShadow.js","./constant":"../node_modules/zrender/lib/graphic/constant.js"}],"../node_modules/zrender/lib/graphic/Pattern.js":[function(require,module,exports) {
 var Pattern = function (image, repeat) {
   // Should do nothing more in this constructor. Because gradient can be
   // declard by `color: {image: ...}`, where this constructor will not be called.
@@ -7891,7 +7891,7 @@ Pattern.prototype.getCanvasPattern = function (ctx) {
 
 var _default = Pattern;
 module.exports = _default;
-},{}],"node_modules/zrender/lib/Layer.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/Layer.js":[function(require,module,exports) {
 var util = require("./core/util");
 
 var _config = require("./config");
@@ -8127,14 +8127,14 @@ Layer.prototype = {
 };
 var _default = Layer;
 module.exports = _default;
-},{"./core/util":"node_modules/zrender/lib/core/util.js","./config":"node_modules/zrender/lib/config.js","./graphic/Style":"node_modules/zrender/lib/graphic/Style.js","./graphic/Pattern":"node_modules/zrender/lib/graphic/Pattern.js"}],"node_modules/zrender/lib/animation/requestAnimationFrame.js":[function(require,module,exports) {
+},{"./core/util":"../node_modules/zrender/lib/core/util.js","./config":"../node_modules/zrender/lib/config.js","./graphic/Style":"../node_modules/zrender/lib/graphic/Style.js","./graphic/Pattern":"../node_modules/zrender/lib/graphic/Pattern.js"}],"../node_modules/zrender/lib/animation/requestAnimationFrame.js":[function(require,module,exports) {
 var _default = typeof window !== 'undefined' && (window.requestAnimationFrame && window.requestAnimationFrame.bind(window) || // https://github.com/ecomfe/zrender/issues/189#issuecomment-224919809
 window.msRequestAnimationFrame && window.msRequestAnimationFrame.bind(window) || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame) || function (func) {
   setTimeout(func, 16);
 };
 
 module.exports = _default;
-},{}],"node_modules/zrender/lib/graphic/helper/image.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/graphic/helper/image.js":[function(require,module,exports) {
 var LRU = require("../../core/LRU");
 
 var globalImageCache = new LRU(50);
@@ -8223,7 +8223,7 @@ function isImageReady(image) {
 exports.findExistImage = findExistImage;
 exports.createOrUpdateImage = createOrUpdateImage;
 exports.isImageReady = isImageReady;
-},{"../../core/LRU":"node_modules/zrender/lib/core/LRU.js"}],"node_modules/zrender/lib/contain/text.js":[function(require,module,exports) {
+},{"../../core/LRU":"../node_modules/zrender/lib/core/LRU.js"}],"../node_modules/zrender/lib/contain/text.js":[function(require,module,exports) {
 var BoundingRect = require("../core/BoundingRect");
 
 var imageHelper = require("../graphic/helper/image");
@@ -8943,7 +8943,7 @@ exports.measureText = measureText;
 exports.parsePlainText = parsePlainText;
 exports.parseRichText = parseRichText;
 exports.makeFont = makeFont;
-},{"../core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../graphic/helper/image":"node_modules/zrender/lib/graphic/helper/image.js","../core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/zrender/lib/graphic/helper/roundRect.js":[function(require,module,exports) {
+},{"../core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../graphic/helper/image":"../node_modules/zrender/lib/graphic/helper/image.js","../core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/zrender/lib/graphic/helper/roundRect.js":[function(require,module,exports) {
 /**
  * @param {Object} ctx
  * @param {Object} shape
@@ -9034,7 +9034,7 @@ function buildPath(ctx, shape) {
 }
 
 exports.buildPath = buildPath;
-},{}],"node_modules/zrender/lib/graphic/helper/text.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/graphic/helper/text.js":[function(require,module,exports) {
 var _util = require("../../core/util");
 
 var retrieve2 = _util.retrieve2;
@@ -9582,7 +9582,7 @@ exports.getStroke = getStroke;
 exports.getFill = getFill;
 exports.parsePercent = parsePercent;
 exports.needDrawText = needDrawText;
-},{"../../core/util":"node_modules/zrender/lib/core/util.js","../../contain/text":"node_modules/zrender/lib/contain/text.js","./roundRect":"node_modules/zrender/lib/graphic/helper/roundRect.js","./image":"node_modules/zrender/lib/graphic/helper/image.js","./fixShadow":"node_modules/zrender/lib/graphic/helper/fixShadow.js","../constant":"node_modules/zrender/lib/graphic/constant.js"}],"node_modules/zrender/lib/graphic/mixin/RectText.js":[function(require,module,exports) {
+},{"../../core/util":"../node_modules/zrender/lib/core/util.js","../../contain/text":"../node_modules/zrender/lib/contain/text.js","./roundRect":"../node_modules/zrender/lib/graphic/helper/roundRect.js","./image":"../node_modules/zrender/lib/graphic/helper/image.js","./fixShadow":"../node_modules/zrender/lib/graphic/helper/fixShadow.js","../constant":"../node_modules/zrender/lib/graphic/constant.js"}],"../node_modules/zrender/lib/graphic/mixin/RectText.js":[function(require,module,exports) {
 var textHelper = require("../helper/text");
 
 var BoundingRect = require("../../core/BoundingRect");
@@ -9645,7 +9645,7 @@ RectText.prototype = {
 };
 var _default = RectText;
 module.exports = _default;
-},{"../helper/text":"node_modules/zrender/lib/graphic/helper/text.js","../../core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../constant":"node_modules/zrender/lib/graphic/constant.js"}],"node_modules/zrender/lib/graphic/Displayable.js":[function(require,module,exports) {
+},{"../helper/text":"../node_modules/zrender/lib/graphic/helper/text.js","../../core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../constant":"../node_modules/zrender/lib/graphic/constant.js"}],"../node_modules/zrender/lib/graphic/Displayable.js":[function(require,module,exports) {
 var zrUtil = require("../core/util");
 
 var Style = require("./Style");
@@ -9923,7 +9923,7 @@ zrUtil.mixin(Displayable, RectText); // zrUtil.mixin(Displayable, Stateful);
 
 var _default = Displayable;
 module.exports = _default;
-},{"../core/util":"node_modules/zrender/lib/core/util.js","./Style":"node_modules/zrender/lib/graphic/Style.js","../Element":"node_modules/zrender/lib/Element.js","./mixin/RectText":"node_modules/zrender/lib/graphic/mixin/RectText.js"}],"node_modules/zrender/lib/graphic/Image.js":[function(require,module,exports) {
+},{"../core/util":"../node_modules/zrender/lib/core/util.js","./Style":"../node_modules/zrender/lib/graphic/Style.js","../Element":"../node_modules/zrender/lib/Element.js","./mixin/RectText":"../node_modules/zrender/lib/graphic/mixin/RectText.js"}],"../node_modules/zrender/lib/graphic/Image.js":[function(require,module,exports) {
 var Displayable = require("./Displayable");
 
 var BoundingRect = require("../core/BoundingRect");
@@ -10016,7 +10016,7 @@ ZImage.prototype = {
 zrUtil.inherits(ZImage, Displayable);
 var _default = ZImage;
 module.exports = _default;
-},{"./Displayable":"node_modules/zrender/lib/graphic/Displayable.js","../core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../core/util":"node_modules/zrender/lib/core/util.js","./helper/image":"node_modules/zrender/lib/graphic/helper/image.js"}],"node_modules/zrender/lib/Painter.js":[function(require,module,exports) {
+},{"./Displayable":"../node_modules/zrender/lib/graphic/Displayable.js","../core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../core/util":"../node_modules/zrender/lib/core/util.js","./helper/image":"../node_modules/zrender/lib/graphic/helper/image.js"}],"../node_modules/zrender/lib/Painter.js":[function(require,module,exports) {
 var _config = require("./config");
 
 var devicePixelRatio = _config.devicePixelRatio;
@@ -11052,7 +11052,7 @@ Painter.prototype = {
 };
 var _default = Painter;
 module.exports = _default;
-},{"./config":"node_modules/zrender/lib/config.js","./core/util":"node_modules/zrender/lib/core/util.js","./core/log":"node_modules/zrender/lib/core/log.js","./core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","./core/timsort":"node_modules/zrender/lib/core/timsort.js","./Layer":"node_modules/zrender/lib/Layer.js","./animation/requestAnimationFrame":"node_modules/zrender/lib/animation/requestAnimationFrame.js","./graphic/Image":"node_modules/zrender/lib/graphic/Image.js","./core/env":"node_modules/zrender/lib/core/env.js"}],"node_modules/zrender/lib/animation/Animation.js":[function(require,module,exports) {
+},{"./config":"../node_modules/zrender/lib/config.js","./core/util":"../node_modules/zrender/lib/core/util.js","./core/log":"../node_modules/zrender/lib/core/log.js","./core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","./core/timsort":"../node_modules/zrender/lib/core/timsort.js","./Layer":"../node_modules/zrender/lib/Layer.js","./animation/requestAnimationFrame":"../node_modules/zrender/lib/animation/requestAnimationFrame.js","./graphic/Image":"../node_modules/zrender/lib/graphic/Image.js","./core/env":"../node_modules/zrender/lib/core/env.js"}],"../node_modules/zrender/lib/animation/Animation.js":[function(require,module,exports) {
 var util = require("../core/util");
 
 var _event = require("../core/event");
@@ -11300,7 +11300,7 @@ Animation.prototype = {
 util.mixin(Animation, Dispatcher);
 var _default = Animation;
 module.exports = _default;
-},{"../core/util":"node_modules/zrender/lib/core/util.js","../core/event":"node_modules/zrender/lib/core/event.js","./requestAnimationFrame":"node_modules/zrender/lib/animation/requestAnimationFrame.js","./Animator":"node_modules/zrender/lib/animation/Animator.js"}],"node_modules/zrender/lib/dom/HandlerProxy.js":[function(require,module,exports) {
+},{"../core/util":"../node_modules/zrender/lib/core/util.js","../core/event":"../node_modules/zrender/lib/core/event.js","./requestAnimationFrame":"../node_modules/zrender/lib/animation/requestAnimationFrame.js","./Animator":"../node_modules/zrender/lib/animation/Animator.js"}],"../node_modules/zrender/lib/dom/HandlerProxy.js":[function(require,module,exports) {
 var _event = require("../core/event");
 
 var addEventListener = _event.addEventListener;
@@ -11806,7 +11806,7 @@ handlerDomProxyProto.setCursor = function (cursorStyle) {
 zrUtil.mixin(HandlerDomProxy, Eventful);
 var _default = HandlerDomProxy;
 module.exports = _default;
-},{"../core/event":"node_modules/zrender/lib/core/event.js","../core/util":"node_modules/zrender/lib/core/util.js","../mixin/Eventful":"node_modules/zrender/lib/mixin/Eventful.js","../core/env":"node_modules/zrender/lib/core/env.js"}],"node_modules/zrender/lib/zrender.js":[function(require,module,exports) {
+},{"../core/event":"../node_modules/zrender/lib/core/event.js","../core/util":"../node_modules/zrender/lib/core/util.js","../mixin/Eventful":"../node_modules/zrender/lib/mixin/Eventful.js","../core/env":"../node_modules/zrender/lib/core/env.js"}],"../node_modules/zrender/lib/zrender.js":[function(require,module,exports) {
 var guid = require("./core/guid");
 
 var env = require("./core/env");
@@ -12259,7 +12259,7 @@ exports.init = init;
 exports.dispose = dispose;
 exports.getInstance = getInstance;
 exports.registerPainter = registerPainter;
-},{"./core/guid":"node_modules/zrender/lib/core/guid.js","./core/env":"node_modules/zrender/lib/core/env.js","./core/util":"node_modules/zrender/lib/core/util.js","./Handler":"node_modules/zrender/lib/Handler.js","./Storage":"node_modules/zrender/lib/Storage.js","./Painter":"node_modules/zrender/lib/Painter.js","./animation/Animation":"node_modules/zrender/lib/animation/Animation.js","./dom/HandlerProxy":"node_modules/zrender/lib/dom/HandlerProxy.js"}],"node_modules/echarts/lib/util/model.js":[function(require,module,exports) {
+},{"./core/guid":"../node_modules/zrender/lib/core/guid.js","./core/env":"../node_modules/zrender/lib/core/env.js","./core/util":"../node_modules/zrender/lib/core/util.js","./Handler":"../node_modules/zrender/lib/Handler.js","./Storage":"../node_modules/zrender/lib/Storage.js","./Painter":"../node_modules/zrender/lib/Painter.js","./animation/Animation":"../node_modules/zrender/lib/animation/Animation.js","./dom/HandlerProxy":"../node_modules/zrender/lib/dom/HandlerProxy.js"}],"../node_modules/echarts/lib/util/model.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -12807,7 +12807,7 @@ exports.setAttribute = setAttribute;
 exports.getAttribute = getAttribute;
 exports.getTooltipRenderMode = getTooltipRenderMode;
 exports.groupData = groupData;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"node_modules/zrender/lib/core/env.js"}],"node_modules/echarts/lib/util/clazz.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js"}],"../node_modules/echarts/lib/util/clazz.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -13089,7 +13089,7 @@ exports.enableClassExtend = enableClassExtend;
 exports.enableClassCheck = enableClassCheck;
 exports.enableClassManagement = enableClassManagement;
 exports.setReadOnly = setReadOnly;
-},{"../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/model/mixin/makeStyleMapper.js":[function(require,module,exports) {
+},{"../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/model/mixin/makeStyleMapper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -13162,7 +13162,7 @@ function _default(properties) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/model/mixin/lineStyle.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/model/mixin/lineStyle.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -13229,7 +13229,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"./makeStyleMapper":"node_modules/echarts/lib/model/mixin/makeStyleMapper.js"}],"node_modules/echarts/lib/model/mixin/areaStyle.js":[function(require,module,exports) {
+},{"./makeStyleMapper":"../node_modules/echarts/lib/model/mixin/makeStyleMapper.js"}],"../node_modules/echarts/lib/model/mixin/areaStyle.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -13277,7 +13277,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"./makeStyleMapper":"node_modules/echarts/lib/model/mixin/makeStyleMapper.js"}],"node_modules/zrender/lib/core/curve.js":[function(require,module,exports) {
+},{"./makeStyleMapper":"../node_modules/echarts/lib/model/mixin/makeStyleMapper.js"}],"../node_modules/zrender/lib/core/curve.js":[function(require,module,exports) {
 var _vector = require("./vector");
 
 var v2Create = _vector.create;
@@ -13810,7 +13810,7 @@ exports.quadraticRootAt = quadraticRootAt;
 exports.quadraticExtremum = quadraticExtremum;
 exports.quadraticSubdivide = quadraticSubdivide;
 exports.quadraticProjectPoint = quadraticProjectPoint;
-},{"./vector":"node_modules/zrender/lib/core/vector.js"}],"node_modules/zrender/lib/core/bbox.js":[function(require,module,exports) {
+},{"./vector":"../node_modules/zrender/lib/core/vector.js"}],"../node_modules/zrender/lib/core/bbox.js":[function(require,module,exports) {
 var vec2 = require("./vector");
 
 var curve = require("./curve");
@@ -14032,7 +14032,7 @@ exports.fromLine = fromLine;
 exports.fromCubic = fromCubic;
 exports.fromQuadratic = fromQuadratic;
 exports.fromArc = fromArc;
-},{"./vector":"node_modules/zrender/lib/core/vector.js","./curve":"node_modules/zrender/lib/core/curve.js"}],"node_modules/zrender/lib/core/PathProxy.js":[function(require,module,exports) {
+},{"./vector":"../node_modules/zrender/lib/core/vector.js","./curve":"../node_modules/zrender/lib/core/curve.js"}],"../node_modules/zrender/lib/core/PathProxy.js":[function(require,module,exports) {
 var curve = require("./curve");
 
 var vec2 = require("./vector");
@@ -14803,7 +14803,7 @@ PathProxy.prototype = {
 PathProxy.CMD = CMD;
 var _default = PathProxy;
 module.exports = _default;
-},{"./curve":"node_modules/zrender/lib/core/curve.js","./vector":"node_modules/zrender/lib/core/vector.js","./bbox":"node_modules/zrender/lib/core/bbox.js","./BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../config":"node_modules/zrender/lib/config.js"}],"node_modules/zrender/lib/contain/line.js":[function(require,module,exports) {
+},{"./curve":"../node_modules/zrender/lib/core/curve.js","./vector":"../node_modules/zrender/lib/core/vector.js","./bbox":"../node_modules/zrender/lib/core/bbox.js","./BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../config":"../node_modules/zrender/lib/config.js"}],"../node_modules/zrender/lib/contain/line.js":[function(require,module,exports) {
 /**
  * 线段包含判断
  * @param  {number}  x0
@@ -14843,7 +14843,7 @@ function containStroke(x0, y0, x1, y1, lineWidth, x, y) {
 }
 
 exports.containStroke = containStroke;
-},{}],"node_modules/zrender/lib/contain/cubic.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/contain/cubic.js":[function(require,module,exports) {
 var curve = require("../core/curve");
 
 /**
@@ -14877,7 +14877,7 @@ function containStroke(x0, y0, x1, y1, x2, y2, x3, y3, lineWidth, x, y) {
 }
 
 exports.containStroke = containStroke;
-},{"../core/curve":"node_modules/zrender/lib/core/curve.js"}],"node_modules/zrender/lib/contain/quadratic.js":[function(require,module,exports) {
+},{"../core/curve":"../node_modules/zrender/lib/core/curve.js"}],"../node_modules/zrender/lib/contain/quadratic.js":[function(require,module,exports) {
 var _curve = require("../core/curve");
 
 var quadraticProjectPoint = _curve.quadraticProjectPoint;
@@ -14911,7 +14911,7 @@ function containStroke(x0, y0, x1, y1, x2, y2, lineWidth, x, y) {
 }
 
 exports.containStroke = containStroke;
-},{"../core/curve":"node_modules/zrender/lib/core/curve.js"}],"node_modules/zrender/lib/contain/util.js":[function(require,module,exports) {
+},{"../core/curve":"../node_modules/zrender/lib/core/curve.js"}],"../node_modules/zrender/lib/contain/util.js":[function(require,module,exports) {
 var PI2 = Math.PI * 2;
 
 function normalizeRadian(angle) {
@@ -14925,7 +14925,7 @@ function normalizeRadian(angle) {
 }
 
 exports.normalizeRadian = normalizeRadian;
-},{}],"node_modules/zrender/lib/contain/arc.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/contain/arc.js":[function(require,module,exports) {
 var _util = require("./util");
 
 var normalizeRadian = _util.normalizeRadian;
@@ -14986,7 +14986,7 @@ function containStroke(cx, cy, r, startAngle, endAngle, anticlockwise, lineWidth
 }
 
 exports.containStroke = containStroke;
-},{"./util":"node_modules/zrender/lib/contain/util.js"}],"node_modules/zrender/lib/contain/windingLine.js":[function(require,module,exports) {
+},{"./util":"../node_modules/zrender/lib/contain/util.js"}],"../node_modules/zrender/lib/contain/windingLine.js":[function(require,module,exports) {
 function windingLine(x0, y0, x1, y1, x, y) {
   if (y > y0 && y > y1 || y < y0 && y < y1) {
     return 0;
@@ -15010,7 +15010,7 @@ function windingLine(x0, y0, x1, y1, x, y) {
 }
 
 module.exports = windingLine;
-},{}],"node_modules/zrender/lib/contain/path.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/contain/path.js":[function(require,module,exports) {
 var PathProxy = require("../core/PathProxy");
 
 var line = require("./line");
@@ -15407,7 +15407,7 @@ function containStroke(pathData, lineWidth, x, y) {
 
 exports.contain = contain;
 exports.containStroke = containStroke;
-},{"../core/PathProxy":"node_modules/zrender/lib/core/PathProxy.js","./line":"node_modules/zrender/lib/contain/line.js","./cubic":"node_modules/zrender/lib/contain/cubic.js","./quadratic":"node_modules/zrender/lib/contain/quadratic.js","./arc":"node_modules/zrender/lib/contain/arc.js","./util":"node_modules/zrender/lib/contain/util.js","../core/curve":"node_modules/zrender/lib/core/curve.js","./windingLine":"node_modules/zrender/lib/contain/windingLine.js"}],"node_modules/zrender/lib/graphic/Path.js":[function(require,module,exports) {
+},{"../core/PathProxy":"../node_modules/zrender/lib/core/PathProxy.js","./line":"../node_modules/zrender/lib/contain/line.js","./cubic":"../node_modules/zrender/lib/contain/cubic.js","./quadratic":"../node_modules/zrender/lib/contain/quadratic.js","./arc":"../node_modules/zrender/lib/contain/arc.js","./util":"../node_modules/zrender/lib/contain/util.js","../core/curve":"../node_modules/zrender/lib/core/curve.js","./windingLine":"../node_modules/zrender/lib/contain/windingLine.js"}],"../node_modules/zrender/lib/graphic/Path.js":[function(require,module,exports) {
 var Displayable = require("./Displayable");
 
 var zrUtil = require("../core/util");
@@ -15786,7 +15786,7 @@ Path.extend = function (defaults) {
 zrUtil.inherits(Path, Displayable);
 var _default = Path;
 module.exports = _default;
-},{"./Displayable":"node_modules/zrender/lib/graphic/Displayable.js","../core/util":"node_modules/zrender/lib/core/util.js","../core/PathProxy":"node_modules/zrender/lib/core/PathProxy.js","../contain/path":"node_modules/zrender/lib/contain/path.js","./Pattern":"node_modules/zrender/lib/graphic/Pattern.js"}],"node_modules/zrender/lib/tool/transformPath.js":[function(require,module,exports) {
+},{"./Displayable":"../node_modules/zrender/lib/graphic/Displayable.js","../core/util":"../node_modules/zrender/lib/core/util.js","../core/PathProxy":"../node_modules/zrender/lib/core/PathProxy.js","../contain/path":"../node_modules/zrender/lib/contain/path.js","./Pattern":"../node_modules/zrender/lib/graphic/Pattern.js"}],"../node_modules/zrender/lib/tool/transformPath.js":[function(require,module,exports) {
 var PathProxy = require("../core/PathProxy");
 
 var _vector = require("../core/vector");
@@ -15887,7 +15887,7 @@ function _default(path, m) {
 }
 
 module.exports = _default;
-},{"../core/PathProxy":"node_modules/zrender/lib/core/PathProxy.js","../core/vector":"node_modules/zrender/lib/core/vector.js"}],"node_modules/zrender/lib/tool/path.js":[function(require,module,exports) {
+},{"../core/PathProxy":"../node_modules/zrender/lib/core/PathProxy.js","../core/vector":"../node_modules/zrender/lib/core/vector.js"}],"../node_modules/zrender/lib/tool/path.js":[function(require,module,exports) {
 var Path = require("../graphic/Path");
 
 var PathProxy = require("../core/PathProxy");
@@ -16328,7 +16328,7 @@ function mergePath(pathEls, opts) {
 exports.createFromString = createFromString;
 exports.extendFromString = extendFromString;
 exports.mergePath = mergePath;
-},{"../graphic/Path":"node_modules/zrender/lib/graphic/Path.js","../core/PathProxy":"node_modules/zrender/lib/core/PathProxy.js","./transformPath":"node_modules/zrender/lib/tool/transformPath.js"}],"node_modules/zrender/lib/graphic/Text.js":[function(require,module,exports) {
+},{"../graphic/Path":"../node_modules/zrender/lib/graphic/Path.js","../core/PathProxy":"../node_modules/zrender/lib/core/PathProxy.js","./transformPath":"../node_modules/zrender/lib/tool/transformPath.js"}],"../node_modules/zrender/lib/graphic/Text.js":[function(require,module,exports) {
 var Displayable = require("./Displayable");
 
 var zrUtil = require("../core/util");
@@ -16408,7 +16408,7 @@ Text.prototype = {
 zrUtil.inherits(Text, Displayable);
 var _default = Text;
 module.exports = _default;
-},{"./Displayable":"node_modules/zrender/lib/graphic/Displayable.js","../core/util":"node_modules/zrender/lib/core/util.js","../contain/text":"node_modules/zrender/lib/contain/text.js","./helper/text":"node_modules/zrender/lib/graphic/helper/text.js","./constant":"node_modules/zrender/lib/graphic/constant.js"}],"node_modules/zrender/lib/graphic/shape/Circle.js":[function(require,module,exports) {
+},{"./Displayable":"../node_modules/zrender/lib/graphic/Displayable.js","../core/util":"../node_modules/zrender/lib/core/util.js","../contain/text":"../node_modules/zrender/lib/contain/text.js","./helper/text":"../node_modules/zrender/lib/graphic/helper/text.js","./constant":"../node_modules/zrender/lib/graphic/constant.js"}],"../node_modules/zrender/lib/graphic/shape/Circle.js":[function(require,module,exports) {
 var Path = require("../Path");
 
 /**
@@ -16441,7 +16441,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"../Path":"node_modules/zrender/lib/graphic/Path.js"}],"node_modules/zrender/lib/graphic/helper/fixClipWithShadow.js":[function(require,module,exports) {
+},{"../Path":"../node_modules/zrender/lib/graphic/Path.js"}],"../node_modules/zrender/lib/graphic/helper/fixClipWithShadow.js":[function(require,module,exports) {
 var env = require("../../core/env");
 
 // Fix weird bug in some version of IE11 (like 11.0.9600.178**),
@@ -16498,7 +16498,7 @@ function _default(orignalBrush) {
 }
 
 module.exports = _default;
-},{"../../core/env":"node_modules/zrender/lib/core/env.js"}],"node_modules/zrender/lib/graphic/shape/Sector.js":[function(require,module,exports) {
+},{"../../core/env":"../node_modules/zrender/lib/core/env.js"}],"../node_modules/zrender/lib/graphic/shape/Sector.js":[function(require,module,exports) {
 var Path = require("../Path");
 
 var fixClipWithShadow = require("../helper/fixClipWithShadow");
@@ -16543,7 +16543,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"../Path":"node_modules/zrender/lib/graphic/Path.js","../helper/fixClipWithShadow":"node_modules/zrender/lib/graphic/helper/fixClipWithShadow.js"}],"node_modules/zrender/lib/graphic/shape/Ring.js":[function(require,module,exports) {
+},{"../Path":"../node_modules/zrender/lib/graphic/Path.js","../helper/fixClipWithShadow":"../node_modules/zrender/lib/graphic/helper/fixClipWithShadow.js"}],"../node_modules/zrender/lib/graphic/shape/Ring.js":[function(require,module,exports) {
 var Path = require("../Path");
 
 /**
@@ -16570,7 +16570,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"../Path":"node_modules/zrender/lib/graphic/Path.js"}],"node_modules/zrender/lib/graphic/helper/smoothSpline.js":[function(require,module,exports) {
+},{"../Path":"../node_modules/zrender/lib/graphic/Path.js"}],"../node_modules/zrender/lib/graphic/helper/smoothSpline.js":[function(require,module,exports) {
 var _vector = require("../../core/vector");
 
 var v2Distance = _vector.distance;
@@ -16639,7 +16639,7 @@ function _default(points, isLoop) {
 }
 
 module.exports = _default;
-},{"../../core/vector":"node_modules/zrender/lib/core/vector.js"}],"node_modules/zrender/lib/graphic/helper/smoothBezier.js":[function(require,module,exports) {
+},{"../../core/vector":"../node_modules/zrender/lib/core/vector.js"}],"../node_modules/zrender/lib/graphic/helper/smoothBezier.js":[function(require,module,exports) {
 var _vector = require("../../core/vector");
 
 var v2Min = _vector.min;
@@ -16745,7 +16745,7 @@ function _default(points, smooth, isLoop, constraint) {
 }
 
 module.exports = _default;
-},{"../../core/vector":"node_modules/zrender/lib/core/vector.js"}],"node_modules/zrender/lib/graphic/helper/poly.js":[function(require,module,exports) {
+},{"../../core/vector":"../node_modules/zrender/lib/core/vector.js"}],"../node_modules/zrender/lib/graphic/helper/poly.js":[function(require,module,exports) {
 var smoothSpline = require("./smoothSpline");
 
 var smoothBezier = require("./smoothBezier");
@@ -16783,7 +16783,7 @@ function buildPath(ctx, shape, closePath) {
 }
 
 exports.buildPath = buildPath;
-},{"./smoothSpline":"node_modules/zrender/lib/graphic/helper/smoothSpline.js","./smoothBezier":"node_modules/zrender/lib/graphic/helper/smoothBezier.js"}],"node_modules/zrender/lib/graphic/shape/Polygon.js":[function(require,module,exports) {
+},{"./smoothSpline":"../node_modules/zrender/lib/graphic/helper/smoothSpline.js","./smoothBezier":"../node_modules/zrender/lib/graphic/helper/smoothBezier.js"}],"../node_modules/zrender/lib/graphic/shape/Polygon.js":[function(require,module,exports) {
 var Path = require("../Path");
 
 var polyHelper = require("../helper/poly");
@@ -16805,7 +16805,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"../Path":"node_modules/zrender/lib/graphic/Path.js","../helper/poly":"node_modules/zrender/lib/graphic/helper/poly.js"}],"node_modules/zrender/lib/graphic/shape/Polyline.js":[function(require,module,exports) {
+},{"../Path":"../node_modules/zrender/lib/graphic/Path.js","../helper/poly":"../node_modules/zrender/lib/graphic/helper/poly.js"}],"../node_modules/zrender/lib/graphic/shape/Polyline.js":[function(require,module,exports) {
 var Path = require("../Path");
 
 var polyHelper = require("../helper/poly");
@@ -16830,7 +16830,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"../Path":"node_modules/zrender/lib/graphic/Path.js","../helper/poly":"node_modules/zrender/lib/graphic/helper/poly.js"}],"node_modules/zrender/lib/graphic/helper/subPixelOptimize.js":[function(require,module,exports) {
+},{"../Path":"../node_modules/zrender/lib/graphic/Path.js","../helper/poly":"../node_modules/zrender/lib/graphic/helper/poly.js"}],"../node_modules/zrender/lib/graphic/helper/subPixelOptimize.js":[function(require,module,exports) {
 /**
  * Sub-pixel optimize for canvas rendering, prevent from blur
  * when rendering a thin vertical/horizontal line.
@@ -16944,7 +16944,7 @@ function subPixelOptimize(position, lineWidth, positiveOrNegative) {
 exports.subPixelOptimizeLine = subPixelOptimizeLine;
 exports.subPixelOptimizeRect = subPixelOptimizeRect;
 exports.subPixelOptimize = subPixelOptimize;
-},{}],"node_modules/zrender/lib/graphic/shape/Rect.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/graphic/shape/Rect.js":[function(require,module,exports) {
 var Path = require("../Path");
 
 var roundRectHelper = require("../helper/roundRect");
@@ -17007,7 +17007,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"../Path":"node_modules/zrender/lib/graphic/Path.js","../helper/roundRect":"node_modules/zrender/lib/graphic/helper/roundRect.js","../helper/subPixelOptimize":"node_modules/zrender/lib/graphic/helper/subPixelOptimize.js"}],"node_modules/zrender/lib/graphic/shape/Line.js":[function(require,module,exports) {
+},{"../Path":"../node_modules/zrender/lib/graphic/Path.js","../helper/roundRect":"../node_modules/zrender/lib/graphic/helper/roundRect.js","../helper/subPixelOptimize":"../node_modules/zrender/lib/graphic/helper/subPixelOptimize.js"}],"../node_modules/zrender/lib/graphic/shape/Line.js":[function(require,module,exports) {
 var Path = require("../Path");
 
 var _subPixelOptimize = require("../helper/subPixelOptimize");
@@ -17083,7 +17083,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"../Path":"node_modules/zrender/lib/graphic/Path.js","../helper/subPixelOptimize":"node_modules/zrender/lib/graphic/helper/subPixelOptimize.js"}],"node_modules/zrender/lib/graphic/shape/BezierCurve.js":[function(require,module,exports) {
+},{"../Path":"../node_modules/zrender/lib/graphic/Path.js","../helper/subPixelOptimize":"../node_modules/zrender/lib/graphic/helper/subPixelOptimize.js"}],"../node_modules/zrender/lib/graphic/shape/BezierCurve.js":[function(require,module,exports) {
 var Path = require("../Path");
 
 var vec2 = require("../../core/vector");
@@ -17197,7 +17197,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"../Path":"node_modules/zrender/lib/graphic/Path.js","../../core/vector":"node_modules/zrender/lib/core/vector.js","../../core/curve":"node_modules/zrender/lib/core/curve.js"}],"node_modules/zrender/lib/graphic/shape/Arc.js":[function(require,module,exports) {
+},{"../Path":"../node_modules/zrender/lib/graphic/Path.js","../../core/vector":"../node_modules/zrender/lib/core/vector.js","../../core/curve":"../node_modules/zrender/lib/core/curve.js"}],"../node_modules/zrender/lib/graphic/shape/Arc.js":[function(require,module,exports) {
 var Path = require("../Path");
 
 /**
@@ -17233,7 +17233,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"../Path":"node_modules/zrender/lib/graphic/Path.js"}],"node_modules/zrender/lib/graphic/CompoundPath.js":[function(require,module,exports) {
+},{"../Path":"../node_modules/zrender/lib/graphic/Path.js"}],"../node_modules/zrender/lib/graphic/CompoundPath.js":[function(require,module,exports) {
 var Path = require("./Path");
 
 // CompoundPath to improve performance
@@ -17290,7 +17290,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"./Path":"node_modules/zrender/lib/graphic/Path.js"}],"node_modules/zrender/lib/graphic/Gradient.js":[function(require,module,exports) {
+},{"./Path":"../node_modules/zrender/lib/graphic/Path.js"}],"../node_modules/zrender/lib/graphic/Gradient.js":[function(require,module,exports) {
 /**
  * @param {Array.<Object>} colorStops
  */
@@ -17309,7 +17309,7 @@ Gradient.prototype = {
 };
 var _default = Gradient;
 module.exports = _default;
-},{}],"node_modules/zrender/lib/graphic/LinearGradient.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/graphic/LinearGradient.js":[function(require,module,exports) {
 var zrUtil = require("../core/util");
 
 var Gradient = require("./Gradient");
@@ -17344,7 +17344,7 @@ LinearGradient.prototype = {
 zrUtil.inherits(LinearGradient, Gradient);
 var _default = LinearGradient;
 module.exports = _default;
-},{"../core/util":"node_modules/zrender/lib/core/util.js","./Gradient":"node_modules/zrender/lib/graphic/Gradient.js"}],"node_modules/zrender/lib/graphic/RadialGradient.js":[function(require,module,exports) {
+},{"../core/util":"../node_modules/zrender/lib/core/util.js","./Gradient":"../node_modules/zrender/lib/graphic/Gradient.js"}],"../node_modules/zrender/lib/graphic/RadialGradient.js":[function(require,module,exports) {
 var zrUtil = require("../core/util");
 
 var Gradient = require("./Gradient");
@@ -17377,7 +17377,7 @@ RadialGradient.prototype = {
 zrUtil.inherits(RadialGradient, Gradient);
 var _default = RadialGradient;
 module.exports = _default;
-},{"../core/util":"node_modules/zrender/lib/core/util.js","./Gradient":"node_modules/zrender/lib/graphic/Gradient.js"}],"node_modules/zrender/lib/graphic/IncrementalDisplayable.js":[function(require,module,exports) {
+},{"../core/util":"../node_modules/zrender/lib/core/util.js","./Gradient":"../node_modules/zrender/lib/graphic/Gradient.js"}],"../node_modules/zrender/lib/graphic/IncrementalDisplayable.js":[function(require,module,exports) {
 var _util = require("../core/util");
 
 var inherits = _util.inherits;
@@ -17525,7 +17525,7 @@ IncrementalDisplayble.prototype.contain = function (x, y) {
 inherits(IncrementalDisplayble, Displayble);
 var _default = IncrementalDisplayble;
 module.exports = _default;
-},{"../core/util":"node_modules/zrender/lib/core/util.js","./Displayable":"node_modules/zrender/lib/graphic/Displayable.js","../core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js"}],"node_modules/echarts/lib/util/graphic.js":[function(require,module,exports) {
+},{"../core/util":"../node_modules/zrender/lib/core/util.js","./Displayable":"../node_modules/zrender/lib/graphic/Displayable.js","../core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js"}],"../node_modules/echarts/lib/util/graphic.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -19053,7 +19053,7 @@ exports.clipRectByRect = clipRectByRect;
 exports.createIcon = createIcon;
 exports.linePolygonIntersect = linePolygonIntersect;
 exports.lineLineIntersect = lineLineIntersect;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/tool/path":"node_modules/zrender/lib/tool/path.js","zrender/lib/tool/color":"node_modules/zrender/lib/tool/color.js","zrender/lib/core/matrix":"node_modules/zrender/lib/core/matrix.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js","zrender/lib/graphic/Path":"node_modules/zrender/lib/graphic/Path.js","zrender/lib/mixin/Transformable":"node_modules/zrender/lib/mixin/Transformable.js","zrender/lib/graphic/Image":"node_modules/zrender/lib/graphic/Image.js","zrender/lib/container/Group":"node_modules/zrender/lib/container/Group.js","zrender/lib/graphic/Text":"node_modules/zrender/lib/graphic/Text.js","zrender/lib/graphic/shape/Circle":"node_modules/zrender/lib/graphic/shape/Circle.js","zrender/lib/graphic/shape/Sector":"node_modules/zrender/lib/graphic/shape/Sector.js","zrender/lib/graphic/shape/Ring":"node_modules/zrender/lib/graphic/shape/Ring.js","zrender/lib/graphic/shape/Polygon":"node_modules/zrender/lib/graphic/shape/Polygon.js","zrender/lib/graphic/shape/Polyline":"node_modules/zrender/lib/graphic/shape/Polyline.js","zrender/lib/graphic/shape/Rect":"node_modules/zrender/lib/graphic/shape/Rect.js","zrender/lib/graphic/shape/Line":"node_modules/zrender/lib/graphic/shape/Line.js","zrender/lib/graphic/shape/BezierCurve":"node_modules/zrender/lib/graphic/shape/BezierCurve.js","zrender/lib/graphic/shape/Arc":"node_modules/zrender/lib/graphic/shape/Arc.js","zrender/lib/graphic/CompoundPath":"node_modules/zrender/lib/graphic/CompoundPath.js","zrender/lib/graphic/LinearGradient":"node_modules/zrender/lib/graphic/LinearGradient.js","zrender/lib/graphic/RadialGradient":"node_modules/zrender/lib/graphic/RadialGradient.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/graphic/IncrementalDisplayable":"node_modules/zrender/lib/graphic/IncrementalDisplayable.js","zrender/lib/graphic/helper/subPixelOptimize":"node_modules/zrender/lib/graphic/helper/subPixelOptimize.js"}],"node_modules/echarts/lib/model/mixin/textStyle.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/tool/path":"../node_modules/zrender/lib/tool/path.js","zrender/lib/tool/color":"../node_modules/zrender/lib/tool/color.js","zrender/lib/core/matrix":"../node_modules/zrender/lib/core/matrix.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js","zrender/lib/graphic/Path":"../node_modules/zrender/lib/graphic/Path.js","zrender/lib/mixin/Transformable":"../node_modules/zrender/lib/mixin/Transformable.js","zrender/lib/graphic/Image":"../node_modules/zrender/lib/graphic/Image.js","zrender/lib/container/Group":"../node_modules/zrender/lib/container/Group.js","zrender/lib/graphic/Text":"../node_modules/zrender/lib/graphic/Text.js","zrender/lib/graphic/shape/Circle":"../node_modules/zrender/lib/graphic/shape/Circle.js","zrender/lib/graphic/shape/Sector":"../node_modules/zrender/lib/graphic/shape/Sector.js","zrender/lib/graphic/shape/Ring":"../node_modules/zrender/lib/graphic/shape/Ring.js","zrender/lib/graphic/shape/Polygon":"../node_modules/zrender/lib/graphic/shape/Polygon.js","zrender/lib/graphic/shape/Polyline":"../node_modules/zrender/lib/graphic/shape/Polyline.js","zrender/lib/graphic/shape/Rect":"../node_modules/zrender/lib/graphic/shape/Rect.js","zrender/lib/graphic/shape/Line":"../node_modules/zrender/lib/graphic/shape/Line.js","zrender/lib/graphic/shape/BezierCurve":"../node_modules/zrender/lib/graphic/shape/BezierCurve.js","zrender/lib/graphic/shape/Arc":"../node_modules/zrender/lib/graphic/shape/Arc.js","zrender/lib/graphic/CompoundPath":"../node_modules/zrender/lib/graphic/CompoundPath.js","zrender/lib/graphic/LinearGradient":"../node_modules/zrender/lib/graphic/LinearGradient.js","zrender/lib/graphic/RadialGradient":"../node_modules/zrender/lib/graphic/RadialGradient.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/graphic/IncrementalDisplayable":"../node_modules/zrender/lib/graphic/IncrementalDisplayable.js","zrender/lib/graphic/helper/subPixelOptimize":"../node_modules/zrender/lib/graphic/helper/subPixelOptimize.js"}],"../node_modules/echarts/lib/model/mixin/textStyle.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -19125,7 +19125,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"zrender/lib/contain/text":"node_modules/zrender/lib/contain/text.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js"}],"node_modules/echarts/lib/model/mixin/itemStyle.js":[function(require,module,exports) {
+},{"zrender/lib/contain/text":"../node_modules/zrender/lib/contain/text.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js"}],"../node_modules/echarts/lib/model/mixin/itemStyle.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -19180,7 +19180,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"./makeStyleMapper":"node_modules/echarts/lib/model/mixin/makeStyleMapper.js"}],"node_modules/echarts/lib/model/Model.js":[function(require,module,exports) {
+},{"./makeStyleMapper":"../node_modules/echarts/lib/model/mixin/makeStyleMapper.js"}],"../node_modules/echarts/lib/model/Model.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -19419,7 +19419,7 @@ mixin(Model, textStyleMixin);
 mixin(Model, itemStyleMixin);
 var _default = Model;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"node_modules/zrender/lib/core/env.js","../util/model":"node_modules/echarts/lib/util/model.js","../util/clazz":"node_modules/echarts/lib/util/clazz.js","./mixin/lineStyle":"node_modules/echarts/lib/model/mixin/lineStyle.js","./mixin/areaStyle":"node_modules/echarts/lib/model/mixin/areaStyle.js","./mixin/textStyle":"node_modules/echarts/lib/model/mixin/textStyle.js","./mixin/itemStyle":"node_modules/echarts/lib/model/mixin/itemStyle.js"}],"node_modules/echarts/lib/util/component.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js","../util/model":"../node_modules/echarts/lib/util/model.js","../util/clazz":"../node_modules/echarts/lib/util/clazz.js","./mixin/lineStyle":"../node_modules/echarts/lib/model/mixin/lineStyle.js","./mixin/areaStyle":"../node_modules/echarts/lib/model/mixin/areaStyle.js","./mixin/textStyle":"../node_modules/echarts/lib/model/mixin/textStyle.js","./mixin/itemStyle":"../node_modules/echarts/lib/model/mixin/itemStyle.js"}],"../node_modules/echarts/lib/util/component.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -19639,7 +19639,7 @@ function enableTopologicalTravel(entity, dependencyGetter) {
 exports.getUID = getUID;
 exports.enableSubTypeDefaulter = enableSubTypeDefaulter;
 exports.enableTopologicalTravel = enableTopologicalTravel;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./clazz":"node_modules/echarts/lib/util/clazz.js"}],"node_modules/echarts/lib/util/number.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./clazz":"../node_modules/echarts/lib/util/clazz.js"}],"../node_modules/echarts/lib/util/number.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -20226,7 +20226,7 @@ exports.nice = nice;
 exports.quantile = quantile;
 exports.reformIntervals = reformIntervals;
 exports.isNumeric = isNumeric;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/util/format.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/util/format.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -20520,7 +20520,7 @@ exports.truncateText = truncateText;
 exports.getTextBoundingRect = getTextBoundingRect;
 exports.getTextRect = getTextRect;
 exports.windowOpen = windowOpen;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/contain/text":"node_modules/zrender/lib/contain/text.js","./number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/util/layout.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/contain/text":"../node_modules/zrender/lib/contain/text.js","./number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/util/layout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -21044,7 +21044,7 @@ exports.sizeCalculable = sizeCalculable;
 exports.mergeLayoutParam = mergeLayoutParam;
 exports.getLayoutParams = getLayoutParams;
 exports.copyLayoutParams = copyLayoutParams;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","./number":"node_modules/echarts/lib/util/number.js","./format":"node_modules/echarts/lib/util/format.js"}],"node_modules/echarts/lib/model/mixin/boxLayout.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","./number":"../node_modules/echarts/lib/util/number.js","./format":"../node_modules/echarts/lib/util/format.js"}],"../node_modules/echarts/lib/model/mixin/boxLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -21096,7 +21096,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{}],"node_modules/echarts/lib/model/Component.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/model/Component.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -21341,7 +21341,7 @@ function getDependencies(componentType) {
 zrUtil.mixin(ComponentModel, boxLayoutMixin);
 var _default = ComponentModel;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./Model":"node_modules/echarts/lib/model/Model.js","../util/component":"node_modules/echarts/lib/util/component.js","../util/clazz":"node_modules/echarts/lib/util/clazz.js","../util/model":"node_modules/echarts/lib/util/model.js","../util/layout":"node_modules/echarts/lib/util/layout.js","./mixin/boxLayout":"node_modules/echarts/lib/model/mixin/boxLayout.js"}],"node_modules/echarts/lib/model/globalDefault.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./Model":"../node_modules/echarts/lib/model/Model.js","../util/component":"../node_modules/echarts/lib/util/component.js","../util/clazz":"../node_modules/echarts/lib/util/clazz.js","../util/model":"../node_modules/echarts/lib/util/model.js","../util/layout":"../node_modules/echarts/lib/util/layout.js","./mixin/boxLayout":"../node_modules/echarts/lib/model/mixin/boxLayout.js"}],"../node_modules/echarts/lib/model/globalDefault.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -21431,7 +21431,7 @@ var _default = {
   useUTC: false
 };
 module.exports = _default;
-},{}],"node_modules/echarts/lib/model/mixin/colorPalette.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/model/mixin/colorPalette.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -21533,7 +21533,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/data/helper/sourceType.js":[function(require,module,exports) {
+},{"../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/data/helper/sourceType.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -21590,7 +21590,7 @@ exports.SOURCE_FORMAT_UNKNOWN = SOURCE_FORMAT_UNKNOWN;
 exports.SOURCE_FORMAT_TYPED_ARRAY = SOURCE_FORMAT_TYPED_ARRAY;
 exports.SERIES_LAYOUT_BY_COLUMN = SERIES_LAYOUT_BY_COLUMN;
 exports.SERIES_LAYOUT_BY_ROW = SERIES_LAYOUT_BY_ROW;
-},{}],"node_modules/echarts/lib/data/Source.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/data/Source.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -21763,7 +21763,7 @@ Source.seriesDataToSource = function (data) {
 enableClassCheck(Source);
 var _default = Source;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/clazz":"node_modules/echarts/lib/util/clazz.js","./helper/sourceType":"node_modules/echarts/lib/data/helper/sourceType.js"}],"node_modules/echarts/lib/data/helper/sourceHelper.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/clazz":"../node_modules/echarts/lib/util/clazz.js","./helper/sourceType":"../node_modules/echarts/lib/data/helper/sourceType.js"}],"../node_modules/echarts/lib/data/helper/sourceHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -22454,7 +22454,7 @@ exports.prepareSource = prepareSource;
 exports.makeSeriesEncodeForAxisCoordSys = makeSeriesEncodeForAxisCoordSys;
 exports.makeSeriesEncodeForNameBased = makeSeriesEncodeForNameBased;
 exports.guessOrdinal = guessOrdinal;
-},{"../../config":"node_modules/echarts/lib/config.js","../../util/model":"node_modules/echarts/lib/util/model.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../Source":"node_modules/echarts/lib/data/Source.js","./sourceType":"node_modules/echarts/lib/data/helper/sourceType.js"}],"node_modules/echarts/lib/model/Global.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../util/model":"../node_modules/echarts/lib/util/model.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../Source":"../node_modules/echarts/lib/data/Source.js","./sourceType":"../node_modules/echarts/lib/data/helper/sourceType.js"}],"../node_modules/echarts/lib/model/Global.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -23180,7 +23180,7 @@ function assertSeriesInitialized(ecModel) {}
 mixin(GlobalModel, colorPaletteMixin);
 var _default = GlobalModel;
 module.exports = _default;
-},{"../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/model":"node_modules/echarts/lib/util/model.js","./Model":"node_modules/echarts/lib/model/Model.js","./Component":"node_modules/echarts/lib/model/Component.js","./globalDefault":"node_modules/echarts/lib/model/globalDefault.js","./mixin/colorPalette":"node_modules/echarts/lib/model/mixin/colorPalette.js","../data/helper/sourceHelper":"node_modules/echarts/lib/data/helper/sourceHelper.js"}],"node_modules/echarts/lib/ExtensionAPI.js":[function(require,module,exports) {
+},{"../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/model":"../node_modules/echarts/lib/util/model.js","./Model":"../node_modules/echarts/lib/model/Model.js","./Component":"../node_modules/echarts/lib/model/Component.js","./globalDefault":"../node_modules/echarts/lib/model/globalDefault.js","./mixin/colorPalette":"../node_modules/echarts/lib/model/mixin/colorPalette.js","../data/helper/sourceHelper":"../node_modules/echarts/lib/data/helper/sourceHelper.js"}],"../node_modules/echarts/lib/ExtensionAPI.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -23231,7 +23231,7 @@ function ExtensionAPI(chartInstance) {
 
 var _default = ExtensionAPI;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/CoordinateSystem.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/CoordinateSystem.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -23308,7 +23308,7 @@ CoordinateSystemManager.get = function (type) {
 
 var _default = CoordinateSystemManager;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/model/OptionManager.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/model/OptionManager.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -23762,7 +23762,7 @@ function mergeOption(oldOption, newOption) {
 
 var _default = OptionManager;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/model":"node_modules/echarts/lib/util/model.js","./Component":"node_modules/echarts/lib/model/Component.js"}],"node_modules/echarts/lib/preprocessor/helper/compatStyle.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/model":"../node_modules/echarts/lib/util/model.js","./Component":"../node_modules/echarts/lib/model/Component.js"}],"../node_modules/echarts/lib/preprocessor/helper/compatStyle.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -24082,7 +24082,7 @@ function _default(option, isTheme) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/preprocessor/backwardCompat.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/preprocessor/backwardCompat.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -24227,7 +24227,7 @@ function _default(option, isTheme) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./helper/compatStyle":"node_modules/echarts/lib/preprocessor/helper/compatStyle.js","../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/processor/dataStack.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./helper/compatStyle":"../node_modules/echarts/lib/preprocessor/helper/compatStyle.js","../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/processor/dataStack.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -24366,7 +24366,7 @@ function calculateStack(stackInfoList) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/data/helper/dataProvider.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/data/helper/dataProvider.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -24745,7 +24745,7 @@ exports.DefaultDataProvider = DefaultDataProvider;
 exports.defaultDimValueGetters = defaultDimValueGetters;
 exports.retrieveRawValue = retrieveRawValue;
 exports.retrieveRawAttr = retrieveRawAttr;
-},{"../../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/model":"node_modules/echarts/lib/util/model.js","../../util/number":"node_modules/echarts/lib/util/number.js","../Source":"node_modules/echarts/lib/data/Source.js","./sourceType":"node_modules/echarts/lib/data/helper/sourceType.js"}],"node_modules/echarts/lib/model/mixin/dataFormat.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/model":"../node_modules/echarts/lib/util/model.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../Source":"../node_modules/echarts/lib/data/Source.js","./sourceType":"../node_modules/echarts/lib/data/helper/sourceType.js"}],"../node_modules/echarts/lib/model/mixin/dataFormat.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -24909,7 +24909,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"../../data/helper/dataProvider":"node_modules/echarts/lib/data/helper/dataProvider.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/stream/task.js":[function(require,module,exports) {
+},{"../../data/helper/dataProvider":"../node_modules/echarts/lib/data/helper/dataProvider.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/stream/task.js":[function(require,module,exports) {
 
 
 /*
@@ -25256,7 +25256,7 @@ taskProto.setOutputEnd = function (end) {
 
 
 exports.createTask = createTask;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../config":"node_modules/echarts/lib/config.js"}],"node_modules/echarts/lib/model/Series.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../config":"../node_modules/echarts/lib/config.js"}],"../node_modules/echarts/lib/model/Series.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -25872,7 +25872,7 @@ function getCurrentTask(seriesModel) {
 
 var _default = SeriesModel;
 module.exports = _default;
-},{"../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"node_modules/zrender/lib/core/env.js","../util/format":"node_modules/echarts/lib/util/format.js","../util/model":"node_modules/echarts/lib/util/model.js","./Component":"node_modules/echarts/lib/model/Component.js","./mixin/colorPalette":"node_modules/echarts/lib/model/mixin/colorPalette.js","../model/mixin/dataFormat":"node_modules/echarts/lib/model/mixin/dataFormat.js","../util/layout":"node_modules/echarts/lib/util/layout.js","../stream/task":"node_modules/echarts/lib/stream/task.js","../data/helper/sourceHelper":"node_modules/echarts/lib/data/helper/sourceHelper.js","../data/helper/dataProvider":"node_modules/echarts/lib/data/helper/dataProvider.js"}],"node_modules/echarts/lib/view/Component.js":[function(require,module,exports) {
+},{"../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js","../util/format":"../node_modules/echarts/lib/util/format.js","../util/model":"../node_modules/echarts/lib/util/model.js","./Component":"../node_modules/echarts/lib/model/Component.js","./mixin/colorPalette":"../node_modules/echarts/lib/model/mixin/colorPalette.js","../model/mixin/dataFormat":"../node_modules/echarts/lib/model/mixin/dataFormat.js","../util/layout":"../node_modules/echarts/lib/util/layout.js","../stream/task":"../node_modules/echarts/lib/stream/task.js","../data/helper/sourceHelper":"../node_modules/echarts/lib/data/helper/sourceHelper.js","../data/helper/dataProvider":"../node_modules/echarts/lib/data/helper/dataProvider.js"}],"../node_modules/echarts/lib/view/Component.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -25959,7 +25959,7 @@ clazzUtil.enableClassManagement(Component, {
 });
 var _default = Component;
 module.exports = _default;
-},{"zrender/lib/container/Group":"node_modules/zrender/lib/container/Group.js","../util/component":"node_modules/echarts/lib/util/component.js","../util/clazz":"node_modules/echarts/lib/util/clazz.js"}],"node_modules/echarts/lib/chart/helper/createRenderPlanner.js":[function(require,module,exports) {
+},{"zrender/lib/container/Group":"../node_modules/zrender/lib/container/Group.js","../util/component":"../node_modules/echarts/lib/util/component.js","../util/clazz":"../node_modules/echarts/lib/util/clazz.js"}],"../node_modules/echarts/lib/chart/helper/createRenderPlanner.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -26023,7 +26023,7 @@ function _default() {
 }
 
 module.exports = _default;
-},{"../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/view/Chart.js":[function(require,module,exports) {
+},{"../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/view/Chart.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -26310,7 +26310,7 @@ var progressMethodMap = {
 };
 var _default = Chart;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/container/Group":"node_modules/zrender/lib/container/Group.js","../util/component":"node_modules/echarts/lib/util/component.js","../util/clazz":"node_modules/echarts/lib/util/clazz.js","../util/model":"node_modules/echarts/lib/util/model.js","../util/graphic":"node_modules/echarts/lib/util/graphic.js","../stream/task":"node_modules/echarts/lib/stream/task.js","../chart/helper/createRenderPlanner":"node_modules/echarts/lib/chart/helper/createRenderPlanner.js"}],"node_modules/echarts/lib/util/throttle.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/container/Group":"../node_modules/zrender/lib/container/Group.js","../util/component":"../node_modules/echarts/lib/util/component.js","../util/clazz":"../node_modules/echarts/lib/util/clazz.js","../util/model":"../node_modules/echarts/lib/util/model.js","../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../stream/task":"../node_modules/echarts/lib/stream/task.js","../chart/helper/createRenderPlanner":"../node_modules/echarts/lib/chart/helper/createRenderPlanner.js"}],"../node_modules/echarts/lib/util/throttle.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -26504,7 +26504,7 @@ function clear(obj, fnAttr) {
 exports.throttle = throttle;
 exports.createOrUpdate = createOrUpdate;
 exports.clear = clear;
-},{}],"node_modules/echarts/lib/visual/seriesColor.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/visual/seriesColor.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -26598,7 +26598,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"zrender/lib/graphic/Gradient":"node_modules/zrender/lib/graphic/Gradient.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/lang.js":[function(require,module,exports) {
+},{"zrender/lib/graphic/Gradient":"../node_modules/zrender/lib/graphic/Gradient.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/lang.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -26745,7 +26745,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{}],"node_modules/echarts/lib/visual/aria.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/visual/aria.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -26919,7 +26919,7 @@ function _default(dom, ecModel) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../lang":"node_modules/echarts/lib/lang.js","../data/helper/dataProvider":"node_modules/echarts/lib/data/helper/dataProvider.js"}],"node_modules/echarts/lib/loading/default.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../lang":"../node_modules/echarts/lib/lang.js","../data/helper/dataProvider":"../node_modules/echarts/lib/data/helper/dataProvider.js"}],"../node_modules/echarts/lib/loading/default.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -27067,7 +27067,7 @@ function _default(api, opts) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/graphic":"node_modules/echarts/lib/util/graphic.js","zrender/lib/contain/text":"node_modules/zrender/lib/contain/text.js"}],"node_modules/echarts/lib/stream/Scheduler.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/graphic":"../node_modules/echarts/lib/util/graphic.js","zrender/lib/contain/text":"../node_modules/zrender/lib/contain/text.js"}],"../node_modules/echarts/lib/stream/Scheduler.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -27644,7 +27644,7 @@ function mockMethods(target, Clz) {
 
 var _default = Scheduler;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./task":"node_modules/echarts/lib/stream/task.js","../util/component":"node_modules/echarts/lib/util/component.js","../model/Global":"node_modules/echarts/lib/model/Global.js","../ExtensionAPI":"node_modules/echarts/lib/ExtensionAPI.js","../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/theme/light.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./task":"../node_modules/echarts/lib/stream/task.js","../util/component":"../node_modules/echarts/lib/util/component.js","../model/Global":"../node_modules/echarts/lib/model/Global.js","../ExtensionAPI":"../node_modules/echarts/lib/ExtensionAPI.js","../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/theme/light.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -27689,7 +27689,7 @@ var _default = {
   colorLayer: [['#37A2DA', '#ffd85c', '#fd7b5f'], ['#37A2DA', '#67E0E3', '#FFDB5C', '#ff9f7f', '#E062AE', '#9d96f5'], ['#37A2DA', '#32C5E9', '#9FE6B8', '#FFDB5C', '#ff9f7f', '#fb7293', '#e7bcf3', '#8378EA', '#96BFFF'], colorAll]
 };
 module.exports = _default;
-},{}],"node_modules/echarts/lib/theme/dark.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/theme/dark.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -27862,7 +27862,7 @@ var theme = {
 theme.categoryAxis.splitLine.show = false;
 var _default = theme;
 module.exports = _default;
-},{}],"node_modules/echarts/lib/component/dataset.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/component/dataset.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -27943,7 +27943,7 @@ ComponentModel.extend({
 ComponentView.extend({
   type: 'dataset'
 });
-},{"../model/Component":"node_modules/echarts/lib/model/Component.js","../view/Component":"node_modules/echarts/lib/view/Component.js","../data/helper/sourceHelper":"node_modules/echarts/lib/data/helper/sourceHelper.js","../data/helper/sourceType":"node_modules/echarts/lib/data/helper/sourceType.js"}],"node_modules/zrender/lib/graphic/shape/Ellipse.js":[function(require,module,exports) {
+},{"../model/Component":"../node_modules/echarts/lib/model/Component.js","../view/Component":"../node_modules/echarts/lib/view/Component.js","../data/helper/sourceHelper":"../node_modules/echarts/lib/data/helper/sourceHelper.js","../data/helper/sourceType":"../node_modules/echarts/lib/data/helper/sourceType.js"}],"../node_modules/zrender/lib/graphic/shape/Ellipse.js":[function(require,module,exports) {
 var Path = require("../Path");
 
 /**
@@ -27979,7 +27979,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"../Path":"node_modules/zrender/lib/graphic/Path.js"}],"node_modules/zrender/lib/tool/parseSVG.js":[function(require,module,exports) {
+},{"../Path":"../node_modules/zrender/lib/graphic/Path.js"}],"../node_modules/zrender/lib/tool/parseSVG.js":[function(require,module,exports) {
 var Group = require("../container/Group");
 
 var ZImage = require("../graphic/Image");
@@ -28672,7 +28672,7 @@ function parseSVG(xml, opt) {
 exports.parseXML = parseXML;
 exports.makeViewBoxTransform = makeViewBoxTransform;
 exports.parseSVG = parseSVG;
-},{"../container/Group":"node_modules/zrender/lib/container/Group.js","../graphic/Image":"node_modules/zrender/lib/graphic/Image.js","../graphic/Text":"node_modules/zrender/lib/graphic/Text.js","../graphic/shape/Circle":"node_modules/zrender/lib/graphic/shape/Circle.js","../graphic/shape/Rect":"node_modules/zrender/lib/graphic/shape/Rect.js","../graphic/shape/Ellipse":"node_modules/zrender/lib/graphic/shape/Ellipse.js","../graphic/shape/Line":"node_modules/zrender/lib/graphic/shape/Line.js","../graphic/Path":"node_modules/zrender/lib/graphic/Path.js","../graphic/shape/Polygon":"node_modules/zrender/lib/graphic/shape/Polygon.js","../graphic/shape/Polyline":"node_modules/zrender/lib/graphic/shape/Polyline.js","../graphic/LinearGradient":"node_modules/zrender/lib/graphic/LinearGradient.js","../graphic/Style":"node_modules/zrender/lib/graphic/Style.js","../core/matrix":"node_modules/zrender/lib/core/matrix.js","./path":"node_modules/zrender/lib/tool/path.js","../core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/coord/geo/mapDataStorage.js":[function(require,module,exports) {
+},{"../container/Group":"../node_modules/zrender/lib/container/Group.js","../graphic/Image":"../node_modules/zrender/lib/graphic/Image.js","../graphic/Text":"../node_modules/zrender/lib/graphic/Text.js","../graphic/shape/Circle":"../node_modules/zrender/lib/graphic/shape/Circle.js","../graphic/shape/Rect":"../node_modules/zrender/lib/graphic/shape/Rect.js","../graphic/shape/Ellipse":"../node_modules/zrender/lib/graphic/shape/Ellipse.js","../graphic/shape/Line":"../node_modules/zrender/lib/graphic/shape/Line.js","../graphic/Path":"../node_modules/zrender/lib/graphic/Path.js","../graphic/shape/Polygon":"../node_modules/zrender/lib/graphic/shape/Polygon.js","../graphic/shape/Polyline":"../node_modules/zrender/lib/graphic/shape/Polyline.js","../graphic/LinearGradient":"../node_modules/zrender/lib/graphic/LinearGradient.js","../graphic/Style":"../node_modules/zrender/lib/graphic/Style.js","../core/matrix":"../node_modules/zrender/lib/core/matrix.js","./path":"../node_modules/zrender/lib/tool/path.js","../core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/coord/geo/mapDataStorage.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -28786,7 +28786,7 @@ var parsers = {
   }
 };
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/tool/parseSVG":"node_modules/zrender/lib/tool/parseSVG.js"}],"node_modules/echarts/lib/data/DataDiffer.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/tool/parseSVG":"../node_modules/zrender/lib/tool/parseSVG.js"}],"../node_modules/echarts/lib/data/DataDiffer.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -28948,7 +28948,7 @@ function initIndexMap(arr, map, keyArr, keyGetterName, dataDiffer) {
 
 var _default = DataDiffer;
 module.exports = _default;
-},{}],"node_modules/echarts/lib/data/helper/dimensionHelper.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/data/helper/dimensionHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -29114,7 +29114,7 @@ function mayLabelDimType(dimType) {
 exports.OTHER_DIMENSIONS = OTHER_DIMENSIONS;
 exports.summarizeDimensions = summarizeDimensions;
 exports.getDimensionTypeByAxis = getDimensionTypeByAxis;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../config":"node_modules/echarts/lib/config.js"}],"node_modules/echarts/lib/data/DataDimensionInfo.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../config":"../node_modules/echarts/lib/config.js"}],"../node_modules/echarts/lib/data/DataDimensionInfo.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -29272,7 +29272,7 @@ function DataDimensionInfo(opt) {
 ;
 var _default = DataDimensionInfo;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/data/List.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/data/List.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -31358,7 +31358,7 @@ listProto.TRANSFERABLE_METHODS = ['cloneShallow', 'downSample', 'map']; // Metho
 listProto.CHANGABLE_METHODS = ['filterSelf', 'selectRange'];
 var _default = List;
 module.exports = _default;
-},{"../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../model/Model":"node_modules/echarts/lib/model/Model.js","./DataDiffer":"node_modules/echarts/lib/data/DataDiffer.js","./Source":"node_modules/echarts/lib/data/Source.js","./helper/dataProvider":"node_modules/echarts/lib/data/helper/dataProvider.js","./helper/dimensionHelper":"node_modules/echarts/lib/data/helper/dimensionHelper.js","./DataDimensionInfo":"node_modules/echarts/lib/data/DataDimensionInfo.js"}],"node_modules/echarts/lib/data/helper/completeDimensions.js":[function(require,module,exports) {
+},{"../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../model/Model":"../node_modules/echarts/lib/model/Model.js","./DataDiffer":"../node_modules/echarts/lib/data/DataDiffer.js","./Source":"../node_modules/echarts/lib/data/Source.js","./helper/dataProvider":"../node_modules/echarts/lib/data/helper/dataProvider.js","./helper/dimensionHelper":"../node_modules/echarts/lib/data/helper/dimensionHelper.js","./DataDimensionInfo":"../node_modules/echarts/lib/data/DataDimensionInfo.js"}],"../node_modules/echarts/lib/data/helper/completeDimensions.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -31683,7 +31683,7 @@ function genName(name, map, fromZero) {
 
 var _default = completeDimensions;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/model":"node_modules/echarts/lib/util/model.js","./sourceHelper":"node_modules/echarts/lib/data/helper/sourceHelper.js","../Source":"node_modules/echarts/lib/data/Source.js","./dimensionHelper":"node_modules/echarts/lib/data/helper/dimensionHelper.js","../DataDimensionInfo":"node_modules/echarts/lib/data/DataDimensionInfo.js"}],"node_modules/echarts/lib/data/helper/createDimensions.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/model":"../node_modules/echarts/lib/util/model.js","./sourceHelper":"../node_modules/echarts/lib/data/helper/sourceHelper.js","../Source":"../node_modules/echarts/lib/data/Source.js","./dimensionHelper":"../node_modules/echarts/lib/data/helper/dimensionHelper.js","../DataDimensionInfo":"../node_modules/echarts/lib/data/DataDimensionInfo.js"}],"../node_modules/echarts/lib/data/helper/createDimensions.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -31755,7 +31755,7 @@ function _default(source, opt) {
 }
 
 module.exports = _default;
-},{"./completeDimensions":"node_modules/echarts/lib/data/helper/completeDimensions.js"}],"node_modules/echarts/lib/model/referHelper.js":[function(require,module,exports) {
+},{"./completeDimensions":"../node_modules/echarts/lib/data/helper/completeDimensions.js"}],"../node_modules/echarts/lib/model/referHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -31946,7 +31946,7 @@ function isCategory(axisModel) {
 }
 
 exports.getCoordSysInfoBySeries = getCoordSysInfoBySeries;
-},{"../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/data/helper/dataStackHelper.js":[function(require,module,exports) {
+},{"../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/data/helper/dataStackHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -32129,7 +32129,7 @@ function getStackedDimension(data, targetDim) {
 exports.enableDataStack = enableDataStack;
 exports.isDimensionStacked = isDimensionStacked;
 exports.getStackedDimension = getStackedDimension;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/helper/createListFromArray.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/helper/createListFromArray.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -32302,7 +32302,7 @@ function firstDataNotNull(data) {
 
 var _default = createListFromArray;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../data/List":"node_modules/echarts/lib/data/List.js","../../data/helper/createDimensions":"node_modules/echarts/lib/data/helper/createDimensions.js","../../data/helper/sourceType":"node_modules/echarts/lib/data/helper/sourceType.js","../../data/helper/dimensionHelper":"node_modules/echarts/lib/data/helper/dimensionHelper.js","../../util/model":"node_modules/echarts/lib/util/model.js","../../CoordinateSystem":"node_modules/echarts/lib/CoordinateSystem.js","../../model/referHelper":"node_modules/echarts/lib/model/referHelper.js","../../data/Source":"node_modules/echarts/lib/data/Source.js","../../data/helper/dataStackHelper":"node_modules/echarts/lib/data/helper/dataStackHelper.js","../../data/helper/sourceHelper":"node_modules/echarts/lib/data/helper/sourceHelper.js"}],"node_modules/echarts/lib/scale/Scale.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../data/List":"../node_modules/echarts/lib/data/List.js","../../data/helper/createDimensions":"../node_modules/echarts/lib/data/helper/createDimensions.js","../../data/helper/sourceType":"../node_modules/echarts/lib/data/helper/sourceType.js","../../data/helper/dimensionHelper":"../node_modules/echarts/lib/data/helper/dimensionHelper.js","../../util/model":"../node_modules/echarts/lib/util/model.js","../../CoordinateSystem":"../node_modules/echarts/lib/CoordinateSystem.js","../../model/referHelper":"../node_modules/echarts/lib/model/referHelper.js","../../data/Source":"../node_modules/echarts/lib/data/Source.js","../../data/helper/dataStackHelper":"../node_modules/echarts/lib/data/helper/dataStackHelper.js","../../data/helper/sourceHelper":"../node_modules/echarts/lib/data/helper/sourceHelper.js"}],"../node_modules/echarts/lib/scale/Scale.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -32498,7 +32498,7 @@ clazzUtil.enableClassManagement(Scale, {
 });
 var _default = Scale;
 module.exports = _default;
-},{"../util/clazz":"node_modules/echarts/lib/util/clazz.js"}],"node_modules/echarts/lib/data/OrdinalMeta.js":[function(require,module,exports) {
+},{"../util/clazz":"../node_modules/echarts/lib/util/clazz.js"}],"../node_modules/echarts/lib/data/OrdinalMeta.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -32666,7 +32666,7 @@ function getName(obj) {
 
 var _default = OrdinalMeta;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/scale/Ordinal.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/scale/Ordinal.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -32816,7 +32816,7 @@ OrdinalScale.create = function () {
 
 var _default = OrdinalScale;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./Scale":"node_modules/echarts/lib/scale/Scale.js","../data/OrdinalMeta":"node_modules/echarts/lib/data/OrdinalMeta.js"}],"node_modules/echarts/lib/scale/helper.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./Scale":"../node_modules/echarts/lib/scale/Scale.js","../data/OrdinalMeta":"../node_modules/echarts/lib/data/OrdinalMeta.js"}],"../node_modules/echarts/lib/scale/helper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -32921,7 +32921,7 @@ function fixExtent(niceTickExtent, extent) {
 exports.intervalScaleNiceTicks = intervalScaleNiceTicks;
 exports.getIntervalPrecision = getIntervalPrecision;
 exports.fixExtent = fixExtent;
-},{"../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/scale/Interval.js":[function(require,module,exports) {
+},{"../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/scale/Interval.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -33230,7 +33230,7 @@ IntervalScale.create = function () {
 
 var _default = IntervalScale;
 module.exports = _default;
-},{"../util/number":"node_modules/echarts/lib/util/number.js","../util/format":"node_modules/echarts/lib/util/format.js","./Scale":"node_modules/echarts/lib/scale/Scale.js","./helper":"node_modules/echarts/lib/scale/helper.js"}],"node_modules/echarts/lib/layout/barGrid.js":[function(require,module,exports) {
+},{"../util/number":"../node_modules/echarts/lib/util/number.js","../util/format":"../node_modules/echarts/lib/util/format.js","./Scale":"../node_modules/echarts/lib/scale/Scale.js","./helper":"../node_modules/echarts/lib/scale/helper.js"}],"../node_modules/echarts/lib/layout/barGrid.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -33812,7 +33812,7 @@ exports.makeColumnLayout = makeColumnLayout;
 exports.retrieveColumnLayout = retrieveColumnLayout;
 exports.layout = layout;
 exports.largeLayout = largeLayout;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/number":"node_modules/echarts/lib/util/number.js","../data/helper/dataStackHelper":"node_modules/echarts/lib/data/helper/dataStackHelper.js","../chart/helper/createRenderPlanner":"node_modules/echarts/lib/chart/helper/createRenderPlanner.js"}],"node_modules/echarts/lib/scale/Time.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/number":"../node_modules/echarts/lib/util/number.js","../data/helper/dataStackHelper":"../node_modules/echarts/lib/data/helper/dataStackHelper.js","../chart/helper/createRenderPlanner":"../node_modules/echarts/lib/chart/helper/createRenderPlanner.js"}],"../node_modules/echarts/lib/scale/Time.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -34056,7 +34056,7 @@ TimeScale.create = function (model) {
 
 var _default = TimeScale;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/number":"node_modules/echarts/lib/util/number.js","../util/format":"node_modules/echarts/lib/util/format.js","./helper":"node_modules/echarts/lib/scale/helper.js","./Interval":"node_modules/echarts/lib/scale/Interval.js"}],"node_modules/echarts/lib/scale/Log.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/number":"../node_modules/echarts/lib/util/number.js","../util/format":"../node_modules/echarts/lib/util/format.js","./helper":"../node_modules/echarts/lib/scale/helper.js","./Interval":"../node_modules/echarts/lib/scale/Interval.js"}],"../node_modules/echarts/lib/scale/Log.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -34269,7 +34269,7 @@ function fixRoundingError(val, originalVal) {
 
 var _default = LogScale;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./Scale":"node_modules/echarts/lib/scale/Scale.js","../util/number":"node_modules/echarts/lib/util/number.js","./Interval":"node_modules/echarts/lib/scale/Interval.js"}],"node_modules/echarts/lib/coord/axisHelper.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./Scale":"../node_modules/echarts/lib/scale/Scale.js","../util/number":"../node_modules/echarts/lib/util/number.js","./Interval":"../node_modules/echarts/lib/scale/Interval.js"}],"../node_modules/echarts/lib/coord/axisHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -34705,7 +34705,7 @@ exports.getAxisRawValue = getAxisRawValue;
 exports.estimateLabelUnionRect = estimateLabelUnionRect;
 exports.getOptionCategoryInterval = getOptionCategoryInterval;
 exports.shouldShowAllLabels = shouldShowAllLabels;
-},{"../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../scale/Ordinal":"node_modules/echarts/lib/scale/Ordinal.js","../scale/Interval":"node_modules/echarts/lib/scale/Interval.js","../scale/Scale":"node_modules/echarts/lib/scale/Scale.js","../util/number":"node_modules/echarts/lib/util/number.js","../layout/barGrid":"node_modules/echarts/lib/layout/barGrid.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../scale/Time":"node_modules/echarts/lib/scale/Time.js","../scale/Log":"node_modules/echarts/lib/scale/Log.js"}],"node_modules/echarts/lib/coord/axisModelCommonMixin.js":[function(require,module,exports) {
+},{"../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../scale/Ordinal":"../node_modules/echarts/lib/scale/Ordinal.js","../scale/Interval":"../node_modules/echarts/lib/scale/Interval.js","../scale/Scale":"../node_modules/echarts/lib/scale/Scale.js","../util/number":"../node_modules/echarts/lib/util/number.js","../layout/barGrid":"../node_modules/echarts/lib/layout/barGrid.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../scale/Time":"../node_modules/echarts/lib/scale/Time.js","../scale/Log":"../node_modules/echarts/lib/scale/Log.js"}],"../node_modules/echarts/lib/coord/axisModelCommonMixin.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -34810,7 +34810,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/util/symbol.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/util/symbol.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -35155,7 +35155,7 @@ function createSymbol(symbolType, x, y, w, h, color, keepAspect) {
 }
 
 exports.createSymbol = createSymbol;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./graphic":"node_modules/echarts/lib/util/graphic.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/contain/text":"node_modules/zrender/lib/contain/text.js"}],"node_modules/echarts/lib/helper.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./graphic":"../node_modules/echarts/lib/util/graphic.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/contain/text":"../node_modules/zrender/lib/contain/text.js"}],"../node_modules/echarts/lib/helper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -35298,7 +35298,7 @@ exports.createList = createList;
 exports.dataStack = dataStack;
 exports.createScale = createScale;
 exports.mixinAxisModelCommonMethods = mixinAxisModelCommonMethods;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./chart/helper/createListFromArray":"node_modules/echarts/lib/chart/helper/createListFromArray.js","./coord/axisHelper":"node_modules/echarts/lib/coord/axisHelper.js","./coord/axisModelCommonMixin":"node_modules/echarts/lib/coord/axisModelCommonMixin.js","./model/Model":"node_modules/echarts/lib/model/Model.js","./util/layout":"node_modules/echarts/lib/util/layout.js","./data/helper/dataStackHelper":"node_modules/echarts/lib/data/helper/dataStackHelper.js","./data/helper/completeDimensions":"node_modules/echarts/lib/data/helper/completeDimensions.js","./data/helper/createDimensions":"node_modules/echarts/lib/data/helper/createDimensions.js","./util/symbol":"node_modules/echarts/lib/util/symbol.js"}],"node_modules/zrender/lib/contain/polygon.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./chart/helper/createListFromArray":"../node_modules/echarts/lib/chart/helper/createListFromArray.js","./coord/axisHelper":"../node_modules/echarts/lib/coord/axisHelper.js","./coord/axisModelCommonMixin":"../node_modules/echarts/lib/coord/axisModelCommonMixin.js","./model/Model":"../node_modules/echarts/lib/model/Model.js","./util/layout":"../node_modules/echarts/lib/util/layout.js","./data/helper/dataStackHelper":"../node_modules/echarts/lib/data/helper/dataStackHelper.js","./data/helper/completeDimensions":"../node_modules/echarts/lib/data/helper/completeDimensions.js","./data/helper/createDimensions":"../node_modules/echarts/lib/data/helper/createDimensions.js","./util/symbol":"../node_modules/echarts/lib/util/symbol.js"}],"../node_modules/zrender/lib/contain/polygon.js":[function(require,module,exports) {
 var windingLine = require("./windingLine");
 
 var EPSILON = 1e-8;
@@ -35332,7 +35332,7 @@ function contain(points, x, y) {
 }
 
 exports.contain = contain;
-},{"./windingLine":"node_modules/zrender/lib/contain/windingLine.js"}],"node_modules/echarts/lib/coord/geo/Region.js":[function(require,module,exports) {
+},{"./windingLine":"../node_modules/zrender/lib/contain/windingLine.js"}],"../node_modules/echarts/lib/coord/geo/Region.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -35543,7 +35543,7 @@ Region.prototype = {
 };
 var _default = Region;
 module.exports = _default;
-},{"zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/core/bbox":"node_modules/zrender/lib/core/bbox.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js","zrender/lib/contain/polygon":"node_modules/zrender/lib/contain/polygon.js"}],"node_modules/echarts/lib/coord/geo/parseGeoJson.js":[function(require,module,exports) {
+},{"zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/core/bbox":"../node_modules/zrender/lib/core/bbox.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js","zrender/lib/contain/polygon":"../node_modules/zrender/lib/contain/polygon.js"}],"../node_modules/echarts/lib/coord/geo/parseGeoJson.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -35699,7 +35699,7 @@ function _default(geoJson, nameProperty) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./Region":"node_modules/echarts/lib/coord/geo/Region.js"}],"node_modules/echarts/lib/coord/axisTickLabelBuilder.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./Region":"../node_modules/echarts/lib/coord/geo/Region.js"}],"../node_modules/echarts/lib/coord/axisTickLabelBuilder.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -36072,7 +36072,7 @@ function makeLabelsByCustomizedCategoryInterval(axis, categoryInterval, onlyTick
 exports.createAxisLabels = createAxisLabels;
 exports.createAxisTicks = createAxisTicks;
 exports.calculateCategoryInterval = calculateCategoryInterval;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/contain/text":"node_modules/zrender/lib/contain/text.js","../util/model":"node_modules/echarts/lib/util/model.js","./axisHelper":"node_modules/echarts/lib/coord/axisHelper.js"}],"node_modules/echarts/lib/coord/Axis.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/contain/text":"../node_modules/zrender/lib/contain/text.js","../util/model":"../node_modules/echarts/lib/util/model.js","./axisHelper":"../node_modules/echarts/lib/coord/axisHelper.js"}],"../node_modules/echarts/lib/coord/Axis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -36468,7 +36468,7 @@ function fixOnBandTicksCoords(axis, ticksCoords, alignWithLabel, clamp) {
 
 var _default = Axis;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/number":"node_modules/echarts/lib/util/number.js","./axisTickLabelBuilder":"node_modules/echarts/lib/coord/axisTickLabelBuilder.js"}],"node_modules/echarts/lib/export.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/number":"../node_modules/echarts/lib/util/number.js","./axisTickLabelBuilder":"../node_modules/echarts/lib/coord/axisTickLabelBuilder.js"}],"../node_modules/echarts/lib/export.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -36580,7 +36580,7 @@ zrUtil.each(['extendShape', 'extendPath', 'makePath', 'makeImage', 'mergePath', 
 exports.parseGeoJson = parseGeoJson;
 exports.util = ecUtil;
 exports.graphic = graphic;
-},{"zrender/lib/zrender":"node_modules/zrender/lib/zrender.js","zrender/lib/core/matrix":"node_modules/zrender/lib/core/matrix.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/tool/color":"node_modules/zrender/lib/tool/color.js","./util/graphic":"node_modules/echarts/lib/util/graphic.js","./util/number":"node_modules/echarts/lib/util/number.js","./util/format":"node_modules/echarts/lib/util/format.js","./util/throttle":"node_modules/echarts/lib/util/throttle.js","./helper":"node_modules/echarts/lib/helper.js","./coord/geo/parseGeoJson":"node_modules/echarts/lib/coord/geo/parseGeoJson.js","./data/List":"node_modules/echarts/lib/data/List.js","./model/Model":"node_modules/echarts/lib/model/Model.js","./coord/Axis":"node_modules/echarts/lib/coord/Axis.js","zrender/lib/core/env":"node_modules/zrender/lib/core/env.js"}],"node_modules/echarts/lib/echarts.js":[function(require,module,exports) {
+},{"zrender/lib/zrender":"../node_modules/zrender/lib/zrender.js","zrender/lib/core/matrix":"../node_modules/zrender/lib/core/matrix.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/tool/color":"../node_modules/zrender/lib/tool/color.js","./util/graphic":"../node_modules/echarts/lib/util/graphic.js","./util/number":"../node_modules/echarts/lib/util/number.js","./util/format":"../node_modules/echarts/lib/util/format.js","./util/throttle":"../node_modules/echarts/lib/util/throttle.js","./helper":"../node_modules/echarts/lib/helper.js","./coord/geo/parseGeoJson":"../node_modules/echarts/lib/coord/geo/parseGeoJson.js","./data/List":"../node_modules/echarts/lib/data/List.js","./model/Model":"../node_modules/echarts/lib/model/Model.js","./coord/Axis":"../node_modules/echarts/lib/coord/Axis.js","zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js"}],"../node_modules/echarts/lib/echarts.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -38927,7 +38927,7 @@ var ___ec_export = require("./export");
         }
     }
 })();
-},{"./config":"node_modules/echarts/lib/config.js","zrender/lib/zrender":"node_modules/zrender/lib/zrender.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/tool/color":"node_modules/zrender/lib/tool/color.js","zrender/lib/core/env":"node_modules/zrender/lib/core/env.js","zrender/lib/core/timsort":"node_modules/zrender/lib/core/timsort.js","zrender/lib/mixin/Eventful":"node_modules/zrender/lib/mixin/Eventful.js","./model/Global":"node_modules/echarts/lib/model/Global.js","./ExtensionAPI":"node_modules/echarts/lib/ExtensionAPI.js","./CoordinateSystem":"node_modules/echarts/lib/CoordinateSystem.js","./model/OptionManager":"node_modules/echarts/lib/model/OptionManager.js","./preprocessor/backwardCompat":"node_modules/echarts/lib/preprocessor/backwardCompat.js","./processor/dataStack":"node_modules/echarts/lib/processor/dataStack.js","./model/Component":"node_modules/echarts/lib/model/Component.js","./model/Series":"node_modules/echarts/lib/model/Series.js","./view/Component":"node_modules/echarts/lib/view/Component.js","./view/Chart":"node_modules/echarts/lib/view/Chart.js","./util/graphic":"node_modules/echarts/lib/util/graphic.js","./util/model":"node_modules/echarts/lib/util/model.js","./util/throttle":"node_modules/echarts/lib/util/throttle.js","./visual/seriesColor":"node_modules/echarts/lib/visual/seriesColor.js","./visual/aria":"node_modules/echarts/lib/visual/aria.js","./loading/default":"node_modules/echarts/lib/loading/default.js","./stream/Scheduler":"node_modules/echarts/lib/stream/Scheduler.js","./theme/light":"node_modules/echarts/lib/theme/light.js","./theme/dark":"node_modules/echarts/lib/theme/dark.js","./component/dataset":"node_modules/echarts/lib/component/dataset.js","./coord/geo/mapDataStorage":"node_modules/echarts/lib/coord/geo/mapDataStorage.js","./export":"node_modules/echarts/lib/export.js"}],"node_modules/echarts/lib/chart/line/LineSeries.js":[function(require,module,exports) {
+},{"./config":"../node_modules/echarts/lib/config.js","zrender/lib/zrender":"../node_modules/zrender/lib/zrender.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/tool/color":"../node_modules/zrender/lib/tool/color.js","zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js","zrender/lib/core/timsort":"../node_modules/zrender/lib/core/timsort.js","zrender/lib/mixin/Eventful":"../node_modules/zrender/lib/mixin/Eventful.js","./model/Global":"../node_modules/echarts/lib/model/Global.js","./ExtensionAPI":"../node_modules/echarts/lib/ExtensionAPI.js","./CoordinateSystem":"../node_modules/echarts/lib/CoordinateSystem.js","./model/OptionManager":"../node_modules/echarts/lib/model/OptionManager.js","./preprocessor/backwardCompat":"../node_modules/echarts/lib/preprocessor/backwardCompat.js","./processor/dataStack":"../node_modules/echarts/lib/processor/dataStack.js","./model/Component":"../node_modules/echarts/lib/model/Component.js","./model/Series":"../node_modules/echarts/lib/model/Series.js","./view/Component":"../node_modules/echarts/lib/view/Component.js","./view/Chart":"../node_modules/echarts/lib/view/Chart.js","./util/graphic":"../node_modules/echarts/lib/util/graphic.js","./util/model":"../node_modules/echarts/lib/util/model.js","./util/throttle":"../node_modules/echarts/lib/util/throttle.js","./visual/seriesColor":"../node_modules/echarts/lib/visual/seriesColor.js","./visual/aria":"../node_modules/echarts/lib/visual/aria.js","./loading/default":"../node_modules/echarts/lib/loading/default.js","./stream/Scheduler":"../node_modules/echarts/lib/stream/Scheduler.js","./theme/light":"../node_modules/echarts/lib/theme/light.js","./theme/dark":"../node_modules/echarts/lib/theme/dark.js","./component/dataset":"../node_modules/echarts/lib/component/dataset.js","./coord/geo/mapDataStorage":"../node_modules/echarts/lib/coord/geo/mapDataStorage.js","./export":"../node_modules/echarts/lib/export.js"}],"../node_modules/echarts/lib/chart/line/LineSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -39037,7 +39037,7 @@ var _default = SeriesModel.extend({
 });
 
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../helper/createListFromArray":"node_modules/echarts/lib/chart/helper/createListFromArray.js","../../model/Series":"node_modules/echarts/lib/model/Series.js"}],"node_modules/echarts/lib/chart/helper/labelHelper.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../helper/createListFromArray":"../node_modules/echarts/lib/chart/helper/createListFromArray.js","../../model/Series":"../node_modules/echarts/lib/model/Series.js"}],"../node_modules/echarts/lib/chart/helper/labelHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -39105,7 +39105,7 @@ function getDefaultLabel(data, dataIndex) {
 }
 
 exports.getDefaultLabel = getDefaultLabel;
-},{"../../data/helper/dataProvider":"node_modules/echarts/lib/data/helper/dataProvider.js"}],"node_modules/echarts/lib/chart/helper/Symbol.js":[function(require,module,exports) {
+},{"../../data/helper/dataProvider":"../node_modules/echarts/lib/data/helper/dataProvider.js"}],"../node_modules/echarts/lib/chart/helper/Symbol.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -39494,7 +39494,7 @@ symbolProto.fadeOut = function (cb, opt) {
 zrUtil.inherits(SymbolClz, graphic.Group);
 var _default = SymbolClz;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/symbol":"node_modules/echarts/lib/util/symbol.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/number":"node_modules/echarts/lib/util/number.js","./labelHelper":"node_modules/echarts/lib/chart/helper/labelHelper.js"}],"node_modules/echarts/lib/chart/helper/SymbolDraw.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/symbol":"../node_modules/echarts/lib/util/symbol.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/number":"../node_modules/echarts/lib/util/number.js","./labelHelper":"../node_modules/echarts/lib/chart/helper/labelHelper.js"}],"../node_modules/echarts/lib/chart/helper/SymbolDraw.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -39719,7 +39719,7 @@ function makeSeriesScope(data) {
 
 var _default = SymbolDraw;
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./Symbol":"node_modules/echarts/lib/chart/helper/Symbol.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/line/helper.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./Symbol":"../node_modules/echarts/lib/chart/helper/Symbol.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/line/helper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -39857,7 +39857,7 @@ function getStackedOnPoint(dataCoordInfo, coordSys, data, idx) {
 
 exports.prepareDataCoordInfo = prepareDataCoordInfo;
 exports.getStackedOnPoint = getStackedOnPoint;
-},{"../../data/helper/dataStackHelper":"node_modules/echarts/lib/data/helper/dataStackHelper.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/line/lineAnimationDiff.js":[function(require,module,exports) {
+},{"../../data/helper/dataStackHelper":"../node_modules/echarts/lib/data/helper/dataStackHelper.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/line/lineAnimationDiff.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -40049,7 +40049,7 @@ function _default(oldData, newData, oldStackedOnPoints, newStackedOnPoints, oldC
 }
 
 module.exports = _default;
-},{"./helper":"node_modules/echarts/lib/chart/line/helper.js"}],"node_modules/echarts/lib/chart/line/poly.js":[function(require,module,exports) {
+},{"./helper":"../node_modules/echarts/lib/chart/line/helper.js"}],"../node_modules/echarts/lib/chart/line/poly.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -40431,7 +40431,7 @@ var Polygon = Path.extend({
 });
 exports.Polyline = Polyline;
 exports.Polygon = Polygon;
-},{"zrender/lib/graphic/Path":"node_modules/zrender/lib/graphic/Path.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js","zrender/lib/graphic/helper/fixClipWithShadow":"node_modules/zrender/lib/graphic/helper/fixClipWithShadow.js"}],"node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js":[function(require,module,exports) {
+},{"zrender/lib/graphic/Path":"../node_modules/zrender/lib/graphic/Path.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js","zrender/lib/graphic/helper/fixClipWithShadow":"../node_modules/zrender/lib/graphic/helper/fixClipWithShadow.js"}],"../node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -40556,7 +40556,7 @@ function createClipPath(coordSys, hasAnimation, seriesModel) {
 exports.createGridClipPath = createGridClipPath;
 exports.createPolarClipPath = createPolarClipPath;
 exports.createClipPath = createClipPath;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/chart/line/LineView.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/chart/line/LineView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -41296,7 +41296,7 @@ var _default = ChartView.extend({
 });
 
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/bbox":"node_modules/zrender/lib/core/bbox.js","../helper/SymbolDraw":"node_modules/echarts/lib/chart/helper/SymbolDraw.js","../helper/Symbol":"node_modules/echarts/lib/chart/helper/Symbol.js","./lineAnimationDiff":"node_modules/echarts/lib/chart/line/lineAnimationDiff.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/model":"node_modules/echarts/lib/util/model.js","./poly":"node_modules/echarts/lib/chart/line/poly.js","../../view/Chart":"node_modules/echarts/lib/view/Chart.js","./helper":"node_modules/echarts/lib/chart/line/helper.js","../helper/createClipPathFromCoordSys":"node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js"}],"node_modules/echarts/lib/visual/symbol.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/bbox":"../node_modules/zrender/lib/core/bbox.js","../helper/SymbolDraw":"../node_modules/echarts/lib/chart/helper/SymbolDraw.js","../helper/Symbol":"../node_modules/echarts/lib/chart/helper/Symbol.js","./lineAnimationDiff":"../node_modules/echarts/lib/chart/line/lineAnimationDiff.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/model":"../node_modules/echarts/lib/util/model.js","./poly":"../node_modules/echarts/lib/chart/line/poly.js","../../view/Chart":"../node_modules/echarts/lib/view/Chart.js","./helper":"../node_modules/echarts/lib/chart/line/helper.js","../helper/createClipPathFromCoordSys":"../node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js"}],"../node_modules/echarts/lib/visual/symbol.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -41417,7 +41417,7 @@ function _default(seriesType, defaultSymbolType, legendSymbol) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/layout/points.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/layout/points.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -41536,7 +41536,7 @@ function _default(seriesType) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../chart/helper/createRenderPlanner":"node_modules/echarts/lib/chart/helper/createRenderPlanner.js","../data/helper/dataStackHelper":"node_modules/echarts/lib/data/helper/dataStackHelper.js"}],"node_modules/echarts/lib/processor/dataSample.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../chart/helper/createRenderPlanner":"../node_modules/echarts/lib/chart/helper/createRenderPlanner.js","../data/helper/dataStackHelper":"../node_modules/echarts/lib/data/helper/dataStackHelper.js"}],"../node_modules/echarts/lib/processor/dataSample.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -41668,7 +41668,7 @@ function _default(seriesType) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/coord/cartesian/Cartesian.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/coord/cartesian/Cartesian.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -41808,7 +41808,7 @@ Cartesian.prototype = {
 };
 var _default = Cartesian;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/coord/cartesian/Cartesian2D.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/coord/cartesian/Cartesian2D.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -41969,7 +41969,7 @@ Cartesian2D.prototype = {
 zrUtil.inherits(Cartesian2D, Cartesian);
 var _default = Cartesian2D;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","./Cartesian":"node_modules/echarts/lib/coord/cartesian/Cartesian.js"}],"node_modules/echarts/lib/coord/cartesian/Axis2D.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","./Cartesian":"../node_modules/echarts/lib/coord/cartesian/Cartesian.js"}],"../node_modules/echarts/lib/coord/cartesian/Axis2D.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -42117,7 +42117,7 @@ Axis2D.prototype = {
 zrUtil.inherits(Axis2D, Axis);
 var _default = Axis2D;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../Axis":"node_modules/echarts/lib/coord/Axis.js"}],"node_modules/echarts/lib/coord/axisDefault.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../Axis":"../node_modules/echarts/lib/coord/Axis.js"}],"../node_modules/echarts/lib/coord/axisDefault.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -42328,7 +42328,7 @@ axisDefault.logAxis = zrUtil.defaults({
 }, axisDefault.valueAxis);
 var _default = axisDefault;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/coord/axisModelCreator.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/coord/axisModelCreator.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -42447,7 +42447,7 @@ function _default(axisName, BaseAxisModelClass, axisTypeDefaulter, extraDefaultO
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./axisDefault":"node_modules/echarts/lib/coord/axisDefault.js","../model/Component":"node_modules/echarts/lib/model/Component.js","../util/layout":"node_modules/echarts/lib/util/layout.js","../data/OrdinalMeta":"node_modules/echarts/lib/data/OrdinalMeta.js"}],"node_modules/echarts/lib/coord/cartesian/AxisModel.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./axisDefault":"../node_modules/echarts/lib/coord/axisDefault.js","../model/Component":"../node_modules/echarts/lib/model/Component.js","../util/layout":"../node_modules/echarts/lib/util/layout.js","../data/OrdinalMeta":"../node_modules/echarts/lib/data/OrdinalMeta.js"}],"../node_modules/echarts/lib/coord/cartesian/AxisModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -42555,7 +42555,7 @@ axisModelCreator('x', AxisModel, getAxisType, extraOption);
 axisModelCreator('y', AxisModel, getAxisType, extraOption);
 var _default = AxisModel;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Component":"node_modules/echarts/lib/model/Component.js","../axisModelCreator":"node_modules/echarts/lib/coord/axisModelCreator.js","../axisModelCommonMixin":"node_modules/echarts/lib/coord/axisModelCommonMixin.js"}],"node_modules/echarts/lib/coord/cartesian/GridModel.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Component":"../node_modules/echarts/lib/model/Component.js","../axisModelCreator":"../node_modules/echarts/lib/coord/axisModelCreator.js","../axisModelCommonMixin":"../node_modules/echarts/lib/coord/axisModelCommonMixin.js"}],"../node_modules/echarts/lib/coord/cartesian/GridModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -42628,7 +42628,7 @@ var _default = ComponentModel.extend({
 });
 
 module.exports = _default;
-},{"./AxisModel":"node_modules/echarts/lib/coord/cartesian/AxisModel.js","../../model/Component":"node_modules/echarts/lib/model/Component.js"}],"node_modules/echarts/lib/coord/cartesian/Grid.js":[function(require,module,exports) {
+},{"./AxisModel":"../node_modules/echarts/lib/coord/cartesian/AxisModel.js","../../model/Component":"../node_modules/echarts/lib/model/Component.js"}],"../node_modules/echarts/lib/coord/cartesian/Grid.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -43239,7 +43239,7 @@ Grid.dimensions = Grid.prototype.dimensions = Cartesian2D.prototype.dimensions;
 CoordinateSystem.register('cartesian2d', Grid);
 var _default = Grid;
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","../../coord/axisHelper":"node_modules/echarts/lib/coord/axisHelper.js","./Cartesian2D":"node_modules/echarts/lib/coord/cartesian/Cartesian2D.js","./Axis2D":"node_modules/echarts/lib/coord/cartesian/Axis2D.js","../../CoordinateSystem":"node_modules/echarts/lib/CoordinateSystem.js","../../data/helper/dataStackHelper":"node_modules/echarts/lib/data/helper/dataStackHelper.js","./GridModel":"node_modules/echarts/lib/coord/cartesian/GridModel.js"}],"node_modules/echarts/lib/component/axis/AxisBuilder.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","../../coord/axisHelper":"../node_modules/echarts/lib/coord/axisHelper.js","./Cartesian2D":"../node_modules/echarts/lib/coord/cartesian/Cartesian2D.js","./Axis2D":"../node_modules/echarts/lib/coord/cartesian/Axis2D.js","../../CoordinateSystem":"../node_modules/echarts/lib/CoordinateSystem.js","../../data/helper/dataStackHelper":"../node_modules/echarts/lib/data/helper/dataStackHelper.js","./GridModel":"../node_modules/echarts/lib/coord/cartesian/GridModel.js"}],"../node_modules/echarts/lib/component/axis/AxisBuilder.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -43923,7 +43923,7 @@ function buildAxisLabel(axisBuilder, axisModel, opt) {
 
 var _default = AxisBuilder;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../model/Model":"node_modules/echarts/lib/model/Model.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../util/symbol":"node_modules/echarts/lib/util/symbol.js","zrender/lib/core/matrix":"node_modules/zrender/lib/core/matrix.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js","../../coord/axisHelper":"node_modules/echarts/lib/coord/axisHelper.js"}],"node_modules/echarts/lib/component/axisPointer/modelHelper.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../util/symbol":"../node_modules/echarts/lib/util/symbol.js","zrender/lib/core/matrix":"../node_modules/zrender/lib/core/matrix.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js","../../coord/axisHelper":"../node_modules/echarts/lib/coord/axisHelper.js"}],"../node_modules/echarts/lib/component/axisPointer/modelHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -44253,7 +44253,7 @@ exports.fixValue = fixValue;
 exports.getAxisInfo = getAxisInfo;
 exports.getAxisPointerModel = getAxisPointerModel;
 exports.makeKey = makeKey;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Model":"node_modules/echarts/lib/model/Model.js"}],"node_modules/echarts/lib/component/axis/AxisView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js"}],"../node_modules/echarts/lib/component/axis/AxisView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -44391,7 +44391,7 @@ AxisView.getAxisPointerClass = function (type) {
 
 var _default = AxisView;
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../../echarts":"node_modules/echarts/lib/echarts.js","../axisPointer/modelHelper":"node_modules/echarts/lib/component/axisPointer/modelHelper.js"}],"node_modules/echarts/lib/coord/cartesian/cartesianAxisHelper.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../echarts":"../node_modules/echarts/lib/echarts.js","../axisPointer/modelHelper":"../node_modules/echarts/lib/component/axisPointer/modelHelper.js"}],"../node_modules/echarts/lib/coord/cartesian/cartesianAxisHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -44500,7 +44500,7 @@ function layout(gridModel, axisModel, opt) {
 }
 
 exports.layout = layout;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/component/axis/axisSplitHelper.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/component/axis/axisSplitHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -44633,7 +44633,7 @@ function rectCoordAxisHandleRemove(axisView) {
 
 exports.rectCoordAxisBuildSplitArea = rectCoordAxisBuildSplitArea;
 exports.rectCoordAxisHandleRemove = rectCoordAxisHandleRemove;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js"}],"node_modules/echarts/lib/component/axis/CartesianAxisView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js"}],"../node_modules/echarts/lib/component/axis/CartesianAxisView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -44854,7 +44854,7 @@ CartesianAxisView.extend({
 CartesianAxisView.extend({
   type: 'yAxis'
 });
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./AxisBuilder":"node_modules/echarts/lib/component/axis/AxisBuilder.js","./AxisView":"node_modules/echarts/lib/component/axis/AxisView.js","../../coord/cartesian/cartesianAxisHelper":"node_modules/echarts/lib/coord/cartesian/cartesianAxisHelper.js","./axisSplitHelper":"node_modules/echarts/lib/component/axis/axisSplitHelper.js"}],"node_modules/echarts/lib/component/axis.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./AxisBuilder":"../node_modules/echarts/lib/component/axis/AxisBuilder.js","./AxisView":"../node_modules/echarts/lib/component/axis/AxisView.js","../../coord/cartesian/cartesianAxisHelper":"../node_modules/echarts/lib/coord/cartesian/cartesianAxisHelper.js","./axisSplitHelper":"../node_modules/echarts/lib/component/axis/axisSplitHelper.js"}],"../node_modules/echarts/lib/component/axis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -44878,7 +44878,7 @@ CartesianAxisView.extend({
 require("../coord/cartesian/AxisModel");
 
 require("./axis/CartesianAxisView");
-},{"../coord/cartesian/AxisModel":"node_modules/echarts/lib/coord/cartesian/AxisModel.js","./axis/CartesianAxisView":"node_modules/echarts/lib/component/axis/CartesianAxisView.js"}],"node_modules/echarts/lib/component/gridSimple.js":[function(require,module,exports) {
+},{"../coord/cartesian/AxisModel":"../node_modules/echarts/lib/coord/cartesian/AxisModel.js","./axis/CartesianAxisView":"../node_modules/echarts/lib/component/axis/CartesianAxisView.js"}],"../node_modules/echarts/lib/component/gridSimple.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -44951,7 +44951,7 @@ echarts.registerPreprocessor(function (option) {
     option.grid = {};
   }
 });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/graphic":"node_modules/echarts/lib/util/graphic.js","../coord/cartesian/Grid":"node_modules/echarts/lib/coord/cartesian/Grid.js","./axis":"node_modules/echarts/lib/component/axis.js"}],"node_modules/echarts/lib/chart/line.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../coord/cartesian/Grid":"../node_modules/echarts/lib/coord/cartesian/Grid.js","./axis":"../node_modules/echarts/lib/component/axis.js"}],"../node_modules/echarts/lib/chart/line.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -45009,7 +45009,7 @@ echarts.registerVisual(visualSymbol('line', 'circle', 'line'));
 echarts.registerLayout(layoutPoints('line')); // Down sample after filter
 
 echarts.registerProcessor(echarts.PRIORITY.PROCESSOR.STATISTIC, dataSample('line'));
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./line/LineSeries":"node_modules/echarts/lib/chart/line/LineSeries.js","./line/LineView":"node_modules/echarts/lib/chart/line/LineView.js","../visual/symbol":"node_modules/echarts/lib/visual/symbol.js","../layout/points":"node_modules/echarts/lib/layout/points.js","../processor/dataSample":"node_modules/echarts/lib/processor/dataSample.js","../component/gridSimple":"node_modules/echarts/lib/component/gridSimple.js"}],"node_modules/echarts/lib/chart/bar/BaseBarSeries.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./line/LineSeries":"../node_modules/echarts/lib/chart/line/LineSeries.js","./line/LineView":"../node_modules/echarts/lib/chart/line/LineView.js","../visual/symbol":"../node_modules/echarts/lib/visual/symbol.js","../layout/points":"../node_modules/echarts/lib/layout/points.js","../processor/dataSample":"../node_modules/echarts/lib/processor/dataSample.js","../component/gridSimple":"../node_modules/echarts/lib/component/gridSimple.js"}],"../node_modules/echarts/lib/chart/bar/BaseBarSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -45113,7 +45113,7 @@ var _default = SeriesModel.extend({
 });
 
 module.exports = _default;
-},{"../../model/Series":"node_modules/echarts/lib/model/Series.js","../helper/createListFromArray":"node_modules/echarts/lib/chart/helper/createListFromArray.js"}],"node_modules/echarts/lib/chart/bar/BarSeries.js":[function(require,module,exports) {
+},{"../../model/Series":"../node_modules/echarts/lib/model/Series.js","../helper/createListFromArray":"../node_modules/echarts/lib/chart/helper/createListFromArray.js"}],"../node_modules/echarts/lib/chart/bar/BarSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -45205,7 +45205,7 @@ var _default = BaseBarSeries.extend({
 });
 
 module.exports = _default;
-},{"./BaseBarSeries":"node_modules/echarts/lib/chart/bar/BaseBarSeries.js"}],"node_modules/echarts/lib/chart/bar/helper.js":[function(require,module,exports) {
+},{"./BaseBarSeries":"../node_modules/echarts/lib/chart/bar/BaseBarSeries.js"}],"../node_modules/echarts/lib/chart/bar/helper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -45271,7 +45271,7 @@ function fixPosition(style, labelPositionOutside) {
 }
 
 exports.setLabel = setLabel;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../helper/labelHelper":"node_modules/echarts/lib/chart/helper/labelHelper.js"}],"node_modules/echarts/lib/chart/bar/barItemStyle.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../helper/labelHelper":"../node_modules/echarts/lib/chart/helper/labelHelper.js"}],"../node_modules/echarts/lib/chart/bar/barItemStyle.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -45327,7 +45327,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"../../model/mixin/makeStyleMapper":"node_modules/echarts/lib/model/mixin/makeStyleMapper.js"}],"node_modules/echarts/lib/util/shape/sausage.js":[function(require,module,exports) {
+},{"../../model/mixin/makeStyleMapper":"../node_modules/echarts/lib/model/mixin/makeStyleMapper.js"}],"../node_modules/echarts/lib/util/shape/sausage.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -45421,7 +45421,7 @@ var _default = extendShape({
 });
 
 module.exports = _default;
-},{"../graphic":"node_modules/echarts/lib/util/graphic.js"}],"node_modules/echarts/lib/chart/bar/BarView.js":[function(require,module,exports) {
+},{"../graphic":"../node_modules/echarts/lib/util/graphic.js"}],"../node_modules/echarts/lib/chart/bar/BarView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -46087,7 +46087,7 @@ function createBackgroundEl(coord, isHorizontalOrRadial, layout) {
 }
 
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./helper":"node_modules/echarts/lib/chart/bar/helper.js","../../model/Model":"node_modules/echarts/lib/model/Model.js","./barItemStyle":"node_modules/echarts/lib/chart/bar/barItemStyle.js","zrender/lib/graphic/Path":"node_modules/zrender/lib/graphic/Path.js","zrender/lib/container/Group":"node_modules/zrender/lib/container/Group.js","../../util/throttle":"node_modules/echarts/lib/util/throttle.js","../helper/createClipPathFromCoordSys":"node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js","../../util/shape/sausage":"node_modules/echarts/lib/util/shape/sausage.js"}],"node_modules/echarts/lib/chart/bar.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./helper":"../node_modules/echarts/lib/chart/bar/helper.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js","./barItemStyle":"../node_modules/echarts/lib/chart/bar/barItemStyle.js","zrender/lib/graphic/Path":"../node_modules/zrender/lib/graphic/Path.js","zrender/lib/container/Group":"../node_modules/zrender/lib/container/Group.js","../../util/throttle":"../node_modules/echarts/lib/util/throttle.js","../helper/createClipPathFromCoordSys":"../node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js","../../util/shape/sausage":"../node_modules/echarts/lib/util/shape/sausage.js"}],"../node_modules/echarts/lib/chart/bar.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -46155,7 +46155,7 @@ echarts.registerVisual({
     seriesModel.getData().setVisual('legendSymbol', 'roundRect');
   }
 });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../layout/barGrid":"node_modules/echarts/lib/layout/barGrid.js","../coord/cartesian/Grid":"node_modules/echarts/lib/coord/cartesian/Grid.js","./bar/BarSeries":"node_modules/echarts/lib/chart/bar/BarSeries.js","./bar/BarView":"node_modules/echarts/lib/chart/bar/BarView.js","../component/gridSimple":"node_modules/echarts/lib/component/gridSimple.js"}],"node_modules/echarts/lib/chart/helper/createListSimply.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../layout/barGrid":"../node_modules/echarts/lib/layout/barGrid.js","../coord/cartesian/Grid":"../node_modules/echarts/lib/coord/cartesian/Grid.js","./bar/BarSeries":"../node_modules/echarts/lib/chart/bar/BarSeries.js","./bar/BarView":"../node_modules/echarts/lib/chart/bar/BarView.js","../component/gridSimple":"../node_modules/echarts/lib/component/gridSimple.js"}],"../node_modules/echarts/lib/chart/helper/createListSimply.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -46232,7 +46232,7 @@ function _default(seriesModel, opt, nameList) {
 }
 
 module.exports = _default;
-},{"../../data/helper/createDimensions":"node_modules/echarts/lib/data/helper/createDimensions.js","../../data/List":"node_modules/echarts/lib/data/List.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/component/helper/selectableMixin.js":[function(require,module,exports) {
+},{"../../data/helper/createDimensions":"../node_modules/echarts/lib/data/helper/createDimensions.js","../../data/List":"../node_modules/echarts/lib/data/List.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/component/helper/selectableMixin.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -46357,7 +46357,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/visual/LegendVisualProvider.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/visual/LegendVisualProvider.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -46433,7 +46433,7 @@ function LegendVisualProvider(getDataWithEncodedVisual, getRawData) {
 
 var _default = LegendVisualProvider;
 module.exports = _default;
-},{}],"node_modules/echarts/lib/chart/pie/PieSeries.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/pie/PieSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -46638,7 +46638,7 @@ var PieSeries = echarts.extendSeriesModel({
 zrUtil.mixin(PieSeries, dataSelectableMixin);
 var _default = PieSeries;
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","../helper/createListSimply":"node_modules/echarts/lib/chart/helper/createListSimply.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/model":"node_modules/echarts/lib/util/model.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../component/helper/selectableMixin":"node_modules/echarts/lib/component/helper/selectableMixin.js","../../data/helper/dataProvider":"node_modules/echarts/lib/data/helper/dataProvider.js","../../data/helper/sourceHelper":"node_modules/echarts/lib/data/helper/sourceHelper.js","../../visual/LegendVisualProvider":"node_modules/echarts/lib/visual/LegendVisualProvider.js"}],"node_modules/echarts/lib/chart/pie/PieView.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","../helper/createListSimply":"../node_modules/echarts/lib/chart/helper/createListSimply.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/model":"../node_modules/echarts/lib/util/model.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../component/helper/selectableMixin":"../node_modules/echarts/lib/component/helper/selectableMixin.js","../../data/helper/dataProvider":"../node_modules/echarts/lib/data/helper/dataProvider.js","../../data/helper/sourceHelper":"../node_modules/echarts/lib/data/helper/sourceHelper.js","../../visual/LegendVisualProvider":"../node_modules/echarts/lib/visual/LegendVisualProvider.js"}],"../node_modules/echarts/lib/chart/pie/PieView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -47029,7 +47029,7 @@ var PieView = ChartView.extend({
 });
 var _default = PieView;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../view/Chart":"node_modules/echarts/lib/view/Chart.js"}],"node_modules/echarts/lib/action/createDataSelectAction.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../view/Chart":"../node_modules/echarts/lib/view/Chart.js"}],"../node_modules/echarts/lib/action/createDataSelectAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -47109,7 +47109,7 @@ function _default(seriesType, actionInfos) {
 }
 
 module.exports = _default;
-},{"../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/visual/dataColor.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/visual/dataColor.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -47208,7 +47208,7 @@ function _default(seriesType) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/pie/labelLayout.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/pie/labelLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -47564,7 +47564,7 @@ function _default(seriesModel, r, viewWidth, viewHeight, viewLeft, viewTop) {
 }
 
 module.exports = _default;
-},{"zrender/lib/contain/text":"node_modules/zrender/lib/contain/text.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/chart/pie/pieLayout.js":[function(require,module,exports) {
+},{"zrender/lib/contain/text":"../node_modules/zrender/lib/contain/text.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/chart/pie/pieLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -47748,7 +47748,7 @@ function _default(seriesType, ecModel, api, payload) {
 }
 
 module.exports = _default;
-},{"../../util/number":"node_modules/echarts/lib/util/number.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","./labelLayout":"node_modules/echarts/lib/chart/pie/labelLayout.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/processor/dataFilter.js":[function(require,module,exports) {
+},{"../../util/number":"../node_modules/echarts/lib/util/number.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","./labelLayout":"../node_modules/echarts/lib/chart/pie/labelLayout.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/processor/dataFilter.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -47816,7 +47816,7 @@ function _default(seriesType) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/chart/pie.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/pie.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -47887,7 +47887,7 @@ createDataSelectAction('pie', [{
 echarts.registerVisual(dataColor('pie'));
 echarts.registerLayout(zrUtil.curry(pieLayout, 'pie'));
 echarts.registerProcessor(dataFilter('pie'));
-},{"../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./pie/PieSeries":"node_modules/echarts/lib/chart/pie/PieSeries.js","./pie/PieView":"node_modules/echarts/lib/chart/pie/PieView.js","../action/createDataSelectAction":"node_modules/echarts/lib/action/createDataSelectAction.js","../visual/dataColor":"node_modules/echarts/lib/visual/dataColor.js","./pie/pieLayout":"node_modules/echarts/lib/chart/pie/pieLayout.js","../processor/dataFilter":"node_modules/echarts/lib/processor/dataFilter.js"}],"node_modules/echarts/lib/chart/scatter/ScatterSeries.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./pie/PieSeries":"../node_modules/echarts/lib/chart/pie/PieSeries.js","./pie/PieView":"../node_modules/echarts/lib/chart/pie/PieView.js","../action/createDataSelectAction":"../node_modules/echarts/lib/action/createDataSelectAction.js","../visual/dataColor":"../node_modules/echarts/lib/visual/dataColor.js","./pie/pieLayout":"../node_modules/echarts/lib/chart/pie/pieLayout.js","../processor/dataFilter":"../node_modules/echarts/lib/processor/dataFilter.js"}],"../node_modules/echarts/lib/chart/scatter/ScatterSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -48000,7 +48000,7 @@ var _default = SeriesModel.extend({
 });
 
 module.exports = _default;
-},{"../helper/createListFromArray":"node_modules/echarts/lib/chart/helper/createListFromArray.js","../../model/Series":"node_modules/echarts/lib/model/Series.js"}],"node_modules/echarts/lib/chart/helper/LargeSymbolDraw.js":[function(require,module,exports) {
+},{"../helper/createListFromArray":"../node_modules/echarts/lib/chart/helper/createListFromArray.js","../../model/Series":"../node_modules/echarts/lib/model/Series.js"}],"../node_modules/echarts/lib/chart/helper/LargeSymbolDraw.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -48303,7 +48303,7 @@ largeSymbolProto._clearIncremental = function () {
 
 var _default = LargeSymbolDraw;
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/symbol":"node_modules/echarts/lib/util/symbol.js","zrender/lib/graphic/IncrementalDisplayable":"node_modules/zrender/lib/graphic/IncrementalDisplayable.js"}],"node_modules/echarts/lib/chart/scatter/ScatterView.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/symbol":"../node_modules/echarts/lib/util/symbol.js","zrender/lib/graphic/IncrementalDisplayable":"../node_modules/zrender/lib/graphic/IncrementalDisplayable.js"}],"../node_modules/echarts/lib/chart/scatter/ScatterView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -48430,7 +48430,7 @@ echarts.extendChartView({
   },
   dispose: function () {}
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","../helper/SymbolDraw":"node_modules/echarts/lib/chart/helper/SymbolDraw.js","../helper/LargeSymbolDraw":"node_modules/echarts/lib/chart/helper/LargeSymbolDraw.js","../../layout/points":"node_modules/echarts/lib/layout/points.js"}],"node_modules/echarts/lib/chart/scatter.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","../helper/SymbolDraw":"../node_modules/echarts/lib/chart/helper/SymbolDraw.js","../helper/LargeSymbolDraw":"../node_modules/echarts/lib/chart/helper/LargeSymbolDraw.js","../../layout/points":"../node_modules/echarts/lib/layout/points.js"}],"../node_modules/echarts/lib/chart/scatter.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -48502,7 +48502,7 @@ echarts.registerLayout(layoutPoints('scatter')); // echarts.registerProcessor(fu
 //         data.selectRange(range);
 //     });
 // });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./scatter/ScatterSeries":"node_modules/echarts/lib/chart/scatter/ScatterSeries.js","./scatter/ScatterView":"node_modules/echarts/lib/chart/scatter/ScatterView.js","../visual/symbol":"node_modules/echarts/lib/visual/symbol.js","../layout/points":"node_modules/echarts/lib/layout/points.js","../component/gridSimple":"node_modules/echarts/lib/component/gridSimple.js"}],"node_modules/echarts/lib/coord/radar/IndicatorAxis.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./scatter/ScatterSeries":"../node_modules/echarts/lib/chart/scatter/ScatterSeries.js","./scatter/ScatterView":"../node_modules/echarts/lib/chart/scatter/ScatterView.js","../visual/symbol":"../node_modules/echarts/lib/visual/symbol.js","../layout/points":"../node_modules/echarts/lib/layout/points.js","../component/gridSimple":"../node_modules/echarts/lib/component/gridSimple.js"}],"../node_modules/echarts/lib/coord/radar/IndicatorAxis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -48574,7 +48574,7 @@ function IndicatorAxis(dim, scale, radiusExtent) {
 zrUtil.inherits(IndicatorAxis, Axis);
 var _default = IndicatorAxis;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../Axis":"node_modules/echarts/lib/coord/Axis.js"}],"node_modules/echarts/lib/coord/radar/Radar.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../Axis":"../node_modules/echarts/lib/coord/Axis.js"}],"../node_modules/echarts/lib/coord/radar/Radar.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -48861,7 +48861,7 @@ Radar.create = function (ecModel, api) {
 CoordinateSystem.register('radar', Radar);
 var _default = Radar;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./IndicatorAxis":"node_modules/echarts/lib/coord/radar/IndicatorAxis.js","../../scale/Interval":"node_modules/echarts/lib/scale/Interval.js","../../util/number":"node_modules/echarts/lib/util/number.js","../axisHelper":"node_modules/echarts/lib/coord/axisHelper.js","../../CoordinateSystem":"node_modules/echarts/lib/CoordinateSystem.js","../../scale/Log":"node_modules/echarts/lib/scale/Log.js"}],"node_modules/echarts/lib/coord/radar/RadarModel.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./IndicatorAxis":"../node_modules/echarts/lib/coord/radar/IndicatorAxis.js","../../scale/Interval":"../node_modules/echarts/lib/scale/Interval.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../axisHelper":"../node_modules/echarts/lib/coord/axisHelper.js","../../CoordinateSystem":"../node_modules/echarts/lib/CoordinateSystem.js","../../scale/Log":"../node_modules/echarts/lib/scale/Log.js"}],"../node_modules/echarts/lib/coord/radar/RadarModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -49022,7 +49022,7 @@ var RadarModel = echarts.extendComponentModel({
 });
 var _default = RadarModel;
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../axisDefault":"node_modules/echarts/lib/coord/axisDefault.js","../../model/Model":"node_modules/echarts/lib/model/Model.js","../axisModelCommonMixin":"node_modules/echarts/lib/coord/axisModelCommonMixin.js"}],"node_modules/echarts/lib/component/radar/RadarView.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../axisDefault":"../node_modules/echarts/lib/coord/axisDefault.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js","../axisModelCommonMixin":"../node_modules/echarts/lib/coord/axisModelCommonMixin.js"}],"../node_modules/echarts/lib/component/radar/RadarView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -49231,7 +49231,7 @@ var _default = echarts.extendComponentView({
 });
 
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../axis/AxisBuilder":"node_modules/echarts/lib/component/axis/AxisBuilder.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js"}],"node_modules/echarts/lib/component/radar.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../axis/AxisBuilder":"../node_modules/echarts/lib/component/axis/AxisBuilder.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js"}],"../node_modules/echarts/lib/component/radar.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -49257,7 +49257,7 @@ require("../coord/radar/Radar");
 require("../coord/radar/RadarModel");
 
 require("./radar/RadarView");
-},{"../coord/radar/Radar":"node_modules/echarts/lib/coord/radar/Radar.js","../coord/radar/RadarModel":"node_modules/echarts/lib/coord/radar/RadarModel.js","./radar/RadarView":"node_modules/echarts/lib/component/radar/RadarView.js"}],"node_modules/echarts/lib/chart/radar/RadarSeries.js":[function(require,module,exports) {
+},{"../coord/radar/Radar":"../node_modules/echarts/lib/coord/radar/Radar.js","../coord/radar/RadarModel":"../node_modules/echarts/lib/coord/radar/RadarModel.js","./radar/RadarView":"../node_modules/echarts/lib/component/radar/RadarView.js"}],"../node_modules/echarts/lib/chart/radar/RadarSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -49377,7 +49377,7 @@ var RadarSeries = SeriesModel.extend({
 });
 var _default = RadarSeries;
 module.exports = _default;
-},{"../../model/Series":"node_modules/echarts/lib/model/Series.js","../helper/createListSimply":"node_modules/echarts/lib/chart/helper/createListSimply.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../visual/LegendVisualProvider":"node_modules/echarts/lib/visual/LegendVisualProvider.js"}],"node_modules/echarts/lib/chart/radar/RadarView.js":[function(require,module,exports) {
+},{"../../model/Series":"../node_modules/echarts/lib/model/Series.js","../helper/createListSimply":"../node_modules/echarts/lib/chart/helper/createListSimply.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../visual/LegendVisualProvider":"../node_modules/echarts/lib/visual/LegendVisualProvider.js"}],"../node_modules/echarts/lib/chart/radar/RadarView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -49595,7 +49595,7 @@ var _default = echarts.extendChartView({
 });
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/symbol":"node_modules/echarts/lib/util/symbol.js"}],"node_modules/echarts/lib/chart/radar/radarLayout.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/symbol":"../node_modules/echarts/lib/util/symbol.js"}],"../node_modules/echarts/lib/chart/radar/radarLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -49680,7 +49680,7 @@ function getValueMissingPoint(coordSys) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/radar/backwardCompat.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/radar/backwardCompat.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -49759,7 +49759,7 @@ function _default(option) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/radar.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/radar.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -49822,7 +49822,7 @@ echarts.registerVisual(visualSymbol('radar', 'circle'));
 echarts.registerLayout(radarLayout);
 echarts.registerProcessor(dataFilter('radar'));
 echarts.registerPreprocessor(backwardCompat);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","../component/radar":"node_modules/echarts/lib/component/radar.js","./radar/RadarSeries":"node_modules/echarts/lib/chart/radar/RadarSeries.js","./radar/RadarView":"node_modules/echarts/lib/chart/radar/RadarView.js","../visual/dataColor":"node_modules/echarts/lib/visual/dataColor.js","../visual/symbol":"node_modules/echarts/lib/visual/symbol.js","./radar/radarLayout":"node_modules/echarts/lib/chart/radar/radarLayout.js","../processor/dataFilter":"node_modules/echarts/lib/processor/dataFilter.js","./radar/backwardCompat":"node_modules/echarts/lib/chart/radar/backwardCompat.js"}],"node_modules/echarts/lib/coord/geo/fix/nanhai.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","../component/radar":"../node_modules/echarts/lib/component/radar.js","./radar/RadarSeries":"../node_modules/echarts/lib/chart/radar/RadarSeries.js","./radar/RadarView":"../node_modules/echarts/lib/chart/radar/RadarView.js","../visual/dataColor":"../node_modules/echarts/lib/visual/dataColor.js","../visual/symbol":"../node_modules/echarts/lib/visual/symbol.js","./radar/radarLayout":"../node_modules/echarts/lib/chart/radar/radarLayout.js","../processor/dataFilter":"../node_modules/echarts/lib/processor/dataFilter.js","./radar/backwardCompat":"../node_modules/echarts/lib/chart/radar/backwardCompat.js"}],"../node_modules/echarts/lib/coord/geo/fix/nanhai.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -49890,7 +49890,7 @@ function _default(mapType, regions) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../Region":"node_modules/echarts/lib/coord/geo/Region.js"}],"node_modules/echarts/lib/coord/geo/fix/textCoord.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../Region":"../node_modules/echarts/lib/coord/geo/Region.js"}],"../node_modules/echarts/lib/coord/geo/fix/textCoord.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -49952,7 +49952,7 @@ function _default(mapType, region) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/coord/geo/fix/geoCoord.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/coord/geo/fix/geoCoord.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -50010,7 +50010,7 @@ function _default(mapType, region) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/coord/geo/fix/diaoyuIsland.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/coord/geo/fix/diaoyuIsland.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -50065,7 +50065,7 @@ function _default(mapType, region) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/coord/geo/geoJSONLoader.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/coord/geo/geoJSONLoader.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -50182,7 +50182,7 @@ function getBoundingRect(regions) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./parseGeoJson":"node_modules/echarts/lib/coord/geo/parseGeoJson.js","../../util/model":"node_modules/echarts/lib/util/model.js","./fix/nanhai":"node_modules/echarts/lib/coord/geo/fix/nanhai.js","./fix/textCoord":"node_modules/echarts/lib/coord/geo/fix/textCoord.js","./fix/geoCoord":"node_modules/echarts/lib/coord/geo/fix/geoCoord.js","./fix/diaoyuIsland":"node_modules/echarts/lib/coord/geo/fix/diaoyuIsland.js"}],"node_modules/echarts/lib/coord/geo/geoSVGLoader.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./parseGeoJson":"../node_modules/echarts/lib/coord/geo/parseGeoJson.js","../../util/model":"../node_modules/echarts/lib/util/model.js","./fix/nanhai":"../node_modules/echarts/lib/coord/geo/fix/nanhai.js","./fix/textCoord":"../node_modules/echarts/lib/coord/geo/fix/textCoord.js","./fix/geoCoord":"../node_modules/echarts/lib/coord/geo/fix/geoCoord.js","./fix/diaoyuIsland":"../node_modules/echarts/lib/coord/geo/fix/diaoyuIsland.js"}],"../node_modules/echarts/lib/coord/geo/geoSVGLoader.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -50351,7 +50351,7 @@ function buildGraphic(mapRecord, boundingRect) {
 }
 
 module.exports = _default;
-},{"zrender/lib/tool/parseSVG":"node_modules/zrender/lib/tool/parseSVG.js","zrender/lib/container/Group":"node_modules/zrender/lib/container/Group.js","zrender/lib/graphic/shape/Rect":"node_modules/zrender/lib/graphic/shape/Rect.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/coord/geo/geoSourceManager.js":[function(require,module,exports) {
+},{"zrender/lib/tool/parseSVG":"../node_modules/zrender/lib/tool/parseSVG.js","zrender/lib/container/Group":"../node_modules/zrender/lib/container/Group.js","zrender/lib/graphic/shape/Rect":"../node_modules/zrender/lib/graphic/shape/Rect.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/coord/geo/geoSourceManager.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -50486,7 +50486,7 @@ function retrieveMap(mapName) {
 }
 
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./mapDataStorage":"node_modules/echarts/lib/coord/geo/mapDataStorage.js","./geoJSONLoader":"node_modules/echarts/lib/coord/geo/geoJSONLoader.js","./geoSVGLoader":"node_modules/echarts/lib/coord/geo/geoSVGLoader.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js"}],"node_modules/echarts/lib/chart/map/MapSeries.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./mapDataStorage":"../node_modules/echarts/lib/coord/geo/mapDataStorage.js","./geoJSONLoader":"../node_modules/echarts/lib/coord/geo/geoJSONLoader.js","./geoSVGLoader":"../node_modules/echarts/lib/coord/geo/geoSVGLoader.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js"}],"../node_modules/echarts/lib/chart/map/MapSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -50752,7 +50752,7 @@ var MapSeries = SeriesModel.extend({
 zrUtil.mixin(MapSeries, dataSelectableMixin);
 var _default = MapSeries;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../helper/createListSimply":"node_modules/echarts/lib/chart/helper/createListSimply.js","../../model/Series":"node_modules/echarts/lib/model/Series.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../component/helper/selectableMixin":"node_modules/echarts/lib/component/helper/selectableMixin.js","../../data/helper/dataProvider":"node_modules/echarts/lib/data/helper/dataProvider.js","../../coord/geo/geoSourceManager":"node_modules/echarts/lib/coord/geo/geoSourceManager.js","../../data/helper/sourceHelper":"node_modules/echarts/lib/data/helper/sourceHelper.js"}],"node_modules/echarts/lib/component/helper/interactionMutex.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../helper/createListSimply":"../node_modules/echarts/lib/chart/helper/createListSimply.js","../../model/Series":"../node_modules/echarts/lib/model/Series.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../component/helper/selectableMixin":"../node_modules/echarts/lib/component/helper/selectableMixin.js","../../data/helper/dataProvider":"../node_modules/echarts/lib/data/helper/dataProvider.js","../../coord/geo/geoSourceManager":"../node_modules/echarts/lib/coord/geo/geoSourceManager.js","../../data/helper/sourceHelper":"../node_modules/echarts/lib/data/helper/sourceHelper.js"}],"../node_modules/echarts/lib/component/helper/interactionMutex.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -50833,7 +50833,7 @@ echarts.registerAction({
 exports.take = take;
 exports.release = release;
 exports.isTaken = isTaken;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js"}],"node_modules/echarts/lib/component/helper/RoamController.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js"}],"../node_modules/echarts/lib/component/helper/RoamController.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -51119,7 +51119,7 @@ function isAvailableBehavior(behaviorToCheck, e, settings) {
 
 var _default = RoamController;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/mixin/Eventful":"node_modules/zrender/lib/mixin/Eventful.js","zrender/lib/core/event":"node_modules/zrender/lib/core/event.js","./interactionMutex":"node_modules/echarts/lib/component/helper/interactionMutex.js"}],"node_modules/echarts/lib/component/helper/roamHelper.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/mixin/Eventful":"../node_modules/zrender/lib/mixin/Eventful.js","zrender/lib/core/event":"../node_modules/zrender/lib/core/event.js","./interactionMutex":"../node_modules/echarts/lib/component/helper/interactionMutex.js"}],"../node_modules/echarts/lib/component/helper/roamHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -51208,7 +51208,7 @@ function updateViewOnZoom(controllerHost, zoomDelta, zoomX, zoomY) {
 
 exports.updateViewOnPan = updateViewOnPan;
 exports.updateViewOnZoom = updateViewOnZoom;
-},{}],"node_modules/echarts/lib/component/helper/cursorHelper.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/component/helper/cursorHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -51265,7 +51265,7 @@ function onIrrelevantElement(e, api, targetCoordSysModel) {
 }
 
 exports.onIrrelevantElement = onIrrelevantElement;
-},{}],"node_modules/echarts/lib/component/helper/MapDraw.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/component/helper/MapDraw.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -51733,7 +51733,7 @@ MapDraw.prototype = {
 };
 var _default = MapDraw;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./RoamController":"node_modules/echarts/lib/component/helper/RoamController.js","../../component/helper/roamHelper":"node_modules/echarts/lib/component/helper/roamHelper.js","../../component/helper/cursorHelper":"node_modules/echarts/lib/component/helper/cursorHelper.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../coord/geo/geoSourceManager":"node_modules/echarts/lib/coord/geo/geoSourceManager.js","../../util/component":"node_modules/echarts/lib/util/component.js","zrender/lib/mixin/Transformable":"node_modules/zrender/lib/mixin/Transformable.js"}],"node_modules/echarts/lib/chart/map/MapView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./RoamController":"../node_modules/echarts/lib/component/helper/RoamController.js","../../component/helper/roamHelper":"../node_modules/echarts/lib/component/helper/roamHelper.js","../../component/helper/cursorHelper":"../node_modules/echarts/lib/component/helper/cursorHelper.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../coord/geo/geoSourceManager":"../node_modules/echarts/lib/coord/geo/geoSourceManager.js","../../util/component":"../node_modules/echarts/lib/util/component.js","zrender/lib/mixin/Transformable":"../node_modules/zrender/lib/mixin/Transformable.js"}],"../node_modules/echarts/lib/chart/map/MapView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -51961,7 +51961,7 @@ function enterRegionHighDown(highDownRecord, toHighOrDown) {
 }
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../component/helper/MapDraw":"node_modules/echarts/lib/component/helper/MapDraw.js"}],"node_modules/echarts/lib/action/roamHelper.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../component/helper/MapDraw":"../node_modules/echarts/lib/component/helper/MapDraw.js"}],"../node_modules/echarts/lib/action/roamHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -52048,7 +52048,7 @@ function updateCenterAndZoom(view, payload, zoomLimit) {
 }
 
 exports.updateCenterAndZoom = updateCenterAndZoom;
-},{}],"node_modules/echarts/lib/action/geoRoam.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/action/geoRoam.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -52134,7 +52134,7 @@ echarts.registerAction({
     }
   });
 });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./roamHelper":"node_modules/echarts/lib/action/roamHelper.js"}],"node_modules/echarts/lib/coord/View.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./roamHelper":"../node_modules/echarts/lib/action/roamHelper.js"}],"../node_modules/echarts/lib/coord/View.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -52458,7 +52458,7 @@ function doConvert(methodName, ecModel, finder, value) {
 
 var _default = View;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js","zrender/lib/core/matrix":"node_modules/zrender/lib/core/matrix.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/mixin/Transformable":"node_modules/zrender/lib/mixin/Transformable.js"}],"node_modules/echarts/lib/coord/geo/Geo.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js","zrender/lib/core/matrix":"../node_modules/zrender/lib/core/matrix.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/mixin/Transformable":"../node_modules/zrender/lib/mixin/Transformable.js"}],"../node_modules/echarts/lib/coord/geo/Geo.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -52677,7 +52677,7 @@ function doConvert(methodName, ecModel, finder, value) {
 
 var _default = Geo;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../View":"node_modules/echarts/lib/coord/View.js","./geoSourceManager":"node_modules/echarts/lib/coord/geo/geoSourceManager.js"}],"node_modules/echarts/lib/coord/geo/geoCreator.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../View":"../node_modules/echarts/lib/coord/View.js","./geoSourceManager":"../node_modules/echarts/lib/coord/geo/geoSourceManager.js"}],"../node_modules/echarts/lib/coord/geo/geoCreator.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -52911,7 +52911,7 @@ var geoCreator = {
 echarts.registerCoordinateSystem('geo', geoCreator);
 var _default = geoCreator;
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./Geo":"node_modules/echarts/lib/coord/geo/Geo.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","../../util/number":"node_modules/echarts/lib/util/number.js","./geoSourceManager":"node_modules/echarts/lib/coord/geo/geoSourceManager.js","./mapDataStorage":"node_modules/echarts/lib/coord/geo/mapDataStorage.js"}],"node_modules/echarts/lib/chart/map/mapSymbolLayout.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./Geo":"../node_modules/echarts/lib/coord/geo/Geo.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","../../util/number":"../node_modules/echarts/lib/util/number.js","./geoSourceManager":"../node_modules/echarts/lib/coord/geo/geoSourceManager.js","./mapDataStorage":"../node_modules/echarts/lib/coord/geo/mapDataStorage.js"}],"../node_modules/echarts/lib/chart/map/mapSymbolLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -53000,7 +53000,7 @@ function _default(ecModel) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/map/mapVisual.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/map/mapVisual.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -53053,7 +53053,7 @@ function _default(ecModel) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/chart/map/mapDataStatistic.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/map/mapDataStatistic.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -53170,7 +53170,7 @@ function _default(ecModel) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/map/backwardCompat.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/map/backwardCompat.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -53225,7 +53225,7 @@ function _default(option) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/map.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/map.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -53301,7 +53301,7 @@ createDataSelectAction('map', [{
   event: 'mapunselected',
   method: 'unSelect'
 }]);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./map/MapSeries":"node_modules/echarts/lib/chart/map/MapSeries.js","./map/MapView":"node_modules/echarts/lib/chart/map/MapView.js","../action/geoRoam":"node_modules/echarts/lib/action/geoRoam.js","../coord/geo/geoCreator":"node_modules/echarts/lib/coord/geo/geoCreator.js","./map/mapSymbolLayout":"node_modules/echarts/lib/chart/map/mapSymbolLayout.js","./map/mapVisual":"node_modules/echarts/lib/chart/map/mapVisual.js","./map/mapDataStatistic":"node_modules/echarts/lib/chart/map/mapDataStatistic.js","./map/backwardCompat":"node_modules/echarts/lib/chart/map/backwardCompat.js","../action/createDataSelectAction":"node_modules/echarts/lib/action/createDataSelectAction.js"}],"node_modules/echarts/lib/data/helper/linkList.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./map/MapSeries":"../node_modules/echarts/lib/chart/map/MapSeries.js","./map/MapView":"../node_modules/echarts/lib/chart/map/MapView.js","../action/geoRoam":"../node_modules/echarts/lib/action/geoRoam.js","../coord/geo/geoCreator":"../node_modules/echarts/lib/coord/geo/geoCreator.js","./map/mapSymbolLayout":"../node_modules/echarts/lib/chart/map/mapSymbolLayout.js","./map/mapVisual":"../node_modules/echarts/lib/chart/map/mapVisual.js","./map/mapDataStatistic":"../node_modules/echarts/lib/chart/map/mapDataStatistic.js","./map/backwardCompat":"../node_modules/echarts/lib/chart/map/backwardCompat.js","../action/createDataSelectAction":"../node_modules/echarts/lib/action/createDataSelectAction.js"}],"../node_modules/echarts/lib/data/helper/linkList.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -53469,7 +53469,7 @@ function linkSingle(data, dataType, mainData, opt) {
 
 var _default = linkList;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/data/Tree.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/data/Tree.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -54029,7 +54029,7 @@ function addChild(child, node) {
 
 var _default = Tree;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../model/Model":"node_modules/echarts/lib/model/Model.js","./helper/linkList":"node_modules/echarts/lib/data/helper/linkList.js","./List":"node_modules/echarts/lib/data/List.js","./helper/createDimensions":"node_modules/echarts/lib/data/helper/createDimensions.js"}],"node_modules/echarts/lib/chart/tree/TreeSeries.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../model/Model":"../node_modules/echarts/lib/model/Model.js","./helper/linkList":"../node_modules/echarts/lib/data/helper/linkList.js","./List":"../node_modules/echarts/lib/data/List.js","./helper/createDimensions":"../node_modules/echarts/lib/data/helper/createDimensions.js"}],"../node_modules/echarts/lib/chart/tree/TreeSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -54222,7 +54222,7 @@ var _default = SeriesModel.extend({
 });
 
 module.exports = _default;
-},{"../../model/Series":"node_modules/echarts/lib/model/Series.js","../../data/Tree":"node_modules/echarts/lib/data/Tree.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../model/Model":"node_modules/echarts/lib/model/Model.js"}],"node_modules/echarts/lib/chart/tree/layoutHelper.js":[function(require,module,exports) {
+},{"../../model/Series":"../node_modules/echarts/lib/model/Series.js","../../data/Tree":"../node_modules/echarts/lib/data/Tree.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js"}],"../node_modules/echarts/lib/chart/tree/layoutHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -54590,7 +54590,7 @@ exports.secondWalk = secondWalk;
 exports.separation = separation;
 exports.radialCoordinate = radialCoordinate;
 exports.getViewRect = getViewRect;
-},{"../../util/layout":"node_modules/echarts/lib/util/layout.js"}],"node_modules/echarts/lib/chart/tree/TreeView.js":[function(require,module,exports) {
+},{"../../util/layout":"../node_modules/echarts/lib/util/layout.js"}],"../node_modules/echarts/lib/chart/tree/TreeView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -55228,7 +55228,7 @@ function getEdgeShape(seriesScope, sourceLayout, targetLayout) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../helper/Symbol":"node_modules/echarts/lib/chart/helper/Symbol.js","./layoutHelper":"node_modules/echarts/lib/chart/tree/layoutHelper.js","../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/bbox":"node_modules/zrender/lib/core/bbox.js","../../coord/View":"node_modules/echarts/lib/coord/View.js","../../component/helper/roamHelper":"node_modules/echarts/lib/component/helper/roamHelper.js","../../component/helper/RoamController":"node_modules/echarts/lib/component/helper/RoamController.js","../../component/helper/cursorHelper":"node_modules/echarts/lib/component/helper/cursorHelper.js","../../config":"node_modules/echarts/lib/config.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/chart/tree/treeAction.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../helper/Symbol":"../node_modules/echarts/lib/chart/helper/Symbol.js","./layoutHelper":"../node_modules/echarts/lib/chart/tree/layoutHelper.js","../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/bbox":"../node_modules/zrender/lib/core/bbox.js","../../coord/View":"../node_modules/echarts/lib/coord/View.js","../../component/helper/roamHelper":"../node_modules/echarts/lib/component/helper/roamHelper.js","../../component/helper/RoamController":"../node_modules/echarts/lib/component/helper/RoamController.js","../../component/helper/cursorHelper":"../node_modules/echarts/lib/component/helper/cursorHelper.js","../../config":"../node_modules/echarts/lib/config.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/chart/tree/treeAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -55309,7 +55309,7 @@ echarts.registerAction({
     seriesModel.setZoom && seriesModel.setZoom(res.zoom);
   });
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","../../action/roamHelper":"node_modules/echarts/lib/action/roamHelper.js"}],"node_modules/echarts/lib/chart/tree/traversalHelper.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","../../action/roamHelper":"../node_modules/echarts/lib/action/roamHelper.js"}],"../node_modules/echarts/lib/chart/tree/traversalHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -55408,7 +55408,7 @@ function eachBefore(root, callback) {
 
 exports.eachAfter = eachAfter;
 exports.eachBefore = eachBefore;
-},{}],"node_modules/echarts/lib/chart/tree/treeLayout.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/tree/treeLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -55566,7 +55566,7 @@ function commonLayout(seriesModel, api) {
 }
 
 module.exports = _default;
-},{"./traversalHelper":"node_modules/echarts/lib/chart/tree/traversalHelper.js","./layoutHelper":"node_modules/echarts/lib/chart/tree/layoutHelper.js"}],"node_modules/echarts/lib/chart/tree.js":[function(require,module,exports) {
+},{"./traversalHelper":"../node_modules/echarts/lib/chart/tree/traversalHelper.js","./layoutHelper":"../node_modules/echarts/lib/chart/tree/layoutHelper.js"}],"../node_modules/echarts/lib/chart/tree.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -55619,7 +55619,7 @@ var treeLayout = require("./tree/treeLayout");
 */
 echarts.registerVisual(visualSymbol('tree', 'circle'));
 echarts.registerLayout(treeLayout);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./tree/TreeSeries":"node_modules/echarts/lib/chart/tree/TreeSeries.js","./tree/TreeView":"node_modules/echarts/lib/chart/tree/TreeView.js","./tree/treeAction":"node_modules/echarts/lib/chart/tree/treeAction.js","../visual/symbol":"node_modules/echarts/lib/visual/symbol.js","./tree/treeLayout":"node_modules/echarts/lib/chart/tree/treeLayout.js"}],"node_modules/echarts/lib/chart/helper/treeHelper.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./tree/TreeSeries":"../node_modules/echarts/lib/chart/tree/TreeSeries.js","./tree/TreeView":"../node_modules/echarts/lib/chart/tree/TreeView.js","./tree/treeAction":"../node_modules/echarts/lib/chart/tree/treeAction.js","../visual/symbol":"../node_modules/echarts/lib/visual/symbol.js","./tree/treeLayout":"../node_modules/echarts/lib/chart/tree/treeLayout.js"}],"../node_modules/echarts/lib/chart/helper/treeHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -55724,7 +55724,7 @@ exports.retrieveTargetInfo = retrieveTargetInfo;
 exports.getPathToRoot = getPathToRoot;
 exports.aboveViewRoot = aboveViewRoot;
 exports.wrapTreePathInfo = wrapTreePathInfo;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/treemap/TreemapSeries.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/treemap/TreemapSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -56141,7 +56141,7 @@ function setDefault(levels, ecModel) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Series":"node_modules/echarts/lib/model/Series.js","../../data/Tree":"node_modules/echarts/lib/data/Tree.js","../../model/Model":"node_modules/echarts/lib/model/Model.js","../../util/format":"node_modules/echarts/lib/util/format.js","../helper/treeHelper":"node_modules/echarts/lib/chart/helper/treeHelper.js"}],"node_modules/echarts/lib/chart/treemap/Breadcrumb.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Series":"../node_modules/echarts/lib/model/Series.js","../../data/Tree":"../node_modules/echarts/lib/data/Tree.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../helper/treeHelper":"../node_modules/echarts/lib/chart/helper/treeHelper.js"}],"../node_modules/echarts/lib/chart/treemap/Breadcrumb.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -56337,7 +56337,7 @@ function packEventData(el, seriesModel, itemNode) {
 
 var _default = Breadcrumb;
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../helper/treeHelper":"node_modules/echarts/lib/chart/helper/treeHelper.js"}],"node_modules/echarts/lib/util/animation.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../helper/treeHelper":"../node_modules/echarts/lib/chart/helper/treeHelper.js"}],"../node_modules/echarts/lib/util/animation.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -56476,7 +56476,7 @@ function createWrap() {
 }
 
 exports.createWrap = createWrap;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/treemap/TreemapView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/treemap/TreemapView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -57418,7 +57418,7 @@ function calculateZ(depth, zInLevel) {
 }
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../data/DataDiffer":"node_modules/echarts/lib/data/DataDiffer.js","../helper/treeHelper":"node_modules/echarts/lib/chart/helper/treeHelper.js","./Breadcrumb":"node_modules/echarts/lib/chart/treemap/Breadcrumb.js","../../component/helper/RoamController":"node_modules/echarts/lib/component/helper/RoamController.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/core/matrix":"node_modules/zrender/lib/core/matrix.js","../../util/animation":"node_modules/echarts/lib/util/animation.js","../../model/mixin/makeStyleMapper":"node_modules/echarts/lib/model/mixin/makeStyleMapper.js","../../util/format":"node_modules/echarts/lib/util/format.js"}],"node_modules/echarts/lib/chart/treemap/treemapAction.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../data/DataDiffer":"../node_modules/echarts/lib/data/DataDiffer.js","../helper/treeHelper":"../node_modules/echarts/lib/chart/helper/treeHelper.js","./Breadcrumb":"../node_modules/echarts/lib/chart/treemap/Breadcrumb.js","../../component/helper/RoamController":"../node_modules/echarts/lib/component/helper/RoamController.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/core/matrix":"../node_modules/zrender/lib/core/matrix.js","../../util/animation":"../node_modules/echarts/lib/util/animation.js","../../model/mixin/makeStyleMapper":"../node_modules/echarts/lib/model/mixin/makeStyleMapper.js","../../util/format":"../node_modules/echarts/lib/util/format.js"}],"../node_modules/echarts/lib/chart/treemap/treemapAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -57501,7 +57501,7 @@ echarts.registerAction({
     }
   }
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","../helper/treeHelper":"node_modules/echarts/lib/chart/helper/treeHelper.js"}],"node_modules/echarts/lib/visual/VisualMapping.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","../helper/treeHelper":"../node_modules/echarts/lib/chart/helper/treeHelper.js"}],"../node_modules/echarts/lib/visual/VisualMapping.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -58114,7 +58114,7 @@ function littleThan(close, a, b) {
 
 var _default = VisualMapping;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/tool/color":"node_modules/zrender/lib/tool/color.js","../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/chart/treemap/treemapVisual.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/tool/color":"../node_modules/zrender/lib/tool/color.js","../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/chart/treemap/treemapVisual.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -58333,7 +58333,7 @@ function mapVisual(nodeModel, visuals, child, index, mapping, seriesModel) {
 }
 
 module.exports = _default;
-},{"../../visual/VisualMapping":"node_modules/echarts/lib/visual/VisualMapping.js","zrender/lib/tool/color":"node_modules/zrender/lib/tool/color.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/treemap/treemapLayout.js":[function(require,module,exports) {
+},{"../../visual/VisualMapping":"../node_modules/echarts/lib/visual/VisualMapping.js","zrender/lib/tool/color":"../node_modules/zrender/lib/tool/color.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/treemap/treemapLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -58904,7 +58904,7 @@ function getUpperLabelHeight(model) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","../helper/treeHelper":"node_modules/echarts/lib/chart/helper/treeHelper.js"}],"node_modules/echarts/lib/chart/treemap.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","../helper/treeHelper":"../node_modules/echarts/lib/chart/helper/treeHelper.js"}],"../node_modules/echarts/lib/chart/treemap.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -58957,7 +58957,7 @@ var treemapLayout = require("./treemap/treemapLayout");
 */
 echarts.registerVisual(treemapVisual);
 echarts.registerLayout(treemapLayout);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./treemap/TreemapSeries":"node_modules/echarts/lib/chart/treemap/TreemapSeries.js","./treemap/TreemapView":"node_modules/echarts/lib/chart/treemap/TreemapView.js","./treemap/treemapAction":"node_modules/echarts/lib/chart/treemap/treemapAction.js","./treemap/treemapVisual":"node_modules/echarts/lib/chart/treemap/treemapVisual.js","./treemap/treemapLayout":"node_modules/echarts/lib/chart/treemap/treemapLayout.js"}],"node_modules/echarts/lib/data/Graph.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./treemap/TreemapSeries":"../node_modules/echarts/lib/chart/treemap/TreemapSeries.js","./treemap/TreemapView":"../node_modules/echarts/lib/chart/treemap/TreemapView.js","./treemap/treemapAction":"../node_modules/echarts/lib/chart/treemap/treemapAction.js","./treemap/treemapVisual":"../node_modules/echarts/lib/chart/treemap/treemapVisual.js","./treemap/treemapLayout":"../node_modules/echarts/lib/chart/treemap/treemapLayout.js"}],"../node_modules/echarts/lib/data/Graph.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -59529,7 +59529,7 @@ enableClassCheck(Node);
 enableClassCheck(Edge);
 var _default = Graph;
 module.exports = _default;
-},{"../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/clazz":"node_modules/echarts/lib/util/clazz.js"}],"node_modules/echarts/lib/chart/helper/createGraphFromNodeEdge.js":[function(require,module,exports) {
+},{"../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/clazz":"../node_modules/echarts/lib/util/clazz.js"}],"../node_modules/echarts/lib/chart/helper/createGraphFromNodeEdge.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -59652,7 +59652,7 @@ function _default(nodes, edges, seriesModel, directed, beforeLink) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../data/List":"node_modules/echarts/lib/data/List.js","../../data/Graph":"node_modules/echarts/lib/data/Graph.js","../../data/helper/linkList":"node_modules/echarts/lib/data/helper/linkList.js","../../data/helper/createDimensions":"node_modules/echarts/lib/data/helper/createDimensions.js","../../CoordinateSystem":"node_modules/echarts/lib/CoordinateSystem.js","./createListFromArray":"node_modules/echarts/lib/chart/helper/createListFromArray.js"}],"node_modules/echarts/lib/chart/graph/GraphSeries.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../data/List":"../node_modules/echarts/lib/data/List.js","../../data/Graph":"../node_modules/echarts/lib/data/Graph.js","../../data/helper/linkList":"../node_modules/echarts/lib/data/helper/linkList.js","../../data/helper/createDimensions":"../node_modules/echarts/lib/data/helper/createDimensions.js","../../CoordinateSystem":"../node_modules/echarts/lib/CoordinateSystem.js","./createListFromArray":"../node_modules/echarts/lib/chart/helper/createListFromArray.js"}],"../node_modules/echarts/lib/chart/graph/GraphSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -59932,7 +59932,7 @@ var GraphSeries = echarts.extendSeriesModel({
 });
 var _default = GraphSeries;
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","../../data/List":"node_modules/echarts/lib/data/List.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/model":"node_modules/echarts/lib/util/model.js","../../model/Model":"node_modules/echarts/lib/model/Model.js","../../util/format":"node_modules/echarts/lib/util/format.js","../helper/createGraphFromNodeEdge":"node_modules/echarts/lib/chart/helper/createGraphFromNodeEdge.js","../../visual/LegendVisualProvider":"node_modules/echarts/lib/visual/LegendVisualProvider.js"}],"node_modules/echarts/lib/chart/helper/LinePath.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","../../data/List":"../node_modules/echarts/lib/data/List.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/model":"../node_modules/echarts/lib/util/model.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../helper/createGraphFromNodeEdge":"../node_modules/echarts/lib/chart/helper/createGraphFromNodeEdge.js","../../visual/LegendVisualProvider":"../node_modules/echarts/lib/visual/LegendVisualProvider.js"}],"../node_modules/echarts/lib/chart/helper/LinePath.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -60020,7 +60020,7 @@ var _default = graphic.extendShape({
 });
 
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js"}],"node_modules/echarts/lib/chart/helper/Line.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js"}],"../node_modules/echarts/lib/chart/helper/Line.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -60476,7 +60476,7 @@ lineProto.setLinePoints = function (points) {
 zrUtil.inherits(Line, graphic.Group);
 var _default = Line;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js","../../util/symbol":"node_modules/echarts/lib/util/symbol.js","./LinePath":"node_modules/echarts/lib/chart/helper/LinePath.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/chart/helper/LineDraw.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js","../../util/symbol":"../node_modules/echarts/lib/util/symbol.js","./LinePath":"../node_modules/echarts/lib/chart/helper/LinePath.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/chart/helper/LineDraw.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -60671,7 +60671,7 @@ function lineNeedsDraw(pts) {
 
 var _default = LineDraw;
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./Line":"node_modules/echarts/lib/chart/helper/Line.js"}],"node_modules/echarts/lib/chart/graph/graphHelper.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./Line":"../node_modules/echarts/lib/chart/helper/Line.js"}],"../node_modules/echarts/lib/chart/graph/graphHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -60738,7 +60738,7 @@ function getSymbolSize(node) {
 
 exports.getNodeGlobalScale = getNodeGlobalScale;
 exports.getSymbolSize = getSymbolSize;
-},{}],"node_modules/echarts/lib/chart/graph/adjustEdge.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/graph/adjustEdge.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -60931,7 +60931,7 @@ function _default(graph, scale) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/curve":"node_modules/zrender/lib/core/curve.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js","./graphHelper":"node_modules/echarts/lib/chart/graph/graphHelper.js"}],"node_modules/echarts/lib/chart/graph/GraphView.js":[function(require,module,exports) {
+},{"zrender/lib/core/curve":"../node_modules/zrender/lib/core/curve.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js","./graphHelper":"../node_modules/echarts/lib/chart/graph/graphHelper.js"}],"../node_modules/echarts/lib/chart/graph/GraphView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -61342,7 +61342,7 @@ var _default = echarts.extendChartView({
 });
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../helper/SymbolDraw":"node_modules/echarts/lib/chart/helper/SymbolDraw.js","../helper/LineDraw":"node_modules/echarts/lib/chart/helper/LineDraw.js","../../component/helper/RoamController":"node_modules/echarts/lib/component/helper/RoamController.js","../../component/helper/roamHelper":"node_modules/echarts/lib/component/helper/roamHelper.js","../../component/helper/cursorHelper":"node_modules/echarts/lib/component/helper/cursorHelper.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./adjustEdge":"node_modules/echarts/lib/chart/graph/adjustEdge.js","./graphHelper":"node_modules/echarts/lib/chart/graph/graphHelper.js"}],"node_modules/echarts/lib/chart/helper/focusNodeAdjacencyAction.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../helper/SymbolDraw":"../node_modules/echarts/lib/chart/helper/SymbolDraw.js","../helper/LineDraw":"../node_modules/echarts/lib/chart/helper/LineDraw.js","../../component/helper/RoamController":"../node_modules/echarts/lib/component/helper/RoamController.js","../../component/helper/roamHelper":"../node_modules/echarts/lib/component/helper/roamHelper.js","../../component/helper/cursorHelper":"../node_modules/echarts/lib/component/helper/cursorHelper.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./adjustEdge":"../node_modules/echarts/lib/chart/graph/adjustEdge.js","./graphHelper":"../node_modules/echarts/lib/chart/graph/graphHelper.js"}],"../node_modules/echarts/lib/chart/helper/focusNodeAdjacencyAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -61408,7 +61408,7 @@ echarts.registerAction({
   event: 'unfocusNodeAdjacency',
   update: 'series:unfocusNodeAdjacency'
 }, function () {});
-},{"../../echarts":"node_modules/echarts/lib/echarts.js"}],"node_modules/echarts/lib/chart/graph/graphAction.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js"}],"../node_modules/echarts/lib/chart/graph/graphAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -61481,7 +61481,7 @@ echarts.registerAction(actionInfo, function (payload, ecModel) {
     seriesModel.setZoom && seriesModel.setZoom(res.zoom);
   });
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","../../action/roamHelper":"node_modules/echarts/lib/action/roamHelper.js","../helper/focusNodeAdjacencyAction":"node_modules/echarts/lib/chart/helper/focusNodeAdjacencyAction.js"}],"node_modules/echarts/lib/chart/graph/categoryFilter.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","../../action/roamHelper":"../node_modules/echarts/lib/action/roamHelper.js","../helper/focusNodeAdjacencyAction":"../node_modules/echarts/lib/chart/helper/focusNodeAdjacencyAction.js"}],"../node_modules/echarts/lib/chart/graph/categoryFilter.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -61557,7 +61557,7 @@ function _default(ecModel) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/chart/graph/categoryVisual.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/graph/categoryVisual.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -61644,7 +61644,7 @@ function _default(ecModel) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/chart/graph/edgeVisual.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/graph/edgeVisual.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -61735,7 +61735,7 @@ function _default(ecModel) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/chart/graph/simpleLayoutHelper.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/graph/simpleLayoutHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -61808,7 +61808,7 @@ function simpleLayoutEdge(graph) {
 
 exports.simpleLayout = simpleLayout;
 exports.simpleLayoutEdge = simpleLayoutEdge;
-},{"zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js"}],"node_modules/echarts/lib/chart/graph/simpleLayout.js":[function(require,module,exports) {
+},{"zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js"}],"../node_modules/echarts/lib/chart/graph/simpleLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -61898,7 +61898,7 @@ function _default(ecModel, api) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./simpleLayoutHelper":"node_modules/echarts/lib/chart/graph/simpleLayoutHelper.js"}],"node_modules/echarts/lib/chart/graph/circularLayoutHelper.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./simpleLayoutHelper":"../node_modules/echarts/lib/chart/graph/simpleLayoutHelper.js"}],"../node_modules/echarts/lib/chart/graph/circularLayoutHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -62052,7 +62052,7 @@ var _layoutNodesBasedOn = {
   }
 };
 exports.circularLayout = circularLayout;
-},{"zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js","./graphHelper":"node_modules/echarts/lib/chart/graph/graphHelper.js"}],"node_modules/echarts/lib/chart/graph/circularLayout.js":[function(require,module,exports) {
+},{"zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js","./graphHelper":"../node_modules/echarts/lib/chart/graph/graphHelper.js"}],"../node_modules/echarts/lib/chart/graph/circularLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -62104,7 +62104,7 @@ function _default(ecModel) {
 }
 
 module.exports = _default;
-},{"./circularLayoutHelper":"node_modules/echarts/lib/chart/graph/circularLayoutHelper.js"}],"node_modules/echarts/lib/chart/graph/forceHelper.js":[function(require,module,exports) {
+},{"./circularLayoutHelper":"../node_modules/echarts/lib/chart/graph/circularLayoutHelper.js"}],"../node_modules/echarts/lib/chart/graph/forceHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -62289,7 +62289,7 @@ function forceLayout(nodes, edges, opts) {
 }
 
 exports.forceLayout = forceLayout;
-},{"zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js"}],"node_modules/echarts/lib/chart/graph/forceLayout.js":[function(require,module,exports) {
+},{"zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js"}],"../node_modules/echarts/lib/chart/graph/forceLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -62485,7 +62485,7 @@ function _default(ecModel) {
 }
 
 module.exports = _default;
-},{"./forceHelper":"node_modules/echarts/lib/chart/graph/forceHelper.js","./simpleLayoutHelper":"node_modules/echarts/lib/chart/graph/simpleLayoutHelper.js","./circularLayoutHelper":"node_modules/echarts/lib/chart/graph/circularLayoutHelper.js","../../util/number":"node_modules/echarts/lib/util/number.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/graph/createView.js":[function(require,module,exports) {
+},{"./forceHelper":"../node_modules/echarts/lib/chart/graph/forceHelper.js","./simpleLayoutHelper":"../node_modules/echarts/lib/chart/graph/simpleLayoutHelper.js","./circularLayoutHelper":"../node_modules/echarts/lib/chart/graph/circularLayoutHelper.js","../../util/number":"../node_modules/echarts/lib/util/number.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/graph/createView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -62594,7 +62594,7 @@ function _default(ecModel, api) {
 }
 
 module.exports = _default;
-},{"../../coord/View":"node_modules/echarts/lib/coord/View.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","zrender/lib/core/bbox":"node_modules/zrender/lib/core/bbox.js"}],"node_modules/echarts/lib/chart/graph.js":[function(require,module,exports) {
+},{"../../coord/View":"../node_modules/echarts/lib/coord/View.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","zrender/lib/core/bbox":"../node_modules/zrender/lib/core/bbox.js"}],"../node_modules/echarts/lib/chart/graph.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -62668,7 +62668,7 @@ echarts.registerLayout(forceLayout); // Graph view coordinate system
 echarts.registerCoordinateSystem('graphView', {
   create: createView
 });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./graph/GraphSeries":"node_modules/echarts/lib/chart/graph/GraphSeries.js","./graph/GraphView":"node_modules/echarts/lib/chart/graph/GraphView.js","./graph/graphAction":"node_modules/echarts/lib/chart/graph/graphAction.js","./graph/categoryFilter":"node_modules/echarts/lib/chart/graph/categoryFilter.js","../visual/symbol":"node_modules/echarts/lib/visual/symbol.js","./graph/categoryVisual":"node_modules/echarts/lib/chart/graph/categoryVisual.js","./graph/edgeVisual":"node_modules/echarts/lib/chart/graph/edgeVisual.js","./graph/simpleLayout":"node_modules/echarts/lib/chart/graph/simpleLayout.js","./graph/circularLayout":"node_modules/echarts/lib/chart/graph/circularLayout.js","./graph/forceLayout":"node_modules/echarts/lib/chart/graph/forceLayout.js","./graph/createView":"node_modules/echarts/lib/chart/graph/createView.js"}],"node_modules/echarts/lib/chart/gauge/GaugeSeries.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./graph/GraphSeries":"../node_modules/echarts/lib/chart/graph/GraphSeries.js","./graph/GraphView":"../node_modules/echarts/lib/chart/graph/GraphView.js","./graph/graphAction":"../node_modules/echarts/lib/chart/graph/graphAction.js","./graph/categoryFilter":"../node_modules/echarts/lib/chart/graph/categoryFilter.js","../visual/symbol":"../node_modules/echarts/lib/visual/symbol.js","./graph/categoryVisual":"../node_modules/echarts/lib/chart/graph/categoryVisual.js","./graph/edgeVisual":"../node_modules/echarts/lib/chart/graph/edgeVisual.js","./graph/simpleLayout":"../node_modules/echarts/lib/chart/graph/simpleLayout.js","./graph/circularLayout":"../node_modules/echarts/lib/chart/graph/circularLayout.js","./graph/forceLayout":"../node_modules/echarts/lib/chart/graph/forceLayout.js","./graph/createView":"../node_modules/echarts/lib/chart/graph/createView.js"}],"../node_modules/echarts/lib/chart/gauge/GaugeSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -62812,7 +62812,7 @@ var GaugeSeries = SeriesModel.extend({
 });
 var _default = GaugeSeries;
 module.exports = _default;
-},{"../helper/createListSimply":"node_modules/echarts/lib/chart/helper/createListSimply.js","../../model/Series":"node_modules/echarts/lib/model/Series.js"}],"node_modules/echarts/lib/chart/gauge/PointerPath.js":[function(require,module,exports) {
+},{"../helper/createListSimply":"../node_modules/echarts/lib/chart/helper/createListSimply.js","../../model/Series":"../node_modules/echarts/lib/model/Series.js"}],"../node_modules/echarts/lib/chart/gauge/PointerPath.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -62881,7 +62881,7 @@ var _default = Path.extend({
 });
 
 module.exports = _default;
-},{"zrender/lib/graphic/Path":"node_modules/zrender/lib/graphic/Path.js"}],"node_modules/echarts/lib/chart/gauge/GaugeView.js":[function(require,module,exports) {
+},{"zrender/lib/graphic/Path":"../node_modules/zrender/lib/graphic/Path.js"}],"../node_modules/echarts/lib/chart/gauge/GaugeView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -63259,7 +63259,7 @@ var GaugeView = ChartView.extend({
 });
 var _default = GaugeView;
 module.exports = _default;
-},{"./PointerPath":"node_modules/echarts/lib/chart/gauge/PointerPath.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../view/Chart":"node_modules/echarts/lib/view/Chart.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/chart/gauge.js":[function(require,module,exports) {
+},{"./PointerPath":"../node_modules/echarts/lib/chart/gauge/PointerPath.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../view/Chart":"../node_modules/echarts/lib/view/Chart.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/chart/gauge.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -63283,7 +63283,7 @@ module.exports = _default;
 require("./gauge/GaugeSeries");
 
 require("./gauge/GaugeView");
-},{"./gauge/GaugeSeries":"node_modules/echarts/lib/chart/gauge/GaugeSeries.js","./gauge/GaugeView":"node_modules/echarts/lib/chart/gauge/GaugeView.js"}],"node_modules/echarts/lib/chart/funnel/FunnelSeries.js":[function(require,module,exports) {
+},{"./gauge/GaugeSeries":"../node_modules/echarts/lib/chart/gauge/GaugeSeries.js","./gauge/GaugeView":"../node_modules/echarts/lib/chart/gauge/GaugeView.js"}],"../node_modules/echarts/lib/chart/funnel/FunnelSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -63423,7 +63423,7 @@ var FunnelSeries = echarts.extendSeriesModel({
 });
 var _default = FunnelSeries;
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../helper/createListSimply":"node_modules/echarts/lib/chart/helper/createListSimply.js","../../util/model":"node_modules/echarts/lib/util/model.js","../../data/helper/sourceHelper":"node_modules/echarts/lib/data/helper/sourceHelper.js","../../visual/LegendVisualProvider":"node_modules/echarts/lib/visual/LegendVisualProvider.js"}],"node_modules/echarts/lib/chart/funnel/FunnelView.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../helper/createListSimply":"../node_modules/echarts/lib/chart/helper/createListSimply.js","../../util/model":"../node_modules/echarts/lib/util/model.js","../../data/helper/sourceHelper":"../node_modules/echarts/lib/data/helper/sourceHelper.js","../../visual/LegendVisualProvider":"../node_modules/echarts/lib/visual/LegendVisualProvider.js"}],"../node_modules/echarts/lib/chart/funnel/FunnelView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -63627,7 +63627,7 @@ var FunnelView = ChartView.extend({
 });
 var _default = FunnelView;
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../view/Chart":"node_modules/echarts/lib/view/Chart.js"}],"node_modules/echarts/lib/chart/funnel/funnelLayout.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../view/Chart":"../node_modules/echarts/lib/view/Chart.js"}],"../node_modules/echarts/lib/chart/funnel/funnelLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -63892,7 +63892,7 @@ function _default(ecModel, api, payload) {
 }
 
 module.exports = _default;
-},{"../../util/layout":"node_modules/echarts/lib/util/layout.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/chart/funnel.js":[function(require,module,exports) {
+},{"../../util/layout":"../node_modules/echarts/lib/util/layout.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/chart/funnel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -63946,7 +63946,7 @@ var dataFilter = require("../processor/dataFilter");
 echarts.registerVisual(dataColor('funnel'));
 echarts.registerLayout(funnelLayout);
 echarts.registerProcessor(dataFilter('funnel'));
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./funnel/FunnelSeries":"node_modules/echarts/lib/chart/funnel/FunnelSeries.js","./funnel/FunnelView":"node_modules/echarts/lib/chart/funnel/FunnelView.js","../visual/dataColor":"node_modules/echarts/lib/visual/dataColor.js","./funnel/funnelLayout":"node_modules/echarts/lib/chart/funnel/funnelLayout.js","../processor/dataFilter":"node_modules/echarts/lib/processor/dataFilter.js"}],"node_modules/echarts/lib/coord/parallel/parallelPreprocessor.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./funnel/FunnelSeries":"../node_modules/echarts/lib/chart/funnel/FunnelSeries.js","./funnel/FunnelView":"../node_modules/echarts/lib/chart/funnel/FunnelView.js","../visual/dataColor":"../node_modules/echarts/lib/visual/dataColor.js","./funnel/funnelLayout":"../node_modules/echarts/lib/chart/funnel/funnelLayout.js","../processor/dataFilter":"../node_modules/echarts/lib/processor/dataFilter.js"}],"../node_modules/echarts/lib/coord/parallel/parallelPreprocessor.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -64038,7 +64038,7 @@ function mergeAxisOptionFromParallel(option) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/coord/parallel/ParallelAxis.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/coord/parallel/ParallelAxis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -64129,7 +64129,7 @@ ParallelAxis.prototype = {
 zrUtil.inherits(ParallelAxis, Axis);
 var _default = ParallelAxis;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../Axis":"node_modules/echarts/lib/coord/Axis.js"}],"node_modules/echarts/lib/component/helper/sliderMove.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../Axis":"../node_modules/echarts/lib/coord/Axis.js"}],"../node_modules/echarts/lib/component/helper/sliderMove.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -64250,7 +64250,7 @@ function restrict(value, extend) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/coord/parallel/Parallel.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/coord/parallel/Parallel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -64766,7 +64766,7 @@ function layoutAxisWithExpand(axisIndex, layoutInfo) {
 
 var _default = Parallel;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/matrix":"node_modules/zrender/lib/core/matrix.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","../../coord/axisHelper":"node_modules/echarts/lib/coord/axisHelper.js","./ParallelAxis":"node_modules/echarts/lib/coord/parallel/ParallelAxis.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../component/helper/sliderMove":"node_modules/echarts/lib/component/helper/sliderMove.js"}],"node_modules/echarts/lib/coord/parallel/parallelCreator.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/matrix":"../node_modules/zrender/lib/core/matrix.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","../../coord/axisHelper":"../node_modules/echarts/lib/coord/axisHelper.js","./ParallelAxis":"../node_modules/echarts/lib/coord/parallel/ParallelAxis.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../component/helper/sliderMove":"../node_modules/echarts/lib/component/helper/sliderMove.js"}],"../node_modules/echarts/lib/coord/parallel/parallelCreator.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -64840,7 +64840,7 @@ function create(ecModel, api) {
 CoordinateSystem.register('parallel', {
   create: create
 });
-},{"./Parallel":"node_modules/echarts/lib/coord/parallel/Parallel.js","../../CoordinateSystem":"node_modules/echarts/lib/CoordinateSystem.js"}],"node_modules/echarts/lib/coord/parallel/AxisModel.js":[function(require,module,exports) {
+},{"./Parallel":"../node_modules/echarts/lib/coord/parallel/Parallel.js","../../CoordinateSystem":"../node_modules/echarts/lib/CoordinateSystem.js"}],"../node_modules/echarts/lib/coord/parallel/AxisModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -64998,7 +64998,7 @@ function getAxisType(axisName, option) {
 axisModelCreator('parallel', AxisModel, getAxisType, defaultOption);
 var _default = AxisModel;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Component":"node_modules/echarts/lib/model/Component.js","../../model/mixin/makeStyleMapper":"node_modules/echarts/lib/model/mixin/makeStyleMapper.js","../axisModelCreator":"node_modules/echarts/lib/coord/axisModelCreator.js","../../util/number":"node_modules/echarts/lib/util/number.js","../axisModelCommonMixin":"node_modules/echarts/lib/coord/axisModelCommonMixin.js"}],"node_modules/echarts/lib/coord/parallel/ParallelModel.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Component":"../node_modules/echarts/lib/model/Component.js","../../model/mixin/makeStyleMapper":"../node_modules/echarts/lib/model/mixin/makeStyleMapper.js","../axisModelCreator":"../node_modules/echarts/lib/coord/axisModelCreator.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../axisModelCommonMixin":"../node_modules/echarts/lib/coord/axisModelCommonMixin.js"}],"../node_modules/echarts/lib/coord/parallel/ParallelModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -65148,7 +65148,7 @@ var _default = Component.extend({
 });
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Component":"node_modules/echarts/lib/model/Component.js","./AxisModel":"node_modules/echarts/lib/coord/parallel/AxisModel.js"}],"node_modules/echarts/lib/component/axis/parallelAxisAction.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Component":"../node_modules/echarts/lib/model/Component.js","./AxisModel":"../node_modules/echarts/lib/coord/parallel/AxisModel.js"}],"../node_modules/echarts/lib/component/axis/parallelAxisAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -65220,7 +65220,7 @@ echarts.registerAction('parallelAxisExpand', function (payload, ecModel) {
     parallelModel.setAxisExpand(payload);
   });
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js"}],"node_modules/echarts/lib/component/helper/BrushController.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js"}],"../node_modules/echarts/lib/component/helper/BrushController.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -66144,7 +66144,7 @@ function getLineRenderer(xyIndex) {
 
 var _default = BrushController;
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/mixin/Eventful":"node_modules/zrender/lib/mixin/Eventful.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./interactionMutex":"node_modules/echarts/lib/component/helper/interactionMutex.js","../../data/DataDiffer":"node_modules/echarts/lib/data/DataDiffer.js"}],"node_modules/echarts/lib/component/helper/brushHelper.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/mixin/Eventful":"../node_modules/zrender/lib/mixin/Eventful.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./interactionMutex":"../node_modules/echarts/lib/component/helper/interactionMutex.js","../../data/DataDiffer":"../node_modules/echarts/lib/data/DataDiffer.js"}],"../node_modules/echarts/lib/component/helper/brushHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -66223,7 +66223,7 @@ function normalizeRect(rect) {
 exports.makeRectPanelClipPath = makeRectPanelClipPath;
 exports.makeLinearBrushOtherExtent = makeLinearBrushOtherExtent;
 exports.makeRectIsTargetByCursor = makeRectIsTargetByCursor;
-},{"zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","./cursorHelper":"node_modules/echarts/lib/component/helper/cursorHelper.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js"}],"node_modules/echarts/lib/component/axis/ParallelAxisView.js":[function(require,module,exports) {
+},{"zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","./cursorHelper":"../node_modules/echarts/lib/component/helper/cursorHelper.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js"}],"../node_modules/echarts/lib/component/axis/ParallelAxisView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -66419,7 +66419,7 @@ function getCoordSysModel(axisModel, ecModel) {
 
 var _default = AxisView;
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./AxisBuilder":"node_modules/echarts/lib/component/axis/AxisBuilder.js","../helper/BrushController":"node_modules/echarts/lib/component/helper/BrushController.js","../helper/brushHelper":"node_modules/echarts/lib/component/helper/brushHelper.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js"}],"node_modules/echarts/lib/component/parallelAxis.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./AxisBuilder":"../node_modules/echarts/lib/component/axis/AxisBuilder.js","../helper/BrushController":"../node_modules/echarts/lib/component/helper/BrushController.js","../helper/brushHelper":"../node_modules/echarts/lib/component/helper/brushHelper.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js"}],"../node_modules/echarts/lib/component/parallelAxis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -66445,7 +66445,7 @@ require("../coord/parallel/parallelCreator");
 require("./axis/parallelAxisAction");
 
 require("./axis/ParallelAxisView");
-},{"../coord/parallel/parallelCreator":"node_modules/echarts/lib/coord/parallel/parallelCreator.js","./axis/parallelAxisAction":"node_modules/echarts/lib/component/axis/parallelAxisAction.js","./axis/ParallelAxisView":"node_modules/echarts/lib/component/axis/ParallelAxisView.js"}],"node_modules/echarts/lib/component/parallel.js":[function(require,module,exports) {
+},{"../coord/parallel/parallelCreator":"../node_modules/echarts/lib/coord/parallel/parallelCreator.js","./axis/parallelAxisAction":"../node_modules/echarts/lib/component/axis/parallelAxisAction.js","./axis/ParallelAxisView":"../node_modules/echarts/lib/component/axis/ParallelAxisView.js"}],"../node_modules/echarts/lib/component/parallel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -66587,7 +66587,7 @@ function checkTrigger(view, triggerOn) {
 }
 
 echarts.registerPreprocessor(parallelPreprocessor);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/throttle":"node_modules/echarts/lib/util/throttle.js","../coord/parallel/parallelPreprocessor":"node_modules/echarts/lib/coord/parallel/parallelPreprocessor.js","../coord/parallel/parallelCreator":"node_modules/echarts/lib/coord/parallel/parallelCreator.js","../coord/parallel/ParallelModel":"node_modules/echarts/lib/coord/parallel/ParallelModel.js","./parallelAxis":"node_modules/echarts/lib/component/parallelAxis.js"}],"node_modules/echarts/lib/chart/parallel/ParallelSeries.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/throttle":"../node_modules/echarts/lib/util/throttle.js","../coord/parallel/parallelPreprocessor":"../node_modules/echarts/lib/coord/parallel/parallelPreprocessor.js","../coord/parallel/parallelCreator":"../node_modules/echarts/lib/coord/parallel/parallelCreator.js","../coord/parallel/ParallelModel":"../node_modules/echarts/lib/coord/parallel/ParallelModel.js","./parallelAxis":"../node_modules/echarts/lib/component/parallelAxis.js"}],"../node_modules/echarts/lib/chart/parallel/ParallelSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -66721,7 +66721,7 @@ function convertDimNameToNumber(dimName) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Series":"node_modules/echarts/lib/model/Series.js","../helper/createListFromArray":"node_modules/echarts/lib/chart/helper/createListFromArray.js"}],"node_modules/echarts/lib/chart/parallel/ParallelView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Series":"../node_modules/echarts/lib/model/Series.js","../helper/createListFromArray":"../node_modules/echarts/lib/chart/helper/createListFromArray.js"}],"../node_modules/echarts/lib/chart/parallel/ParallelView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -66993,7 +66993,7 @@ function isEmptyValue(val, axisType) {
 
 var _default = ParallelView;
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../view/Chart":"node_modules/echarts/lib/view/Chart.js"}],"node_modules/echarts/lib/chart/parallel/parallelVisual.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../view/Chart":"../node_modules/echarts/lib/view/Chart.js"}],"../node_modules/echarts/lib/chart/parallel/parallelVisual.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -67071,7 +67071,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{}],"node_modules/echarts/lib/chart/parallel.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/parallel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -67121,7 +67121,7 @@ var parallelVisual = require("./parallel/parallelVisual");
 * under the License.
 */
 echarts.registerVisual(parallelVisual);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","../component/parallel":"node_modules/echarts/lib/component/parallel.js","./parallel/ParallelSeries":"node_modules/echarts/lib/chart/parallel/ParallelSeries.js","./parallel/ParallelView":"node_modules/echarts/lib/chart/parallel/ParallelView.js","./parallel/parallelVisual":"node_modules/echarts/lib/chart/parallel/parallelVisual.js"}],"node_modules/echarts/lib/chart/sankey/SankeySeries.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","../component/parallel":"../node_modules/echarts/lib/component/parallel.js","./parallel/ParallelSeries":"../node_modules/echarts/lib/chart/parallel/ParallelSeries.js","./parallel/ParallelView":"../node_modules/echarts/lib/chart/parallel/ParallelView.js","./parallel/parallelVisual":"../node_modules/echarts/lib/chart/parallel/parallelVisual.js"}],"../node_modules/echarts/lib/chart/sankey/SankeySeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -67350,7 +67350,7 @@ var SankeySeries = SeriesModel.extend({
 });
 var _default = SankeySeries;
 module.exports = _default;
-},{"../../model/Series":"node_modules/echarts/lib/model/Series.js","../helper/createGraphFromNodeEdge":"node_modules/echarts/lib/chart/helper/createGraphFromNodeEdge.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../model/Model":"node_modules/echarts/lib/model/Model.js","../../config":"node_modules/echarts/lib/config.js"}],"node_modules/echarts/lib/chart/sankey/SankeyView.js":[function(require,module,exports) {
+},{"../../model/Series":"../node_modules/echarts/lib/model/Series.js","../helper/createGraphFromNodeEdge":"../node_modules/echarts/lib/chart/helper/createGraphFromNodeEdge.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js","../../config":"../node_modules/echarts/lib/config.js"}],"../node_modules/echarts/lib/chart/sankey/SankeyView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -67804,7 +67804,7 @@ function createGridClipShape(rect, seriesModel, cb) {
 }
 
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/sankey/sankeyAction.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/sankey/sankeyAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -67861,7 +67861,7 @@ echarts.registerAction({
     seriesModel.setNodePosition(payload.dataIndex, [payload.localX, payload.localY]);
   });
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","../helper/focusNodeAdjacencyAction":"node_modules/echarts/lib/chart/helper/focusNodeAdjacencyAction.js"}],"node_modules/echarts/lib/chart/sankey/sankeyLayout.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","../helper/focusNodeAdjacencyAction":"../node_modules/echarts/lib/chart/helper/focusNodeAdjacencyAction.js"}],"../node_modules/echarts/lib/chart/sankey/sankeyLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -68452,7 +68452,7 @@ function computeEdgeDepths(nodes, orient) {
 }
 
 module.exports = _default;
-},{"../../util/layout":"node_modules/echarts/lib/util/layout.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/chart/sankey/sankeyVisual.js":[function(require,module,exports) {
+},{"../../util/layout":"../node_modules/echarts/lib/util/layout.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/chart/sankey/sankeyVisual.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -68530,7 +68530,7 @@ function _default(ecModel, payload) {
 }
 
 module.exports = _default;
-},{"../../visual/VisualMapping":"node_modules/echarts/lib/visual/VisualMapping.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/sankey.js":[function(require,module,exports) {
+},{"../../visual/VisualMapping":"../node_modules/echarts/lib/visual/VisualMapping.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/sankey.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -68583,7 +68583,7 @@ var sankeyVisual = require("./sankey/sankeyVisual");
 */
 echarts.registerLayout(sankeyLayout);
 echarts.registerVisual(sankeyVisual);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./sankey/SankeySeries":"node_modules/echarts/lib/chart/sankey/SankeySeries.js","./sankey/SankeyView":"node_modules/echarts/lib/chart/sankey/SankeyView.js","./sankey/sankeyAction":"node_modules/echarts/lib/chart/sankey/sankeyAction.js","./sankey/sankeyLayout":"node_modules/echarts/lib/chart/sankey/sankeyLayout.js","./sankey/sankeyVisual":"node_modules/echarts/lib/chart/sankey/sankeyVisual.js"}],"node_modules/echarts/lib/chart/helper/whiskerBoxCommon.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./sankey/SankeySeries":"../node_modules/echarts/lib/chart/sankey/SankeySeries.js","./sankey/SankeyView":"../node_modules/echarts/lib/chart/sankey/SankeyView.js","./sankey/sankeyAction":"../node_modules/echarts/lib/chart/sankey/sankeyAction.js","./sankey/sankeyLayout":"../node_modules/echarts/lib/chart/sankey/sankeyLayout.js","./sankey/sankeyVisual":"../node_modules/echarts/lib/chart/sankey/sankeyVisual.js"}],"../node_modules/echarts/lib/chart/helper/whiskerBoxCommon.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -68730,7 +68730,7 @@ var seriesModelMixin = {
   }
 };
 exports.seriesModelMixin = seriesModelMixin;
-},{"../helper/createListSimply":"node_modules/echarts/lib/chart/helper/createListSimply.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../data/helper/dimensionHelper":"node_modules/echarts/lib/data/helper/dimensionHelper.js","../../data/helper/sourceHelper":"node_modules/echarts/lib/data/helper/sourceHelper.js"}],"node_modules/echarts/lib/chart/boxplot/BoxplotSeries.js":[function(require,module,exports) {
+},{"../helper/createListSimply":"../node_modules/echarts/lib/chart/helper/createListSimply.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../data/helper/dimensionHelper":"../node_modules/echarts/lib/data/helper/dimensionHelper.js","../../data/helper/sourceHelper":"../node_modules/echarts/lib/data/helper/sourceHelper.js"}],"../node_modules/echarts/lib/chart/boxplot/BoxplotSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -68849,7 +68849,7 @@ var BoxplotSeries = SeriesModel.extend({
 zrUtil.mixin(BoxplotSeries, seriesModelMixin, true);
 var _default = BoxplotSeries;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Series":"node_modules/echarts/lib/model/Series.js","../helper/whiskerBoxCommon":"node_modules/echarts/lib/chart/helper/whiskerBoxCommon.js"}],"node_modules/echarts/lib/chart/boxplot/BoxplotView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Series":"../node_modules/echarts/lib/model/Series.js","../helper/whiskerBoxCommon":"../node_modules/echarts/lib/chart/helper/whiskerBoxCommon.js"}],"../node_modules/echarts/lib/chart/boxplot/BoxplotView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -69018,7 +69018,7 @@ function transInit(points, dim, itemLayout) {
 
 var _default = BoxplotView;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../view/Chart":"node_modules/echarts/lib/view/Chart.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","zrender/lib/graphic/Path":"node_modules/zrender/lib/graphic/Path.js"}],"node_modules/echarts/lib/chart/boxplot/boxplotVisual.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../view/Chart":"../node_modules/echarts/lib/view/Chart.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","zrender/lib/graphic/Path":"../node_modules/zrender/lib/graphic/Path.js"}],"../node_modules/echarts/lib/chart/boxplot/boxplotVisual.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -69083,7 +69083,7 @@ function _default(ecModel, api) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/chart/boxplot/boxplotLayout.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/boxplot/boxplotLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -69288,7 +69288,7 @@ function layoutSingleSeries(seriesModel, offset, boxWidth) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/chart/boxplot.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/chart/boxplot.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -69339,7 +69339,7 @@ var boxplotLayout = require("./boxplot/boxplotLayout");
 */
 echarts.registerVisual(boxplotVisual);
 echarts.registerLayout(boxplotLayout);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./boxplot/BoxplotSeries":"node_modules/echarts/lib/chart/boxplot/BoxplotSeries.js","./boxplot/BoxplotView":"node_modules/echarts/lib/chart/boxplot/BoxplotView.js","./boxplot/boxplotVisual":"node_modules/echarts/lib/chart/boxplot/boxplotVisual.js","./boxplot/boxplotLayout":"node_modules/echarts/lib/chart/boxplot/boxplotLayout.js"}],"node_modules/echarts/lib/chart/candlestick/CandlestickSeries.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./boxplot/BoxplotSeries":"../node_modules/echarts/lib/chart/boxplot/BoxplotSeries.js","./boxplot/BoxplotView":"../node_modules/echarts/lib/chart/boxplot/BoxplotView.js","./boxplot/boxplotVisual":"../node_modules/echarts/lib/chart/boxplot/boxplotVisual.js","./boxplot/boxplotLayout":"../node_modules/echarts/lib/chart/boxplot/boxplotLayout.js"}],"../node_modules/echarts/lib/chart/candlestick/CandlestickSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -69471,7 +69471,7 @@ var CandlestickSeries = SeriesModel.extend({
 zrUtil.mixin(CandlestickSeries, seriesModelMixin, true);
 var _default = CandlestickSeries;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Series":"node_modules/echarts/lib/model/Series.js","../helper/whiskerBoxCommon":"node_modules/echarts/lib/chart/helper/whiskerBoxCommon.js"}],"node_modules/echarts/lib/chart/candlestick/CandlestickView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Series":"../node_modules/echarts/lib/model/Series.js","../helper/whiskerBoxCommon":"../node_modules/echarts/lib/chart/helper/whiskerBoxCommon.js"}],"../node_modules/echarts/lib/chart/candlestick/CandlestickView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -69789,7 +69789,7 @@ function setLargeStyle(sign, el, seriesModel, data) {
 
 var _default = CandlestickView;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../view/Chart":"node_modules/echarts/lib/view/Chart.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","zrender/lib/graphic/Path":"node_modules/zrender/lib/graphic/Path.js","../helper/createClipPathFromCoordSys":"node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js"}],"node_modules/echarts/lib/chart/candlestick/preprocessor.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../view/Chart":"../node_modules/echarts/lib/view/Chart.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","zrender/lib/graphic/Path":"../node_modules/zrender/lib/graphic/Path.js","../helper/createClipPathFromCoordSys":"../node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js"}],"../node_modules/echarts/lib/chart/candlestick/preprocessor.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -69844,7 +69844,7 @@ function _default(option) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/candlestick/candlestickVisual.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/candlestick/candlestickVisual.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -69936,7 +69936,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"../helper/createRenderPlanner":"node_modules/echarts/lib/chart/helper/createRenderPlanner.js"}],"node_modules/echarts/lib/chart/candlestick/candlestickLayout.js":[function(require,module,exports) {
+},{"../helper/createRenderPlanner":"../node_modules/echarts/lib/chart/helper/createRenderPlanner.js"}],"../node_modules/echarts/lib/chart/candlestick/candlestickLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -70150,7 +70150,7 @@ function calculateCandleWidth(seriesModel, data) {
 }
 
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../helper/createRenderPlanner":"node_modules/echarts/lib/chart/helper/createRenderPlanner.js","../../util/number":"node_modules/echarts/lib/util/number.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/candlestick.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../helper/createRenderPlanner":"../node_modules/echarts/lib/chart/helper/createRenderPlanner.js","../../util/number":"../node_modules/echarts/lib/util/number.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/candlestick.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -70204,7 +70204,7 @@ var candlestickLayout = require("./candlestick/candlestickLayout");
 echarts.registerPreprocessor(preprocessor);
 echarts.registerVisual(candlestickVisual);
 echarts.registerLayout(candlestickLayout);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./candlestick/CandlestickSeries":"node_modules/echarts/lib/chart/candlestick/CandlestickSeries.js","./candlestick/CandlestickView":"node_modules/echarts/lib/chart/candlestick/CandlestickView.js","./candlestick/preprocessor":"node_modules/echarts/lib/chart/candlestick/preprocessor.js","./candlestick/candlestickVisual":"node_modules/echarts/lib/chart/candlestick/candlestickVisual.js","./candlestick/candlestickLayout":"node_modules/echarts/lib/chart/candlestick/candlestickLayout.js"}],"node_modules/echarts/lib/chart/effectScatter/EffectScatterSeries.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./candlestick/CandlestickSeries":"../node_modules/echarts/lib/chart/candlestick/CandlestickSeries.js","./candlestick/CandlestickView":"../node_modules/echarts/lib/chart/candlestick/CandlestickView.js","./candlestick/preprocessor":"../node_modules/echarts/lib/chart/candlestick/preprocessor.js","./candlestick/candlestickVisual":"../node_modules/echarts/lib/chart/candlestick/candlestickVisual.js","./candlestick/candlestickLayout":"../node_modules/echarts/lib/chart/candlestick/candlestickLayout.js"}],"../node_modules/echarts/lib/chart/effectScatter/EffectScatterSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -70294,7 +70294,7 @@ var _default = SeriesModel.extend({
 });
 
 module.exports = _default;
-},{"../helper/createListFromArray":"node_modules/echarts/lib/chart/helper/createListFromArray.js","../../model/Series":"node_modules/echarts/lib/model/Series.js"}],"node_modules/echarts/lib/chart/helper/EffectSymbol.js":[function(require,module,exports) {
+},{"../helper/createListFromArray":"../node_modules/echarts/lib/chart/helper/createListFromArray.js","../../model/Series":"../node_modules/echarts/lib/model/Series.js"}],"../node_modules/echarts/lib/chart/helper/EffectSymbol.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -70558,7 +70558,7 @@ effectSymbolProto.fadeOut = function (cb) {
 zrUtil.inherits(EffectSymbol, Group);
 var _default = EffectSymbol;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/symbol":"node_modules/echarts/lib/util/symbol.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/number":"node_modules/echarts/lib/util/number.js","./Symbol":"node_modules/echarts/lib/chart/helper/Symbol.js"}],"node_modules/echarts/lib/chart/effectScatter/EffectScatterView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/symbol":"../node_modules/echarts/lib/util/symbol.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/number":"../node_modules/echarts/lib/util/number.js","./Symbol":"../node_modules/echarts/lib/chart/helper/Symbol.js"}],"../node_modules/echarts/lib/chart/effectScatter/EffectScatterView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -70647,7 +70647,7 @@ var _default = echarts.extendChartView({
 });
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","../helper/SymbolDraw":"node_modules/echarts/lib/chart/helper/SymbolDraw.js","../helper/EffectSymbol":"node_modules/echarts/lib/chart/helper/EffectSymbol.js","zrender/lib/core/matrix":"node_modules/zrender/lib/core/matrix.js","../../layout/points":"node_modules/echarts/lib/layout/points.js"}],"node_modules/echarts/lib/chart/effectScatter.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","../helper/SymbolDraw":"../node_modules/echarts/lib/chart/helper/SymbolDraw.js","../helper/EffectSymbol":"../node_modules/echarts/lib/chart/helper/EffectSymbol.js","zrender/lib/core/matrix":"../node_modules/zrender/lib/core/matrix.js","../../layout/points":"../node_modules/echarts/lib/layout/points.js"}],"../node_modules/echarts/lib/chart/effectScatter.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -70698,7 +70698,7 @@ var layoutPoints = require("../layout/points");
 */
 echarts.registerVisual(visualSymbol('effectScatter', 'circle'));
 echarts.registerLayout(layoutPoints('effectScatter'));
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./effectScatter/EffectScatterSeries":"node_modules/echarts/lib/chart/effectScatter/EffectScatterSeries.js","./effectScatter/EffectScatterView":"node_modules/echarts/lib/chart/effectScatter/EffectScatterView.js","../visual/symbol":"node_modules/echarts/lib/visual/symbol.js","../layout/points":"node_modules/echarts/lib/layout/points.js"}],"node_modules/echarts/lib/chart/lines/LinesSeries.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./effectScatter/EffectScatterSeries":"../node_modules/echarts/lib/chart/effectScatter/EffectScatterSeries.js","./effectScatter/EffectScatterView":"../node_modules/echarts/lib/chart/effectScatter/EffectScatterView.js","../visual/symbol":"../node_modules/echarts/lib/visual/symbol.js","../layout/points":"../node_modules/echarts/lib/layout/points.js"}],"../node_modules/echarts/lib/chart/lines/LinesSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -71033,7 +71033,7 @@ var LinesSeries = SeriesModel.extend({
 });
 var _default = LinesSeries;
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../../model/Series":"node_modules/echarts/lib/model/Series.js","../../data/List":"node_modules/echarts/lib/data/List.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../CoordinateSystem":"node_modules/echarts/lib/CoordinateSystem.js"}],"node_modules/echarts/lib/chart/helper/EffectLine.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../model/Series":"../node_modules/echarts/lib/model/Series.js","../../data/List":"../node_modules/echarts/lib/data/List.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../CoordinateSystem":"../node_modules/echarts/lib/CoordinateSystem.js"}],"../node_modules/echarts/lib/chart/helper/EffectLine.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -71270,7 +71270,7 @@ effectLineProto.updateLayout = function (lineData, idx) {
 zrUtil.inherits(EffectLine, graphic.Group);
 var _default = EffectLine;
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./Line":"node_modules/echarts/lib/chart/helper/Line.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/symbol":"node_modules/echarts/lib/util/symbol.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js","zrender/lib/core/curve":"node_modules/zrender/lib/core/curve.js"}],"node_modules/echarts/lib/chart/helper/Polyline.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./Line":"../node_modules/echarts/lib/chart/helper/Line.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/symbol":"../node_modules/echarts/lib/util/symbol.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js","zrender/lib/core/curve":"../node_modules/zrender/lib/core/curve.js"}],"../node_modules/echarts/lib/chart/helper/Polyline.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -71386,7 +71386,7 @@ polylineProto.updateLayout = function (lineData, idx) {
 zrUtil.inherits(Polyline, graphic.Group);
 var _default = Polyline;
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/helper/EffectPolyline.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/helper/EffectPolyline.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -71536,7 +71536,7 @@ effectPolylineProto.updateSymbolPosition = function (symbol) {
 zrUtil.inherits(EffectPolyline, EffectLine);
 var _default = EffectPolyline;
 module.exports = _default;
-},{"./Polyline":"node_modules/echarts/lib/chart/helper/Polyline.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./EffectLine":"node_modules/echarts/lib/chart/helper/EffectLine.js","zrender/lib/core/vector":"node_modules/zrender/lib/core/vector.js"}],"node_modules/echarts/lib/chart/helper/LargeLineDraw.js":[function(require,module,exports) {
+},{"./Polyline":"../node_modules/echarts/lib/chart/helper/Polyline.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./EffectLine":"../node_modules/echarts/lib/chart/helper/EffectLine.js","zrender/lib/core/vector":"../node_modules/zrender/lib/core/vector.js"}],"../node_modules/echarts/lib/chart/helper/LargeLineDraw.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -71810,7 +71810,7 @@ largeLineProto._clearIncremental = function () {
 
 var _default = LargeLineDraw;
 module.exports = _default;
-},{"../../util/graphic":"node_modules/echarts/lib/util/graphic.js","zrender/lib/graphic/IncrementalDisplayable":"node_modules/zrender/lib/graphic/IncrementalDisplayable.js","zrender/lib/contain/line":"node_modules/zrender/lib/contain/line.js","zrender/lib/contain/quadratic":"node_modules/zrender/lib/contain/quadratic.js"}],"node_modules/echarts/lib/chart/lines/linesLayout.js":[function(require,module,exports) {
+},{"../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","zrender/lib/graphic/IncrementalDisplayable":"../node_modules/zrender/lib/graphic/IncrementalDisplayable.js","zrender/lib/contain/line":"../node_modules/zrender/lib/contain/line.js","zrender/lib/contain/quadratic":"../node_modules/zrender/lib/contain/quadratic.js"}],"../node_modules/echarts/lib/chart/lines/linesLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -71929,7 +71929,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{"../helper/createRenderPlanner":"node_modules/echarts/lib/chart/helper/createRenderPlanner.js"}],"node_modules/echarts/lib/chart/lines/LinesView.js":[function(require,module,exports) {
+},{"../helper/createRenderPlanner":"../node_modules/echarts/lib/chart/helper/createRenderPlanner.js"}],"../node_modules/echarts/lib/chart/lines/LinesView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -72128,7 +72128,7 @@ var _default = echarts.extendChartView({
 });
 
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../../echarts":"node_modules/echarts/lib/echarts.js","../helper/LineDraw":"node_modules/echarts/lib/chart/helper/LineDraw.js","../helper/EffectLine":"node_modules/echarts/lib/chart/helper/EffectLine.js","../helper/Line":"node_modules/echarts/lib/chart/helper/Line.js","../helper/Polyline":"node_modules/echarts/lib/chart/helper/Polyline.js","../helper/EffectPolyline":"node_modules/echarts/lib/chart/helper/EffectPolyline.js","../helper/LargeLineDraw":"node_modules/echarts/lib/chart/helper/LargeLineDraw.js","./linesLayout":"node_modules/echarts/lib/chart/lines/linesLayout.js","../helper/createClipPathFromCoordSys":"node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js"}],"node_modules/echarts/lib/chart/lines/linesVisual.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../echarts":"../node_modules/echarts/lib/echarts.js","../helper/LineDraw":"../node_modules/echarts/lib/chart/helper/LineDraw.js","../helper/EffectLine":"../node_modules/echarts/lib/chart/helper/EffectLine.js","../helper/Line":"../node_modules/echarts/lib/chart/helper/Line.js","../helper/Polyline":"../node_modules/echarts/lib/chart/helper/Polyline.js","../helper/EffectPolyline":"../node_modules/echarts/lib/chart/helper/EffectPolyline.js","../helper/LargeLineDraw":"../node_modules/echarts/lib/chart/helper/LargeLineDraw.js","./linesLayout":"../node_modules/echarts/lib/chart/lines/linesLayout.js","../helper/createClipPathFromCoordSys":"../node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js"}],"../node_modules/echarts/lib/chart/lines/linesVisual.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -72206,7 +72206,7 @@ var _default = {
   }
 };
 module.exports = _default;
-},{}],"node_modules/echarts/lib/chart/lines.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/lines.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -72257,7 +72257,7 @@ var linesVisual = require("./lines/linesVisual");
 */
 echarts.registerLayout(linesLayout);
 echarts.registerVisual(linesVisual);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./lines/LinesSeries":"node_modules/echarts/lib/chart/lines/LinesSeries.js","./lines/LinesView":"node_modules/echarts/lib/chart/lines/LinesView.js","./lines/linesLayout":"node_modules/echarts/lib/chart/lines/linesLayout.js","./lines/linesVisual":"node_modules/echarts/lib/chart/lines/linesVisual.js"}],"node_modules/echarts/lib/chart/heatmap/HeatmapSeries.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./lines/LinesSeries":"../node_modules/echarts/lib/chart/lines/LinesSeries.js","./lines/LinesView":"../node_modules/echarts/lib/chart/lines/LinesView.js","./lines/linesLayout":"../node_modules/echarts/lib/chart/lines/linesLayout.js","./lines/linesVisual":"../node_modules/echarts/lib/chart/lines/linesVisual.js"}],"../node_modules/echarts/lib/chart/heatmap/HeatmapSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -72334,7 +72334,7 @@ var _default = SeriesModel.extend({
 });
 
 module.exports = _default;
-},{"../../model/Series":"node_modules/echarts/lib/model/Series.js","../helper/createListFromArray":"node_modules/echarts/lib/chart/helper/createListFromArray.js","../../CoordinateSystem":"node_modules/echarts/lib/CoordinateSystem.js"}],"node_modules/echarts/lib/chart/heatmap/HeatmapLayer.js":[function(require,module,exports) {
+},{"../../model/Series":"../node_modules/echarts/lib/model/Series.js","../helper/createListFromArray":"../node_modules/echarts/lib/chart/helper/createListFromArray.js","../../CoordinateSystem":"../node_modules/echarts/lib/CoordinateSystem.js"}],"../node_modules/echarts/lib/chart/heatmap/HeatmapLayer.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -72516,7 +72516,7 @@ Heatmap.prototype = {
 };
 var _default = Heatmap;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/heatmap/HeatmapView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/heatmap/HeatmapView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -72798,7 +72798,7 @@ var _default = echarts.extendChartView({
 });
 
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../../echarts":"node_modules/echarts/lib/echarts.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./HeatmapLayer":"node_modules/echarts/lib/chart/heatmap/HeatmapLayer.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/heatmap.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../echarts":"../node_modules/echarts/lib/echarts.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./HeatmapLayer":"../node_modules/echarts/lib/chart/heatmap/HeatmapLayer.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/heatmap.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -72822,7 +72822,7 @@ module.exports = _default;
 require("./heatmap/HeatmapSeries");
 
 require("./heatmap/HeatmapView");
-},{"./heatmap/HeatmapSeries":"node_modules/echarts/lib/chart/heatmap/HeatmapSeries.js","./heatmap/HeatmapView":"node_modules/echarts/lib/chart/heatmap/HeatmapView.js"}],"node_modules/echarts/lib/chart/bar/PictorialBarSeries.js":[function(require,module,exports) {
+},{"./heatmap/HeatmapSeries":"../node_modules/echarts/lib/chart/heatmap/HeatmapSeries.js","./heatmap/HeatmapView":"../node_modules/echarts/lib/chart/heatmap/HeatmapView.js"}],"../node_modules/echarts/lib/chart/bar/PictorialBarSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -72906,7 +72906,7 @@ var PictorialBarSeries = BaseBarSeries.extend({
 });
 var _default = PictorialBarSeries;
 module.exports = _default;
-},{"./BaseBarSeries":"node_modules/echarts/lib/chart/bar/BaseBarSeries.js"}],"node_modules/echarts/lib/chart/bar/PictorialBarView.js":[function(require,module,exports) {
+},{"./BaseBarSeries":"../node_modules/echarts/lib/chart/bar/BaseBarSeries.js"}],"../node_modules/echarts/lib/chart/bar/PictorialBarView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -73584,7 +73584,7 @@ function toIntTimes(times) {
 
 var _default = BarView;
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/symbol":"node_modules/echarts/lib/util/symbol.js","../../util/number":"node_modules/echarts/lib/util/number.js","./helper":"node_modules/echarts/lib/chart/bar/helper.js"}],"node_modules/echarts/lib/chart/pictorialBar.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/symbol":"../node_modules/echarts/lib/util/symbol.js","../../util/number":"../node_modules/echarts/lib/util/number.js","./helper":"../node_modules/echarts/lib/chart/bar/helper.js"}],"../node_modules/echarts/lib/chart/pictorialBar.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -73644,7 +73644,7 @@ require("../component/gridSimple");
 // In case developer forget to include grid component
 echarts.registerLayout(zrUtil.curry(layout, 'pictorialBar'));
 echarts.registerVisual(visualSymbol('pictorialBar', 'roundRect'));
-},{"../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../coord/cartesian/Grid":"node_modules/echarts/lib/coord/cartesian/Grid.js","./bar/PictorialBarSeries":"node_modules/echarts/lib/chart/bar/PictorialBarSeries.js","./bar/PictorialBarView":"node_modules/echarts/lib/chart/bar/PictorialBarView.js","../layout/barGrid":"node_modules/echarts/lib/layout/barGrid.js","../visual/symbol":"node_modules/echarts/lib/visual/symbol.js","../component/gridSimple":"node_modules/echarts/lib/component/gridSimple.js"}],"node_modules/echarts/lib/coord/single/SingleAxis.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../coord/cartesian/Grid":"../node_modules/echarts/lib/coord/cartesian/Grid.js","./bar/PictorialBarSeries":"../node_modules/echarts/lib/chart/bar/PictorialBarSeries.js","./bar/PictorialBarView":"../node_modules/echarts/lib/chart/bar/PictorialBarView.js","../layout/barGrid":"../node_modules/echarts/lib/layout/barGrid.js","../visual/symbol":"../node_modules/echarts/lib/visual/symbol.js","../component/gridSimple":"../node_modules/echarts/lib/component/gridSimple.js"}],"../node_modules/echarts/lib/coord/single/SingleAxis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -73772,7 +73772,7 @@ SingleAxis.prototype = {
 zrUtil.inherits(SingleAxis, Axis);
 var _default = SingleAxis;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../Axis":"node_modules/echarts/lib/coord/Axis.js"}],"node_modules/echarts/lib/coord/single/Single.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../Axis":"../node_modules/echarts/lib/coord/Axis.js"}],"../node_modules/echarts/lib/coord/single/Single.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -74061,7 +74061,7 @@ Single.prototype = {
 };
 var _default = Single;
 module.exports = _default;
-},{"./SingleAxis":"node_modules/echarts/lib/coord/single/SingleAxis.js","../axisHelper":"node_modules/echarts/lib/coord/axisHelper.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/coord/single/singleCreator.js":[function(require,module,exports) {
+},{"./SingleAxis":"../node_modules/echarts/lib/coord/single/SingleAxis.js","../axisHelper":"../node_modules/echarts/lib/coord/axisHelper.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/coord/single/singleCreator.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -74142,7 +74142,7 @@ CoordinateSystem.register('single', {
   create: create,
   dimensions: Single.prototype.dimensions
 });
-},{"./Single":"node_modules/echarts/lib/coord/single/Single.js","../../CoordinateSystem":"node_modules/echarts/lib/CoordinateSystem.js"}],"node_modules/echarts/lib/coord/single/singleAxisHelper.js":[function(require,module,exports) {
+},{"./Single":"../node_modules/echarts/lib/coord/single/Single.js","../../CoordinateSystem":"../node_modules/echarts/lib/CoordinateSystem.js"}],"../node_modules/echarts/lib/coord/single/singleAxisHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -74240,7 +74240,7 @@ function layout(axisModel, opt) {
 }
 
 exports.layout = layout;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/component/axis/SingleAxisView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/component/axis/SingleAxisView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -74391,7 +74391,7 @@ var SingleAxisView = AxisView.extend({
 });
 var _default = SingleAxisView;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./AxisBuilder":"node_modules/echarts/lib/component/axis/AxisBuilder.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../coord/single/singleAxisHelper":"node_modules/echarts/lib/coord/single/singleAxisHelper.js","./AxisView":"node_modules/echarts/lib/component/axis/AxisView.js","./axisSplitHelper":"node_modules/echarts/lib/component/axis/axisSplitHelper.js"}],"node_modules/echarts/lib/coord/single/AxisModel.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./AxisBuilder":"../node_modules/echarts/lib/component/axis/AxisBuilder.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../coord/single/singleAxisHelper":"../node_modules/echarts/lib/coord/single/singleAxisHelper.js","./AxisView":"../node_modules/echarts/lib/component/axis/AxisView.js","./axisSplitHelper":"../node_modules/echarts/lib/component/axis/axisSplitHelper.js"}],"../node_modules/echarts/lib/coord/single/AxisModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -74508,7 +74508,7 @@ zrUtil.merge(AxisModel.prototype, axisModelCommonMixin);
 axisModelCreator('single', AxisModel, getAxisType, defaultOption);
 var _default = AxisModel;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Component":"node_modules/echarts/lib/model/Component.js","../axisModelCreator":"node_modules/echarts/lib/coord/axisModelCreator.js","../axisModelCommonMixin":"node_modules/echarts/lib/coord/axisModelCommonMixin.js"}],"node_modules/echarts/lib/component/axisPointer/findPointFromSeries.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Component":"../node_modules/echarts/lib/model/Component.js","../axisModelCreator":"../node_modules/echarts/lib/coord/axisModelCreator.js","../axisModelCommonMixin":"../node_modules/echarts/lib/coord/axisModelCommonMixin.js"}],"../node_modules/echarts/lib/component/axisPointer/findPointFromSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -74600,7 +74600,7 @@ function _default(finder, ecModel) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/component/axisPointer/axisTrigger.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/component/axisPointer/axisTrigger.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -75032,7 +75032,7 @@ function illegalPoint(point) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/model":"node_modules/echarts/lib/util/model.js","./modelHelper":"node_modules/echarts/lib/component/axisPointer/modelHelper.js","./findPointFromSeries":"node_modules/echarts/lib/component/axisPointer/findPointFromSeries.js"}],"node_modules/echarts/lib/component/axisPointer/AxisPointerModel.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/model":"../node_modules/echarts/lib/util/model.js","./modelHelper":"../node_modules/echarts/lib/component/axisPointer/modelHelper.js","./findPointFromSeries":"../node_modules/echarts/lib/component/axisPointer/findPointFromSeries.js"}],"../node_modules/echarts/lib/component/axisPointer/AxisPointerModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -75162,7 +75162,7 @@ var AxisPointerModel = echarts.extendComponentModel({
 });
 var _default = AxisPointerModel;
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js"}],"node_modules/echarts/lib/component/axisPointer/globalListener.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js"}],"../node_modules/echarts/lib/component/axisPointer/globalListener.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -75325,7 +75325,7 @@ function unregister(key, api) {
 
 exports.register = register;
 exports.unregister = unregister;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"node_modules/zrender/lib/core/env.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/component/axisPointer/AxisPointerView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/component/axisPointer/AxisPointerView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -75406,7 +75406,7 @@ var AxisPointerView = echarts.extendComponentView({
 });
 var _default = AxisPointerView;
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","./globalListener":"node_modules/echarts/lib/component/axisPointer/globalListener.js"}],"node_modules/echarts/lib/component/axisPointer/BaseAxisPointer.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","./globalListener":"../node_modules/echarts/lib/component/axisPointer/globalListener.js"}],"../node_modules/echarts/lib/component/axisPointer/BaseAxisPointer.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -75934,7 +75934,7 @@ function updateMandatoryProps(group, axisPointerModel, silent) {
 clazzUtil.enableClassExtend(BaseAxisPointer);
 var _default = BaseAxisPointer;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/clazz":"node_modules/echarts/lib/util/clazz.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./modelHelper":"node_modules/echarts/lib/component/axisPointer/modelHelper.js","zrender/lib/core/event":"node_modules/zrender/lib/core/event.js","../../util/throttle":"node_modules/echarts/lib/util/throttle.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/component/axisPointer/viewHelper.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/clazz":"../node_modules/echarts/lib/util/clazz.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./modelHelper":"../node_modules/echarts/lib/component/axisPointer/modelHelper.js","zrender/lib/core/event":"../node_modules/zrender/lib/core/event.js","../../util/throttle":"../node_modules/echarts/lib/util/throttle.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/component/axisPointer/viewHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -76198,7 +76198,7 @@ exports.buildCartesianSingleLabelElOption = buildCartesianSingleLabelElOption;
 exports.makeLineShape = makeLineShape;
 exports.makeRectShape = makeRectShape;
 exports.makeSectorShape = makeSectorShape;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","zrender/lib/contain/text":"node_modules/zrender/lib/contain/text.js","../../util/format":"node_modules/echarts/lib/util/format.js","zrender/lib/core/matrix":"node_modules/zrender/lib/core/matrix.js","../../coord/axisHelper":"node_modules/echarts/lib/coord/axisHelper.js","../axis/AxisBuilder":"node_modules/echarts/lib/component/axis/AxisBuilder.js"}],"node_modules/echarts/lib/component/axisPointer/CartesianAxisPointer.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","zrender/lib/contain/text":"../node_modules/zrender/lib/contain/text.js","../../util/format":"../node_modules/echarts/lib/util/format.js","zrender/lib/core/matrix":"../node_modules/zrender/lib/core/matrix.js","../../coord/axisHelper":"../node_modules/echarts/lib/coord/axisHelper.js","../axis/AxisBuilder":"../node_modules/echarts/lib/component/axis/AxisBuilder.js"}],"../node_modules/echarts/lib/component/axisPointer/CartesianAxisPointer.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -76345,7 +76345,7 @@ function getAxisDimIndex(axis) {
 AxisView.registerAxisPointerClass('CartesianAxisPointer', CartesianAxisPointer);
 var _default = CartesianAxisPointer;
 module.exports = _default;
-},{"./BaseAxisPointer":"node_modules/echarts/lib/component/axisPointer/BaseAxisPointer.js","./viewHelper":"node_modules/echarts/lib/component/axisPointer/viewHelper.js","../../coord/cartesian/cartesianAxisHelper":"node_modules/echarts/lib/coord/cartesian/cartesianAxisHelper.js","../axis/AxisView":"node_modules/echarts/lib/component/axis/AxisView.js"}],"node_modules/echarts/lib/component/axisPointer.js":[function(require,module,exports) {
+},{"./BaseAxisPointer":"../node_modules/echarts/lib/component/axisPointer/BaseAxisPointer.js","./viewHelper":"../node_modules/echarts/lib/component/axisPointer/viewHelper.js","../../coord/cartesian/cartesianAxisHelper":"../node_modules/echarts/lib/coord/cartesian/cartesianAxisHelper.js","../axis/AxisView":"../node_modules/echarts/lib/component/axis/AxisView.js"}],"../node_modules/echarts/lib/component/axisPointer.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -76427,7 +76427,7 @@ echarts.registerAction({
   event: 'updateAxisPointer',
   update: ':updateAxisPointer'
 }, axisTrigger);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./axisPointer/modelHelper":"node_modules/echarts/lib/component/axisPointer/modelHelper.js","./axisPointer/axisTrigger":"node_modules/echarts/lib/component/axisPointer/axisTrigger.js","./axisPointer/AxisPointerModel":"node_modules/echarts/lib/component/axisPointer/AxisPointerModel.js","./axisPointer/AxisPointerView":"node_modules/echarts/lib/component/axisPointer/AxisPointerView.js","./axisPointer/CartesianAxisPointer":"node_modules/echarts/lib/component/axisPointer/CartesianAxisPointer.js"}],"node_modules/echarts/lib/component/axisPointer/SingleAxisPointer.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./axisPointer/modelHelper":"../node_modules/echarts/lib/component/axisPointer/modelHelper.js","./axisPointer/axisTrigger":"../node_modules/echarts/lib/component/axisPointer/axisTrigger.js","./axisPointer/AxisPointerModel":"../node_modules/echarts/lib/component/axisPointer/AxisPointerModel.js","./axisPointer/AxisPointerView":"../node_modules/echarts/lib/component/axisPointer/AxisPointerView.js","./axisPointer/CartesianAxisPointer":"../node_modules/echarts/lib/component/axisPointer/CartesianAxisPointer.js"}],"../node_modules/echarts/lib/component/axisPointer/SingleAxisPointer.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -76570,7 +76570,7 @@ function getGlobalExtent(coordSys, dimIndex) {
 AxisView.registerAxisPointerClass('SingleAxisPointer', SingleAxisPointer);
 var _default = SingleAxisPointer;
 module.exports = _default;
-},{"./BaseAxisPointer":"node_modules/echarts/lib/component/axisPointer/BaseAxisPointer.js","./viewHelper":"node_modules/echarts/lib/component/axisPointer/viewHelper.js","../../coord/single/singleAxisHelper":"node_modules/echarts/lib/coord/single/singleAxisHelper.js","../axis/AxisView":"node_modules/echarts/lib/component/axis/AxisView.js"}],"node_modules/echarts/lib/component/singleAxis.js":[function(require,module,exports) {
+},{"./BaseAxisPointer":"../node_modules/echarts/lib/component/axisPointer/BaseAxisPointer.js","./viewHelper":"../node_modules/echarts/lib/component/axisPointer/viewHelper.js","../../coord/single/singleAxisHelper":"../node_modules/echarts/lib/coord/single/singleAxisHelper.js","../axis/AxisView":"../node_modules/echarts/lib/component/axis/AxisView.js"}],"../node_modules/echarts/lib/component/singleAxis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -76624,7 +76624,7 @@ require("./axisPointer/SingleAxisPointer");
 echarts.extendComponentView({
   type: 'single'
 });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","../coord/single/singleCreator":"node_modules/echarts/lib/coord/single/singleCreator.js","./axis/SingleAxisView":"node_modules/echarts/lib/component/axis/SingleAxisView.js","../coord/single/AxisModel":"node_modules/echarts/lib/coord/single/AxisModel.js","./axisPointer":"node_modules/echarts/lib/component/axisPointer.js","./axisPointer/SingleAxisPointer":"node_modules/echarts/lib/component/axisPointer/SingleAxisPointer.js"}],"node_modules/echarts/lib/chart/themeRiver/ThemeRiverSeries.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","../coord/single/singleCreator":"../node_modules/echarts/lib/coord/single/singleCreator.js","./axis/SingleAxisView":"../node_modules/echarts/lib/component/axis/SingleAxisView.js","../coord/single/AxisModel":"../node_modules/echarts/lib/coord/single/AxisModel.js","./axisPointer":"../node_modules/echarts/lib/component/axisPointer.js","./axisPointer/SingleAxisPointer":"../node_modules/echarts/lib/component/axisPointer/SingleAxisPointer.js"}],"../node_modules/echarts/lib/chart/themeRiver/ThemeRiverSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -76946,7 +76946,7 @@ var ThemeRiverSeries = SeriesModel.extend({
 });
 var _default = ThemeRiverSeries;
 module.exports = _default;
-},{"../../model/Series":"node_modules/echarts/lib/model/Series.js","../../data/helper/createDimensions":"node_modules/echarts/lib/data/helper/createDimensions.js","../../data/helper/dimensionHelper":"node_modules/echarts/lib/data/helper/dimensionHelper.js","../../data/List":"node_modules/echarts/lib/data/List.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/model":"node_modules/echarts/lib/util/model.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../visual/LegendVisualProvider":"node_modules/echarts/lib/visual/LegendVisualProvider.js"}],"../../.config/yarn/global/node_modules/process/browser.js":[function(require,module,exports) {
+},{"../../model/Series":"../node_modules/echarts/lib/model/Series.js","../../data/helper/createDimensions":"../node_modules/echarts/lib/data/helper/createDimensions.js","../../data/helper/dimensionHelper":"../node_modules/echarts/lib/data/helper/dimensionHelper.js","../../data/List":"../node_modules/echarts/lib/data/List.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/model":"../node_modules/echarts/lib/util/model.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../visual/LegendVisualProvider":"../node_modules/echarts/lib/visual/LegendVisualProvider.js"}],"../../../.config/yarn/global/node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -77155,7 +77155,7 @@ process.chdir = function (dir) {
 process.umask = function () {
   return 0;
 };
-},{}],"node_modules/echarts/lib/chart/themeRiver/ThemeRiverView.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/themeRiver/ThemeRiverView.js":[function(require,module,exports) {
 var process = require("process");
 
 /*
@@ -77344,7 +77344,7 @@ function createGridClipShape(rect, seriesModel, cb) {
 }
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","../line/poly":"node_modules/echarts/lib/chart/line/poly.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../data/DataDiffer":"node_modules/echarts/lib/data/DataDiffer.js","process":"../../.config/yarn/global/node_modules/process/browser.js"}],"node_modules/echarts/lib/chart/themeRiver/themeRiverLayout.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","../line/poly":"../node_modules/echarts/lib/chart/line/poly.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../data/DataDiffer":"../node_modules/echarts/lib/data/DataDiffer.js","process":"../../../.config/yarn/global/node_modules/process/browser.js"}],"../node_modules/echarts/lib/chart/themeRiver/themeRiverLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -77519,7 +77519,7 @@ function computeBaseline(data) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/chart/themeRiver/themeRiverVisual.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/chart/themeRiver/themeRiverVisual.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -77585,7 +77585,7 @@ function _default(ecModel) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/themeRiver.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/themeRiver.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -77641,7 +77641,7 @@ var dataFilter = require("../processor/dataFilter");
 echarts.registerLayout(themeRiverLayout);
 echarts.registerVisual(themeRiverVisual);
 echarts.registerProcessor(dataFilter('themeRiver'));
-},{"../echarts":"node_modules/echarts/lib/echarts.js","../component/singleAxis":"node_modules/echarts/lib/component/singleAxis.js","./themeRiver/ThemeRiverSeries":"node_modules/echarts/lib/chart/themeRiver/ThemeRiverSeries.js","./themeRiver/ThemeRiverView":"node_modules/echarts/lib/chart/themeRiver/ThemeRiverView.js","./themeRiver/themeRiverLayout":"node_modules/echarts/lib/chart/themeRiver/themeRiverLayout.js","./themeRiver/themeRiverVisual":"node_modules/echarts/lib/chart/themeRiver/themeRiverVisual.js","../processor/dataFilter":"node_modules/echarts/lib/processor/dataFilter.js"}],"node_modules/echarts/lib/chart/sunburst/SunburstSeries.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","../component/singleAxis":"../node_modules/echarts/lib/component/singleAxis.js","./themeRiver/ThemeRiverSeries":"../node_modules/echarts/lib/chart/themeRiver/ThemeRiverSeries.js","./themeRiver/ThemeRiverView":"../node_modules/echarts/lib/chart/themeRiver/ThemeRiverView.js","./themeRiver/themeRiverLayout":"../node_modules/echarts/lib/chart/themeRiver/themeRiverLayout.js","./themeRiver/themeRiverVisual":"../node_modules/echarts/lib/chart/themeRiver/themeRiverVisual.js","../processor/dataFilter":"../node_modules/echarts/lib/processor/dataFilter.js"}],"../node_modules/echarts/lib/chart/sunburst/SunburstSeries.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -77854,7 +77854,7 @@ function completeTreeValue(dataNode) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Series":"node_modules/echarts/lib/model/Series.js","../../data/Tree":"node_modules/echarts/lib/data/Tree.js","../helper/treeHelper":"node_modules/echarts/lib/chart/helper/treeHelper.js"}],"node_modules/echarts/lib/chart/sunburst/SunburstPiece.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Series":"../node_modules/echarts/lib/model/Series.js","../../data/Tree":"../node_modules/echarts/lib/data/Tree.js","../helper/treeHelper":"../node_modules/echarts/lib/chart/helper/treeHelper.js"}],"../node_modules/echarts/lib/chart/sunburst/SunburstPiece.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -78247,7 +78247,7 @@ function fillDefaultColor(node, seriesModel, color) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js"}],"node_modules/echarts/lib/chart/sunburst/SunburstView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js"}],"../node_modules/echarts/lib/chart/sunburst/SunburstView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -78495,7 +78495,7 @@ var SunburstView = ChartView.extend({
 });
 var _default = SunburstView;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../view/Chart":"node_modules/echarts/lib/view/Chart.js","./SunburstPiece":"node_modules/echarts/lib/chart/sunburst/SunburstPiece.js","../../data/DataDiffer":"node_modules/echarts/lib/data/DataDiffer.js","../../util/format":"node_modules/echarts/lib/util/format.js"}],"node_modules/echarts/lib/chart/sunburst/sunburstAction.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../view/Chart":"../node_modules/echarts/lib/view/Chart.js","./SunburstPiece":"../node_modules/echarts/lib/chart/sunburst/SunburstPiece.js","../../data/DataDiffer":"../node_modules/echarts/lib/data/DataDiffer.js","../../util/format":"../node_modules/echarts/lib/util/format.js"}],"../node_modules/echarts/lib/chart/sunburst/sunburstAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -78601,7 +78601,7 @@ echarts.registerAction({
     payload.unhighlight = true;
   }
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","../helper/treeHelper":"node_modules/echarts/lib/chart/helper/treeHelper.js"}],"node_modules/echarts/lib/chart/sunburst/sunburstLayout.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","../helper/treeHelper":"../node_modules/echarts/lib/chart/helper/treeHelper.js"}],"../node_modules/echarts/lib/chart/sunburst/sunburstLayout.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -78818,7 +78818,7 @@ function sort(children, sortOrder) {
 }
 
 module.exports = _default;
-},{"../../util/number":"node_modules/echarts/lib/util/number.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/chart/sunburst.js":[function(require,module,exports) {
+},{"../../util/number":"../node_modules/echarts/lib/util/number.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/chart/sunburst.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -78876,7 +78876,7 @@ var dataFilter = require("../processor/dataFilter");
 echarts.registerVisual(zrUtil.curry(dataColor, 'sunburst'));
 echarts.registerLayout(zrUtil.curry(sunburstLayout, 'sunburst'));
 echarts.registerProcessor(zrUtil.curry(dataFilter, 'sunburst'));
-},{"../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./sunburst/SunburstSeries":"node_modules/echarts/lib/chart/sunburst/SunburstSeries.js","./sunburst/SunburstView":"node_modules/echarts/lib/chart/sunburst/SunburstView.js","./sunburst/sunburstAction":"node_modules/echarts/lib/chart/sunburst/sunburstAction.js","../visual/dataColor":"node_modules/echarts/lib/visual/dataColor.js","./sunburst/sunburstLayout":"node_modules/echarts/lib/chart/sunburst/sunburstLayout.js","../processor/dataFilter":"node_modules/echarts/lib/processor/dataFilter.js"}],"node_modules/echarts/lib/coord/cartesian/prepareCustom.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./sunburst/SunburstSeries":"../node_modules/echarts/lib/chart/sunburst/SunburstSeries.js","./sunburst/SunburstView":"../node_modules/echarts/lib/chart/sunburst/SunburstView.js","./sunburst/sunburstAction":"../node_modules/echarts/lib/chart/sunburst/sunburstAction.js","../visual/dataColor":"../node_modules/echarts/lib/visual/dataColor.js","./sunburst/sunburstLayout":"../node_modules/echarts/lib/chart/sunburst/sunburstLayout.js","../processor/dataFilter":"../node_modules/echarts/lib/processor/dataFilter.js"}],"../node_modules/echarts/lib/coord/cartesian/prepareCustom.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -78950,7 +78950,7 @@ function _default(coordSys) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/coord/geo/prepareCustom.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/coord/geo/prepareCustom.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -79029,7 +79029,7 @@ function _default(coordSys) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/coord/single/prepareCustom.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/coord/single/prepareCustom.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -79099,7 +79099,7 @@ function _default(coordSys) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/coord/polar/prepareCustom.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/coord/polar/prepareCustom.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -79184,7 +79184,7 @@ function _default(coordSys) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/coord/calendar/prepareCustom.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/coord/calendar/prepareCustom.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -79251,7 +79251,7 @@ function _default(coordSys) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/chart/custom.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/chart/custom.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -79955,7 +79955,7 @@ function hasOwnPathData(shape) {
 function hasOwn(host, prop) {
   return host && host.hasOwnProperty(prop);
 }
-},{"../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/graphic":"node_modules/echarts/lib/util/graphic.js","./helper/labelHelper":"node_modules/echarts/lib/chart/helper/labelHelper.js","./helper/createListFromArray":"node_modules/echarts/lib/chart/helper/createListFromArray.js","../layout/barGrid":"node_modules/echarts/lib/layout/barGrid.js","../data/DataDiffer":"node_modules/echarts/lib/data/DataDiffer.js","../model/Series":"node_modules/echarts/lib/model/Series.js","../model/Model":"node_modules/echarts/lib/model/Model.js","../view/Chart":"node_modules/echarts/lib/view/Chart.js","./helper/createClipPathFromCoordSys":"node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js","../coord/cartesian/prepareCustom":"node_modules/echarts/lib/coord/cartesian/prepareCustom.js","../coord/geo/prepareCustom":"node_modules/echarts/lib/coord/geo/prepareCustom.js","../coord/single/prepareCustom":"node_modules/echarts/lib/coord/single/prepareCustom.js","../coord/polar/prepareCustom":"node_modules/echarts/lib/coord/polar/prepareCustom.js","../coord/calendar/prepareCustom":"node_modules/echarts/lib/coord/calendar/prepareCustom.js"}],"node_modules/echarts/lib/component/grid.js":[function(require,module,exports) {
+},{"../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./helper/labelHelper":"../node_modules/echarts/lib/chart/helper/labelHelper.js","./helper/createListFromArray":"../node_modules/echarts/lib/chart/helper/createListFromArray.js","../layout/barGrid":"../node_modules/echarts/lib/layout/barGrid.js","../data/DataDiffer":"../node_modules/echarts/lib/data/DataDiffer.js","../model/Series":"../node_modules/echarts/lib/model/Series.js","../model/Model":"../node_modules/echarts/lib/model/Model.js","../view/Chart":"../node_modules/echarts/lib/view/Chart.js","./helper/createClipPathFromCoordSys":"../node_modules/echarts/lib/chart/helper/createClipPathFromCoordSys.js","../coord/cartesian/prepareCustom":"../node_modules/echarts/lib/coord/cartesian/prepareCustom.js","../coord/geo/prepareCustom":"../node_modules/echarts/lib/coord/geo/prepareCustom.js","../coord/single/prepareCustom":"../node_modules/echarts/lib/coord/single/prepareCustom.js","../coord/polar/prepareCustom":"../node_modules/echarts/lib/coord/polar/prepareCustom.js","../coord/calendar/prepareCustom":"../node_modules/echarts/lib/coord/calendar/prepareCustom.js"}],"../node_modules/echarts/lib/component/grid.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -79981,7 +79981,7 @@ require("./gridSimple");
 require("./axisPointer/CartesianAxisPointer");
 
 require("./axisPointer");
-},{"./gridSimple":"node_modules/echarts/lib/component/gridSimple.js","./axisPointer/CartesianAxisPointer":"node_modules/echarts/lib/component/axisPointer/CartesianAxisPointer.js","./axisPointer":"node_modules/echarts/lib/component/axisPointer.js"}],"node_modules/echarts/lib/layout/barPolar.js":[function(require,module,exports) {
+},{"./gridSimple":"../node_modules/echarts/lib/component/gridSimple.js","./axisPointer/CartesianAxisPointer":"../node_modules/echarts/lib/component/axisPointer/CartesianAxisPointer.js","./axisPointer":"../node_modules/echarts/lib/component/axisPointer.js"}],"../node_modules/echarts/lib/layout/barPolar.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -80265,7 +80265,7 @@ function calRadialBar(barSeries, api) {
 
 var _default = barLayoutPolar;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/number":"node_modules/echarts/lib/util/number.js","../data/helper/dataStackHelper":"node_modules/echarts/lib/data/helper/dataStackHelper.js"}],"node_modules/echarts/lib/coord/polar/RadiusAxis.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/number":"../node_modules/echarts/lib/util/number.js","../data/helper/dataStackHelper":"../node_modules/echarts/lib/data/helper/dataStackHelper.js"}],"../node_modules/echarts/lib/coord/polar/RadiusAxis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -80337,7 +80337,7 @@ RadiusAxis.prototype = {
 zrUtil.inherits(RadiusAxis, Axis);
 var _default = RadiusAxis;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../Axis":"node_modules/echarts/lib/coord/Axis.js"}],"node_modules/echarts/lib/coord/polar/AngleAxis.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../Axis":"../node_modules/echarts/lib/coord/Axis.js"}],"../node_modules/echarts/lib/coord/polar/AngleAxis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -80470,7 +80470,7 @@ AngleAxis.prototype = {
 zrUtil.inherits(AngleAxis, Axis);
 var _default = AngleAxis;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/contain/text":"node_modules/zrender/lib/contain/text.js","../Axis":"node_modules/echarts/lib/coord/Axis.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/coord/polar/Polar.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/contain/text":"../node_modules/zrender/lib/contain/text.js","../Axis":"../node_modules/echarts/lib/coord/Axis.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/coord/polar/Polar.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -80763,7 +80763,7 @@ Polar.prototype = {
 };
 var _default = Polar;
 module.exports = _default;
-},{"./RadiusAxis":"node_modules/echarts/lib/coord/polar/RadiusAxis.js","./AngleAxis":"node_modules/echarts/lib/coord/polar/AngleAxis.js"}],"node_modules/echarts/lib/coord/polar/AxisModel.js":[function(require,module,exports) {
+},{"./RadiusAxis":"../node_modules/echarts/lib/coord/polar/RadiusAxis.js","./AngleAxis":"../node_modules/echarts/lib/coord/polar/AngleAxis.js"}],"../node_modules/echarts/lib/coord/polar/AxisModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -80855,7 +80855,7 @@ function getAxisType(axisDim, option) {
 
 axisModelCreator('angle', PolarAxisModel, getAxisType, polarAxisDefaultExtendedOption.angle);
 axisModelCreator('radius', PolarAxisModel, getAxisType, polarAxisDefaultExtendedOption.radius);
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Component":"node_modules/echarts/lib/model/Component.js","../axisModelCreator":"node_modules/echarts/lib/coord/axisModelCreator.js","../axisModelCommonMixin":"node_modules/echarts/lib/coord/axisModelCommonMixin.js"}],"node_modules/echarts/lib/coord/polar/PolarModel.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Component":"../node_modules/echarts/lib/model/Component.js","../axisModelCreator":"../node_modules/echarts/lib/coord/axisModelCreator.js","../axisModelCommonMixin":"../node_modules/echarts/lib/coord/axisModelCommonMixin.js"}],"../node_modules/echarts/lib/coord/polar/PolarModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -80930,7 +80930,7 @@ var _default = echarts.extendComponentModel({
 });
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","./AxisModel":"node_modules/echarts/lib/coord/polar/AxisModel.js"}],"node_modules/echarts/lib/coord/polar/polarCreator.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","./AxisModel":"../node_modules/echarts/lib/coord/polar/AxisModel.js"}],"../node_modules/echarts/lib/coord/polar/polarCreator.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -81113,7 +81113,7 @@ var polarCreator = {
   }
 };
 CoordinateSystem.register('polar', polarCreator);
-},{"../../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./Polar":"node_modules/echarts/lib/coord/polar/Polar.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../coord/axisHelper":"node_modules/echarts/lib/coord/axisHelper.js","../../CoordinateSystem":"node_modules/echarts/lib/CoordinateSystem.js","../../data/helper/dataStackHelper":"node_modules/echarts/lib/data/helper/dataStackHelper.js","./PolarModel":"node_modules/echarts/lib/coord/polar/PolarModel.js"}],"node_modules/echarts/lib/component/axis/AngleAxisView.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./Polar":"../node_modules/echarts/lib/coord/polar/Polar.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../coord/axisHelper":"../node_modules/echarts/lib/coord/axisHelper.js","../../CoordinateSystem":"../node_modules/echarts/lib/CoordinateSystem.js","../../data/helper/dataStackHelper":"../node_modules/echarts/lib/data/helper/dataStackHelper.js","./PolarModel":"../node_modules/echarts/lib/coord/polar/PolarModel.js"}],"../node_modules/echarts/lib/component/axis/AngleAxisView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -81462,7 +81462,7 @@ var _default = AxisView.extend({
 });
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../model/Model":"node_modules/echarts/lib/model/Model.js","./AxisView":"node_modules/echarts/lib/component/axis/AxisView.js","./AxisBuilder":"node_modules/echarts/lib/component/axis/AxisBuilder.js"}],"node_modules/echarts/lib/component/angleAxis.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js","./AxisView":"../node_modules/echarts/lib/component/axis/AxisView.js","./AxisBuilder":"../node_modules/echarts/lib/component/axis/AxisBuilder.js"}],"../node_modules/echarts/lib/component/angleAxis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -81486,7 +81486,7 @@ module.exports = _default;
 require("../coord/polar/polarCreator");
 
 require("./axis/AngleAxisView");
-},{"../coord/polar/polarCreator":"node_modules/echarts/lib/coord/polar/polarCreator.js","./axis/AngleAxisView":"node_modules/echarts/lib/component/axis/AngleAxisView.js"}],"node_modules/echarts/lib/component/axis/RadiusAxisView.js":[function(require,module,exports) {
+},{"../coord/polar/polarCreator":"../node_modules/echarts/lib/coord/polar/polarCreator.js","./axis/AngleAxisView":"../node_modules/echarts/lib/component/axis/AngleAxisView.js"}],"../node_modules/echarts/lib/component/axis/RadiusAxisView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -81696,7 +81696,7 @@ function layoutAxis(polar, radiusAxisModel, axisAngle) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./AxisBuilder":"node_modules/echarts/lib/component/axis/AxisBuilder.js","./AxisView":"node_modules/echarts/lib/component/axis/AxisView.js"}],"node_modules/echarts/lib/component/radiusAxis.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./AxisBuilder":"../node_modules/echarts/lib/component/axis/AxisBuilder.js","./AxisView":"../node_modules/echarts/lib/component/axis/AxisView.js"}],"../node_modules/echarts/lib/component/radiusAxis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -81720,7 +81720,7 @@ module.exports = _default;
 require("../coord/polar/polarCreator");
 
 require("./axis/RadiusAxisView");
-},{"../coord/polar/polarCreator":"node_modules/echarts/lib/coord/polar/polarCreator.js","./axis/RadiusAxisView":"node_modules/echarts/lib/component/axis/RadiusAxisView.js"}],"node_modules/echarts/lib/component/axisPointer/PolarAxisPointer.js":[function(require,module,exports) {
+},{"../coord/polar/polarCreator":"../node_modules/echarts/lib/coord/polar/polarCreator.js","./axis/RadiusAxisView":"../node_modules/echarts/lib/component/axis/RadiusAxisView.js"}],"../node_modules/echarts/lib/component/axisPointer/PolarAxisPointer.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -81872,7 +81872,7 @@ var pointerShapeBuilder = {
 AxisView.registerAxisPointerClass('PolarAxisPointer', PolarAxisPointer);
 var _default = PolarAxisPointer;
 module.exports = _default;
-},{"../../util/format":"node_modules/echarts/lib/util/format.js","./BaseAxisPointer":"node_modules/echarts/lib/component/axisPointer/BaseAxisPointer.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./viewHelper":"node_modules/echarts/lib/component/axisPointer/viewHelper.js","zrender/lib/core/matrix":"node_modules/zrender/lib/core/matrix.js","../axis/AxisBuilder":"node_modules/echarts/lib/component/axis/AxisBuilder.js","../axis/AxisView":"node_modules/echarts/lib/component/axis/AxisView.js"}],"node_modules/echarts/lib/component/polar.js":[function(require,module,exports) {
+},{"../../util/format":"../node_modules/echarts/lib/util/format.js","./BaseAxisPointer":"../node_modules/echarts/lib/component/axisPointer/BaseAxisPointer.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./viewHelper":"../node_modules/echarts/lib/component/axisPointer/viewHelper.js","zrender/lib/core/matrix":"../node_modules/zrender/lib/core/matrix.js","../axis/AxisBuilder":"../node_modules/echarts/lib/component/axis/AxisBuilder.js","../axis/AxisView":"../node_modules/echarts/lib/component/axis/AxisView.js"}],"../node_modules/echarts/lib/component/polar.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -81933,7 +81933,7 @@ echarts.registerLayout(zrUtil.curry(barPolar, 'bar')); // Polar view
 echarts.extendComponentView({
   type: 'polar'
 });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../layout/barPolar":"node_modules/echarts/lib/layout/barPolar.js","../coord/polar/polarCreator":"node_modules/echarts/lib/coord/polar/polarCreator.js","./angleAxis":"node_modules/echarts/lib/component/angleAxis.js","./radiusAxis":"node_modules/echarts/lib/component/radiusAxis.js","./axisPointer":"node_modules/echarts/lib/component/axisPointer.js","./axisPointer/PolarAxisPointer":"node_modules/echarts/lib/component/axisPointer/PolarAxisPointer.js"}],"node_modules/echarts/lib/coord/geo/GeoModel.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../layout/barPolar":"../node_modules/echarts/lib/layout/barPolar.js","../coord/polar/polarCreator":"../node_modules/echarts/lib/coord/polar/polarCreator.js","./angleAxis":"../node_modules/echarts/lib/component/angleAxis.js","./radiusAxis":"../node_modules/echarts/lib/component/radiusAxis.js","./axisPointer":"../node_modules/echarts/lib/component/axisPointer.js","./axisPointer/PolarAxisPointer":"../node_modules/echarts/lib/component/axisPointer/PolarAxisPointer.js"}],"../node_modules/echarts/lib/coord/geo/GeoModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -82102,7 +82102,7 @@ var GeoModel = ComponentModel.extend({
 zrUtil.mixin(GeoModel, selectableMixin);
 var _default = GeoModel;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/model":"node_modules/echarts/lib/util/model.js","../../model/Component":"node_modules/echarts/lib/model/Component.js","../../model/Model":"node_modules/echarts/lib/model/Model.js","../../component/helper/selectableMixin":"node_modules/echarts/lib/component/helper/selectableMixin.js","./geoCreator":"node_modules/echarts/lib/coord/geo/geoCreator.js"}],"node_modules/echarts/lib/component/geo/GeoView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/model":"../node_modules/echarts/lib/util/model.js","../../model/Component":"../node_modules/echarts/lib/model/Component.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js","../../component/helper/selectableMixin":"../node_modules/echarts/lib/component/helper/selectableMixin.js","./geoCreator":"../node_modules/echarts/lib/coord/geo/geoCreator.js"}],"../node_modules/echarts/lib/component/geo/GeoView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -82174,7 +82174,7 @@ var _default = echarts.extendComponentView({
 });
 
 module.exports = _default;
-},{"../helper/MapDraw":"node_modules/echarts/lib/component/helper/MapDraw.js","../../echarts":"node_modules/echarts/lib/echarts.js"}],"node_modules/echarts/lib/component/geo.js":[function(require,module,exports) {
+},{"../helper/MapDraw":"../node_modules/echarts/lib/component/helper/MapDraw.js","../../echarts":"../node_modules/echarts/lib/echarts.js"}],"../node_modules/echarts/lib/component/geo.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -82258,7 +82258,7 @@ makeAction('unSelect', {
   type: 'geoUnSelect',
   event: 'geounselected'
 });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../coord/geo/GeoModel":"node_modules/echarts/lib/coord/geo/GeoModel.js","../coord/geo/geoCreator":"node_modules/echarts/lib/coord/geo/geoCreator.js","./geo/GeoView":"node_modules/echarts/lib/component/geo/GeoView.js","../action/geoRoam":"node_modules/echarts/lib/action/geoRoam.js"}],"node_modules/echarts/lib/coord/calendar/Calendar.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../coord/geo/GeoModel":"../node_modules/echarts/lib/coord/geo/GeoModel.js","../coord/geo/geoCreator":"../node_modules/echarts/lib/coord/geo/geoCreator.js","./geo/GeoView":"../node_modules/echarts/lib/component/geo/GeoView.js","../action/geoRoam":"../node_modules/echarts/lib/action/geoRoam.js"}],"../node_modules/echarts/lib/coord/calendar/Calendar.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -82691,7 +82691,7 @@ function doConvert(methodName, ecModel, finder, value) {
 CoordinateSystem.register('calendar', Calendar);
 var _default = Calendar;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../CoordinateSystem":"node_modules/echarts/lib/CoordinateSystem.js"}],"node_modules/echarts/lib/coord/calendar/CalendarModel.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../CoordinateSystem":"../node_modules/echarts/lib/CoordinateSystem.js"}],"../node_modules/echarts/lib/coord/calendar/CalendarModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -82855,7 +82855,7 @@ function mergeAndNormalizeLayoutParams(target, raw) {
 
 var _default = CalendarModel;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Component":"node_modules/echarts/lib/model/Component.js","../../util/layout":"node_modules/echarts/lib/util/layout.js"}],"node_modules/echarts/lib/component/calendar/CalendarView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Component":"../node_modules/echarts/lib/model/Component.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js"}],"../node_modules/echarts/lib/component/calendar/CalendarView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -83307,7 +83307,7 @@ var _default = echarts.extendComponentView({
 });
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/component/calendar.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/component/calendar.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -83333,7 +83333,7 @@ require("../coord/calendar/Calendar");
 require("../coord/calendar/CalendarModel");
 
 require("./calendar/CalendarView");
-},{"../coord/calendar/Calendar":"node_modules/echarts/lib/coord/calendar/Calendar.js","../coord/calendar/CalendarModel":"node_modules/echarts/lib/coord/calendar/CalendarModel.js","./calendar/CalendarView":"node_modules/echarts/lib/component/calendar/CalendarView.js"}],"node_modules/echarts/lib/component/graphic.js":[function(require,module,exports) {
+},{"../coord/calendar/Calendar":"../node_modules/echarts/lib/coord/calendar/Calendar.js","../coord/calendar/CalendarModel":"../node_modules/echarts/lib/coord/calendar/CalendarModel.js","./calendar/CalendarView":"../node_modules/echarts/lib/component/calendar/CalendarView.js"}],"../node_modules/echarts/lib/component/graphic.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -83874,7 +83874,7 @@ function setEventData(el, graphicModel, elOption) {
     eventData.info = el.info;
   }
 }
-},{"../config":"node_modules/echarts/lib/config.js","../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../util/model":"node_modules/echarts/lib/util/model.js","../util/graphic":"node_modules/echarts/lib/util/graphic.js","../util/layout":"node_modules/echarts/lib/util/layout.js","../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/component/toolbox/featureManager.js":[function(require,module,exports) {
+},{"../config":"../node_modules/echarts/lib/config.js","../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../util/model":"../node_modules/echarts/lib/util/model.js","../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../util/layout":"../node_modules/echarts/lib/util/layout.js","../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/component/toolbox/featureManager.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -83925,7 +83925,7 @@ function get(name) {
 
 exports.register = register;
 exports.get = get;
-},{}],"node_modules/echarts/lib/component/toolbox/ToolboxModel.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/component/toolbox/ToolboxModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -84018,7 +84018,7 @@ var ToolboxModel = echarts.extendComponentModel({
 });
 var _default = ToolboxModel;
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./featureManager":"node_modules/echarts/lib/component/toolbox/featureManager.js"}],"node_modules/echarts/lib/component/helper/listComponent.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./featureManager":"../node_modules/echarts/lib/component/toolbox/featureManager.js"}],"../node_modules/echarts/lib/component/helper/listComponent.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -84112,7 +84112,7 @@ function makeBackground(rect, componentModel) {
 
 exports.layout = layout;
 exports.makeBackground = makeBackground;
-},{"../../util/layout":"node_modules/echarts/lib/util/layout.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js"}],"node_modules/echarts/lib/component/toolbox/ToolboxView.js":[function(require,module,exports) {
+},{"../../util/layout":"../node_modules/echarts/lib/util/layout.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js"}],"../node_modules/echarts/lib/component/toolbox/ToolboxView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -84406,7 +84406,7 @@ function isUserFeatureName(featureName) {
 }
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/contain/text":"node_modules/zrender/lib/contain/text.js","./featureManager":"node_modules/echarts/lib/component/toolbox/featureManager.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../model/Model":"node_modules/echarts/lib/model/Model.js","../../data/DataDiffer":"node_modules/echarts/lib/data/DataDiffer.js","../helper/listComponent":"node_modules/echarts/lib/component/helper/listComponent.js"}],"node_modules/echarts/lib/component/toolbox/feature/SaveAsImage.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/contain/text":"../node_modules/zrender/lib/contain/text.js","./featureManager":"../node_modules/echarts/lib/component/toolbox/featureManager.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js","../../data/DataDiffer":"../node_modules/echarts/lib/data/DataDiffer.js","../helper/listComponent":"../node_modules/echarts/lib/component/helper/listComponent.js"}],"../node_modules/echarts/lib/component/toolbox/feature/SaveAsImage.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -84524,7 +84524,7 @@ proto.onclick = function (ecModel, api) {
 featureManager.register('saveAsImage', SaveAsImage);
 var _default = SaveAsImage;
 module.exports = _default;
-},{"zrender/lib/core/env":"node_modules/zrender/lib/core/env.js","../../../lang":"node_modules/echarts/lib/lang.js","../featureManager":"node_modules/echarts/lib/component/toolbox/featureManager.js"}],"node_modules/echarts/lib/component/toolbox/feature/MagicType.js":[function(require,module,exports) {
+},{"zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js","../../../lang":"../node_modules/echarts/lib/lang.js","../featureManager":"../node_modules/echarts/lib/component/toolbox/featureManager.js"}],"../node_modules/echarts/lib/component/toolbox/feature/MagicType.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -84742,7 +84742,7 @@ echarts.registerAction({
 featureManager.register('magicType', MagicType);
 var _default = MagicType;
 module.exports = _default;
-},{"../../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../../lang":"node_modules/echarts/lib/lang.js","../featureManager":"node_modules/echarts/lib/component/toolbox/featureManager.js"}],"node_modules/echarts/lib/component/toolbox/feature/DataView.js":[function(require,module,exports) {
+},{"../../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../../lang":"../node_modules/echarts/lib/lang.js","../featureManager":"../node_modules/echarts/lib/component/toolbox/featureManager.js"}],"../node_modules/echarts/lib/component/toolbox/feature/DataView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -85239,7 +85239,7 @@ echarts.registerAction({
 });
 var _default = DataView;
 module.exports = _default;
-},{"../../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/event":"node_modules/zrender/lib/core/event.js","../../../lang":"node_modules/echarts/lib/lang.js","../featureManager":"node_modules/echarts/lib/component/toolbox/featureManager.js"}],"node_modules/echarts/lib/component/helper/BrushTargetManager.js":[function(require,module,exports) {
+},{"../../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/event":"../node_modules/zrender/lib/core/event.js","../../../lang":"../node_modules/echarts/lib/lang.js","../featureManager":"../node_modules/echarts/lib/component/toolbox/featureManager.js"}],"../node_modules/echarts/lib/component/helper/BrushTargetManager.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -85658,7 +85658,7 @@ function getSize(xyMinMax) {
 
 var _default = BrushTargetManager;
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/model":"node_modules/echarts/lib/util/model.js","./brushHelper":"node_modules/echarts/lib/component/helper/brushHelper.js"}],"node_modules/echarts/lib/component/dataZoom/history.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/model":"../node_modules/echarts/lib/util/model.js","./brushHelper":"../node_modules/echarts/lib/component/helper/brushHelper.js"}],"../node_modules/echarts/lib/component/dataZoom/history.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -85804,7 +85804,7 @@ exports.push = push;
 exports.pop = pop;
 exports.clear = clear;
 exports.count = count;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/component/dataZoom/typeDefaulter.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/component/dataZoom/typeDefaulter.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -85849,7 +85849,7 @@ Component.registerSubTypeDefaulter('dataZoom', function () {
   // Default 'slider' when no type specified.
   return 'slider';
 });
-},{"../../model/Component":"node_modules/echarts/lib/model/Component.js"}],"node_modules/echarts/lib/component/dataZoom/helper.js":[function(require,module,exports) {
+},{"../../model/Component":"../node_modules/echarts/lib/model/Component.js"}],"../node_modules/echarts/lib/component/dataZoom/helper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -86023,7 +86023,7 @@ exports.isCoordSupported = isCoordSupported;
 exports.createNameEach = createNameEach;
 exports.eachAxisDim = eachAxisDim;
 exports.createLinkedNodesFinder = createLinkedNodesFinder;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/format":"node_modules/echarts/lib/util/format.js"}],"node_modules/echarts/lib/component/dataZoom/AxisProxy.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/format":"../node_modules/echarts/lib/util/format.js"}],"../node_modules/echarts/lib/component/dataZoom/AxisProxy.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -86542,7 +86542,7 @@ function setMinMaxSpan(axisProxy) {
 
 var _default = AxisProxy;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/number":"node_modules/echarts/lib/util/number.js","./helper":"node_modules/echarts/lib/component/dataZoom/helper.js","../helper/sliderMove":"node_modules/echarts/lib/component/helper/sliderMove.js"}],"node_modules/echarts/lib/component/dataZoom/DataZoomModel.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/number":"../node_modules/echarts/lib/util/number.js","./helper":"../node_modules/echarts/lib/component/dataZoom/helper.js","../helper/sliderMove":"../node_modules/echarts/lib/component/helper/sliderMove.js"}],"../node_modules/echarts/lib/component/dataZoom/DataZoomModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -87175,7 +87175,7 @@ function updateRangeUse(dataZoomModel, inputRawOption) {
 
 var _default = DataZoomModel;
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"node_modules/zrender/lib/core/env.js","../../util/model":"node_modules/echarts/lib/util/model.js","./helper":"node_modules/echarts/lib/component/dataZoom/helper.js","./AxisProxy":"node_modules/echarts/lib/component/dataZoom/AxisProxy.js"}],"node_modules/echarts/lib/component/dataZoom/DataZoomView.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js","../../util/model":"../node_modules/echarts/lib/util/model.js","./helper":"../node_modules/echarts/lib/component/dataZoom/helper.js","./AxisProxy":"../node_modules/echarts/lib/component/dataZoom/AxisProxy.js"}],"../node_modules/echarts/lib/component/dataZoom/DataZoomView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -87281,7 +87281,7 @@ var _default = ComponentView.extend({
 });
 
 module.exports = _default;
-},{"../../view/Component":"node_modules/echarts/lib/view/Component.js"}],"node_modules/echarts/lib/component/dataZoom/SelectZoomModel.js":[function(require,module,exports) {
+},{"../../view/Component":"../node_modules/echarts/lib/view/Component.js"}],"../node_modules/echarts/lib/component/dataZoom/SelectZoomModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -87327,7 +87327,7 @@ var _default = DataZoomModel.extend({
 });
 
 module.exports = _default;
-},{"./DataZoomModel":"node_modules/echarts/lib/component/dataZoom/DataZoomModel.js"}],"node_modules/echarts/lib/component/dataZoom/SelectZoomView.js":[function(require,module,exports) {
+},{"./DataZoomModel":"../node_modules/echarts/lib/component/dataZoom/DataZoomModel.js"}],"../node_modules/echarts/lib/component/dataZoom/SelectZoomView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -87373,7 +87373,7 @@ var _default = DataZoomView.extend({
 });
 
 module.exports = _default;
-},{"./DataZoomView":"node_modules/echarts/lib/component/dataZoom/DataZoomView.js"}],"node_modules/echarts/lib/component/dataZoom/dataZoomProcessor.js":[function(require,module,exports) {
+},{"./DataZoomView":"../node_modules/echarts/lib/component/dataZoom/DataZoomView.js"}],"../node_modules/echarts/lib/component/dataZoom/dataZoomProcessor.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -87480,7 +87480,7 @@ echarts.registerProcessor({
     });
   }
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/component/dataZoom/dataZoomAction.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/component/dataZoom/dataZoomAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -87545,7 +87545,7 @@ echarts.registerAction('dataZoom', function (payload, ecModel) {
     });
   });
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./helper":"node_modules/echarts/lib/component/dataZoom/helper.js"}],"node_modules/echarts/lib/component/dataZoomSelect.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./helper":"../node_modules/echarts/lib/component/dataZoom/helper.js"}],"../node_modules/echarts/lib/component/dataZoomSelect.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -87579,7 +87579,7 @@ require("./dataZoom/SelectZoomView");
 require("./dataZoom/dataZoomProcessor");
 
 require("./dataZoom/dataZoomAction");
-},{"./dataZoom/typeDefaulter":"node_modules/echarts/lib/component/dataZoom/typeDefaulter.js","./dataZoom/DataZoomModel":"node_modules/echarts/lib/component/dataZoom/DataZoomModel.js","./dataZoom/DataZoomView":"node_modules/echarts/lib/component/dataZoom/DataZoomView.js","./dataZoom/SelectZoomModel":"node_modules/echarts/lib/component/dataZoom/SelectZoomModel.js","./dataZoom/SelectZoomView":"node_modules/echarts/lib/component/dataZoom/SelectZoomView.js","./dataZoom/dataZoomProcessor":"node_modules/echarts/lib/component/dataZoom/dataZoomProcessor.js","./dataZoom/dataZoomAction":"node_modules/echarts/lib/component/dataZoom/dataZoomAction.js"}],"node_modules/echarts/lib/component/toolbox/feature/DataZoom.js":[function(require,module,exports) {
+},{"./dataZoom/typeDefaulter":"../node_modules/echarts/lib/component/dataZoom/typeDefaulter.js","./dataZoom/DataZoomModel":"../node_modules/echarts/lib/component/dataZoom/DataZoomModel.js","./dataZoom/DataZoomView":"../node_modules/echarts/lib/component/dataZoom/DataZoomView.js","./dataZoom/SelectZoomModel":"../node_modules/echarts/lib/component/dataZoom/SelectZoomModel.js","./dataZoom/SelectZoomView":"../node_modules/echarts/lib/component/dataZoom/SelectZoomView.js","./dataZoom/dataZoomProcessor":"../node_modules/echarts/lib/component/dataZoom/dataZoomProcessor.js","./dataZoom/dataZoomAction":"../node_modules/echarts/lib/component/dataZoom/dataZoomAction.js"}],"../node_modules/echarts/lib/component/toolbox/feature/DataZoom.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -87909,7 +87909,7 @@ echarts.registerPreprocessor(function (option) {
 });
 var _default = DataZoom;
 module.exports = _default;
-},{"../../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../helper/BrushController":"node_modules/echarts/lib/component/helper/BrushController.js","../../helper/BrushTargetManager":"node_modules/echarts/lib/component/helper/BrushTargetManager.js","../../dataZoom/history":"node_modules/echarts/lib/component/dataZoom/history.js","../../helper/sliderMove":"node_modules/echarts/lib/component/helper/sliderMove.js","../../../lang":"node_modules/echarts/lib/lang.js","../featureManager":"node_modules/echarts/lib/component/toolbox/featureManager.js","../../dataZoomSelect":"node_modules/echarts/lib/component/dataZoomSelect.js"}],"node_modules/echarts/lib/component/toolbox/feature/Restore.js":[function(require,module,exports) {
+},{"../../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../helper/BrushController":"../node_modules/echarts/lib/component/helper/BrushController.js","../../helper/BrushTargetManager":"../node_modules/echarts/lib/component/helper/BrushTargetManager.js","../../dataZoom/history":"../node_modules/echarts/lib/component/dataZoom/history.js","../../helper/sliderMove":"../node_modules/echarts/lib/component/helper/sliderMove.js","../../../lang":"../node_modules/echarts/lib/lang.js","../featureManager":"../node_modules/echarts/lib/component/toolbox/featureManager.js","../../dataZoomSelect":"../node_modules/echarts/lib/component/dataZoomSelect.js"}],"../node_modules/echarts/lib/component/toolbox/feature/Restore.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -87991,7 +87991,7 @@ echarts.registerAction({
 });
 var _default = Restore;
 module.exports = _default;
-},{"../../../echarts":"node_modules/echarts/lib/echarts.js","../../dataZoom/history":"node_modules/echarts/lib/component/dataZoom/history.js","../../../lang":"node_modules/echarts/lib/lang.js","../featureManager":"node_modules/echarts/lib/component/toolbox/featureManager.js"}],"node_modules/echarts/lib/component/toolbox.js":[function(require,module,exports) {
+},{"../../../echarts":"../node_modules/echarts/lib/echarts.js","../../dataZoom/history":"../node_modules/echarts/lib/component/dataZoom/history.js","../../../lang":"../node_modules/echarts/lib/lang.js","../featureManager":"../node_modules/echarts/lib/component/toolbox/featureManager.js"}],"../node_modules/echarts/lib/component/toolbox.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -88025,7 +88025,7 @@ require("./toolbox/feature/DataView");
 require("./toolbox/feature/DataZoom");
 
 require("./toolbox/feature/Restore");
-},{"./toolbox/ToolboxModel":"node_modules/echarts/lib/component/toolbox/ToolboxModel.js","./toolbox/ToolboxView":"node_modules/echarts/lib/component/toolbox/ToolboxView.js","./toolbox/feature/SaveAsImage":"node_modules/echarts/lib/component/toolbox/feature/SaveAsImage.js","./toolbox/feature/MagicType":"node_modules/echarts/lib/component/toolbox/feature/MagicType.js","./toolbox/feature/DataView":"node_modules/echarts/lib/component/toolbox/feature/DataView.js","./toolbox/feature/DataZoom":"node_modules/echarts/lib/component/toolbox/feature/DataZoom.js","./toolbox/feature/Restore":"node_modules/echarts/lib/component/toolbox/feature/Restore.js"}],"node_modules/echarts/lib/component/tooltip/TooltipModel.js":[function(require,module,exports) {
+},{"./toolbox/ToolboxModel":"../node_modules/echarts/lib/component/toolbox/ToolboxModel.js","./toolbox/ToolboxView":"../node_modules/echarts/lib/component/toolbox/ToolboxView.js","./toolbox/feature/SaveAsImage":"../node_modules/echarts/lib/component/toolbox/feature/SaveAsImage.js","./toolbox/feature/MagicType":"../node_modules/echarts/lib/component/toolbox/feature/MagicType.js","./toolbox/feature/DataView":"../node_modules/echarts/lib/component/toolbox/feature/DataView.js","./toolbox/feature/DataZoom":"../node_modules/echarts/lib/component/toolbox/feature/DataZoom.js","./toolbox/feature/Restore":"../node_modules/echarts/lib/component/toolbox/feature/Restore.js"}],"../node_modules/echarts/lib/component/tooltip/TooltipModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -88147,7 +88147,7 @@ var _default = echarts.extendComponentModel({
 });
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js"}],"node_modules/echarts/lib/component/tooltip/TooltipContent.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js"}],"../node_modules/echarts/lib/component/tooltip/TooltipContent.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -88489,7 +88489,7 @@ TooltipContent.prototype = {
 };
 var _default = TooltipContent;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/tool/color":"node_modules/zrender/lib/tool/color.js","zrender/lib/core/event":"node_modules/zrender/lib/core/event.js","zrender/lib/core/dom":"node_modules/zrender/lib/core/dom.js","zrender/lib/core/env":"node_modules/zrender/lib/core/env.js","../../util/format":"node_modules/echarts/lib/util/format.js"}],"node_modules/echarts/lib/component/tooltip/TooltipRichContent.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/tool/color":"../node_modules/zrender/lib/tool/color.js","zrender/lib/core/event":"../node_modules/zrender/lib/core/event.js","zrender/lib/core/dom":"../node_modules/zrender/lib/core/dom.js","zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js","../../util/format":"../node_modules/echarts/lib/util/format.js"}],"../node_modules/echarts/lib/component/tooltip/TooltipRichContent.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -88694,7 +88694,7 @@ TooltipRichContent.prototype = {
 };
 var _default = TooltipRichContent;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/graphic/Text":"node_modules/zrender/lib/graphic/Text.js"}],"node_modules/echarts/lib/component/tooltip/TooltipView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/graphic/Text":"../node_modules/zrender/lib/graphic/Text.js"}],"../node_modules/echarts/lib/component/tooltip/TooltipView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -89476,7 +89476,7 @@ function isCenterAlign(align) {
 }
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"node_modules/zrender/lib/core/env.js","./TooltipContent":"node_modules/echarts/lib/component/tooltip/TooltipContent.js","./TooltipRichContent":"node_modules/echarts/lib/component/tooltip/TooltipRichContent.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../axisPointer/findPointFromSeries":"node_modules/echarts/lib/component/axisPointer/findPointFromSeries.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","../../model/Model":"node_modules/echarts/lib/model/Model.js","../axisPointer/globalListener":"node_modules/echarts/lib/component/axisPointer/globalListener.js","../../coord/axisHelper":"node_modules/echarts/lib/coord/axisHelper.js","../axisPointer/viewHelper":"node_modules/echarts/lib/component/axisPointer/viewHelper.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/component/tooltip.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js","./TooltipContent":"../node_modules/echarts/lib/component/tooltip/TooltipContent.js","./TooltipRichContent":"../node_modules/echarts/lib/component/tooltip/TooltipRichContent.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../axisPointer/findPointFromSeries":"../node_modules/echarts/lib/component/axisPointer/findPointFromSeries.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js","../axisPointer/globalListener":"../node_modules/echarts/lib/component/axisPointer/globalListener.js","../../coord/axisHelper":"../node_modules/echarts/lib/coord/axisHelper.js","../axisPointer/viewHelper":"../node_modules/echarts/lib/component/axisPointer/viewHelper.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/component/tooltip.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -89545,7 +89545,7 @@ echarts.registerAction({
   update: 'tooltip:manuallyHideTip'
 }, // noop
 function () {});
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./axisPointer":"node_modules/echarts/lib/component/axisPointer.js","./tooltip/TooltipModel":"node_modules/echarts/lib/component/tooltip/TooltipModel.js","./tooltip/TooltipView":"node_modules/echarts/lib/component/tooltip/TooltipView.js"}],"node_modules/echarts/lib/component/brush/preprocessor.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./axisPointer":"../node_modules/echarts/lib/component/axisPointer.js","./tooltip/TooltipModel":"../node_modules/echarts/lib/component/tooltip/TooltipModel.js","./tooltip/TooltipView":"../node_modules/echarts/lib/component/tooltip/TooltipView.js"}],"../node_modules/echarts/lib/component/brush/preprocessor.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -89643,7 +89643,7 @@ function removeDuplicate(arr) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/visual/visualSolution.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/visual/visualSolution.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -89881,7 +89881,7 @@ exports.createVisualMappings = createVisualMappings;
 exports.replaceVisualOption = replaceVisualOption;
 exports.applyVisual = applyVisual;
 exports.incrementalApplyVisual = incrementalApplyVisual;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./VisualMapping":"node_modules/echarts/lib/visual/VisualMapping.js"}],"node_modules/echarts/lib/component/brush/selector.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./VisualMapping":"../node_modules/echarts/lib/visual/VisualMapping.js"}],"../node_modules/echarts/lib/component/brush/selector.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -90000,7 +90000,7 @@ function inLineRange(p, range) {
 
 var _default = selector;
 module.exports = _default;
-},{"zrender/lib/contain/polygon":"node_modules/zrender/lib/contain/polygon.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js"}],"node_modules/echarts/lib/component/brush/visualEncoding.js":[function(require,module,exports) {
+},{"zrender/lib/contain/polygon":"../node_modules/zrender/lib/contain/polygon.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js"}],"../node_modules/echarts/lib/component/brush/visualEncoding.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -90329,7 +90329,7 @@ function getBoundingRectFromMinMax(minMax) {
 }
 
 exports.layoutCovers = layoutCovers;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../../visual/visualSolution":"node_modules/echarts/lib/visual/visualSolution.js","./selector":"node_modules/echarts/lib/component/brush/selector.js","../../util/throttle":"node_modules/echarts/lib/util/throttle.js","../helper/BrushTargetManager":"node_modules/echarts/lib/component/helper/BrushTargetManager.js"}],"node_modules/echarts/lib/component/brush/BrushModel.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../../visual/visualSolution":"../node_modules/echarts/lib/visual/visualSolution.js","./selector":"../node_modules/echarts/lib/component/brush/selector.js","../../util/throttle":"../node_modules/echarts/lib/util/throttle.js","../helper/BrushTargetManager":"../node_modules/echarts/lib/component/helper/BrushTargetManager.js"}],"../node_modules/echarts/lib/component/brush/BrushModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -90510,7 +90510,7 @@ function generateBrushOption(option, brushOption) {
 
 var _default = BrushModel;
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../visual/visualSolution":"node_modules/echarts/lib/visual/visualSolution.js","../../model/Model":"node_modules/echarts/lib/model/Model.js"}],"node_modules/echarts/lib/component/brush/BrushView.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../visual/visualSolution":"../node_modules/echarts/lib/visual/visualSolution.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js"}],"../node_modules/echarts/lib/component/brush/BrushView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -90657,7 +90657,7 @@ function updateController(brushModel, ecModel, api, payload) {
 }
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../helper/BrushController":"node_modules/echarts/lib/component/helper/BrushController.js","./visualEncoding":"node_modules/echarts/lib/component/brush/visualEncoding.js"}],"node_modules/echarts/lib/component/brush/brushAction.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../helper/BrushController":"../node_modules/echarts/lib/component/helper/BrushController.js","./visualEncoding":"../node_modules/echarts/lib/component/brush/visualEncoding.js"}],"../node_modules/echarts/lib/component/brush/brushAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -90752,7 +90752,7 @@ echarts.registerAction({
   event: 'brushEnd',
   update: 'none'
 }, function () {});
-},{"../../echarts":"node_modules/echarts/lib/echarts.js"}],"node_modules/echarts/lib/component/toolbox/feature/Brush.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js"}],"../node_modules/echarts/lib/component/toolbox/feature/Brush.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -90907,7 +90907,7 @@ proto.onclick = function (ecModel, api, type) {
 featureManager.register('brush', Brush);
 var _default = Brush;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../featureManager":"node_modules/echarts/lib/component/toolbox/featureManager.js","../../../lang":"node_modules/echarts/lib/lang.js"}],"node_modules/echarts/lib/component/brush.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../featureManager":"../node_modules/echarts/lib/component/toolbox/featureManager.js","../../../lang":"../node_modules/echarts/lib/lang.js"}],"../node_modules/echarts/lib/component/brush.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -90965,7 +90965,7 @@ require("./toolbox/feature/Brush");
  * Brush component entry
  */
 echarts.registerPreprocessor(preprocessor);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./brush/preprocessor":"node_modules/echarts/lib/component/brush/preprocessor.js","./brush/visualEncoding":"node_modules/echarts/lib/component/brush/visualEncoding.js","./brush/BrushModel":"node_modules/echarts/lib/component/brush/BrushModel.js","./brush/BrushView":"node_modules/echarts/lib/component/brush/BrushView.js","./brush/brushAction":"node_modules/echarts/lib/component/brush/brushAction.js","./toolbox/feature/Brush":"node_modules/echarts/lib/component/toolbox/feature/Brush.js"}],"node_modules/echarts/lib/component/title.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./brush/preprocessor":"../node_modules/echarts/lib/component/brush/preprocessor.js","./brush/visualEncoding":"../node_modules/echarts/lib/component/brush/visualEncoding.js","./brush/BrushModel":"../node_modules/echarts/lib/component/brush/BrushModel.js","./brush/BrushView":"../node_modules/echarts/lib/component/brush/BrushView.js","./brush/brushAction":"../node_modules/echarts/lib/component/brush/brushAction.js","./toolbox/feature/Brush":"../node_modules/echarts/lib/component/toolbox/feature/Brush.js"}],"../node_modules/echarts/lib/component/title.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -91208,7 +91208,7 @@ echarts.extendComponentView({
     group.add(rect);
   }
 });
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../echarts":"node_modules/echarts/lib/echarts.js","../util/graphic":"node_modules/echarts/lib/util/graphic.js","../util/layout":"node_modules/echarts/lib/util/layout.js","../util/format":"node_modules/echarts/lib/util/format.js"}],"node_modules/echarts/lib/component/timeline/preprocessor.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../echarts":"../node_modules/echarts/lib/echarts.js","../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../util/layout":"../node_modules/echarts/lib/util/layout.js","../util/format":"../node_modules/echarts/lib/util/format.js"}],"../node_modules/echarts/lib/component/timeline/preprocessor.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -91333,7 +91333,7 @@ function has(obj, attr) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/component/timeline/typeDefaulter.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/component/timeline/typeDefaulter.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -91378,7 +91378,7 @@ Component.registerSubTypeDefaulter('timeline', function () {
   // Only slider now.
   return 'slider';
 });
-},{"../../model/Component":"node_modules/echarts/lib/model/Component.js"}],"node_modules/echarts/lib/component/timeline/timelineAction.js":[function(require,module,exports) {
+},{"../../model/Component":"../node_modules/echarts/lib/model/Component.js"}],"../node_modules/echarts/lib/component/timeline/timelineAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -91453,7 +91453,7 @@ echarts.registerAction({
     timelineModel.setPlayState(payload.playState);
   }
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/component/timeline/TimelineModel.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/component/timeline/TimelineModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -91675,7 +91675,7 @@ var TimelineModel = ComponentModel.extend({
 });
 var _default = TimelineModel;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Component":"node_modules/echarts/lib/model/Component.js","../../data/List":"node_modules/echarts/lib/data/List.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/component/timeline/SliderTimelineModel.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Component":"../node_modules/echarts/lib/model/Component.js","../../data/List":"../node_modules/echarts/lib/data/List.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/component/timeline/SliderTimelineModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -91818,7 +91818,7 @@ var SliderTimelineModel = TimelineModel.extend({
 zrUtil.mixin(SliderTimelineModel, dataFormatMixin);
 var _default = SliderTimelineModel;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./TimelineModel":"node_modules/echarts/lib/component/timeline/TimelineModel.js","../../model/mixin/dataFormat":"node_modules/echarts/lib/model/mixin/dataFormat.js"}],"node_modules/echarts/lib/component/timeline/TimelineView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./TimelineModel":"../node_modules/echarts/lib/component/timeline/TimelineModel.js","../../model/mixin/dataFormat":"../node_modules/echarts/lib/model/mixin/dataFormat.js"}],"../node_modules/echarts/lib/component/timeline/TimelineView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -91864,7 +91864,7 @@ var _default = ComponentView.extend({
 });
 
 module.exports = _default;
-},{"../../view/Component":"node_modules/echarts/lib/view/Component.js"}],"node_modules/echarts/lib/component/timeline/TimelineAxis.js":[function(require,module,exports) {
+},{"../../view/Component":"../node_modules/echarts/lib/view/Component.js"}],"../node_modules/echarts/lib/component/timeline/TimelineAxis.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -91958,7 +91958,7 @@ TimelineAxis.prototype = {
 zrUtil.inherits(TimelineAxis, Axis);
 var _default = TimelineAxis;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../coord/Axis":"node_modules/echarts/lib/coord/Axis.js"}],"node_modules/echarts/lib/component/timeline/SliderTimelineView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../coord/Axis":"../node_modules/echarts/lib/coord/Axis.js"}],"../node_modules/echarts/lib/component/timeline/SliderTimelineView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -92612,7 +92612,7 @@ function pointerMoveTo(pointer, dataIndex, axis, timelineModel, noAnimation) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/core/matrix":"node_modules/zrender/lib/core/matrix.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","./TimelineView":"node_modules/echarts/lib/component/timeline/TimelineView.js","./TimelineAxis":"node_modules/echarts/lib/component/timeline/TimelineAxis.js","../../util/symbol":"node_modules/echarts/lib/util/symbol.js","../../coord/axisHelper":"node_modules/echarts/lib/coord/axisHelper.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../util/format":"node_modules/echarts/lib/util/format.js"}],"node_modules/echarts/lib/component/timeline.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","zrender/lib/core/matrix":"../node_modules/zrender/lib/core/matrix.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","./TimelineView":"../node_modules/echarts/lib/component/timeline/TimelineView.js","./TimelineAxis":"../node_modules/echarts/lib/component/timeline/TimelineAxis.js","../../util/symbol":"../node_modules/echarts/lib/util/symbol.js","../../coord/axisHelper":"../node_modules/echarts/lib/coord/axisHelper.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../util/format":"../node_modules/echarts/lib/util/format.js"}],"../node_modules/echarts/lib/component/timeline.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -92668,7 +92668,7 @@ require("./timeline/SliderTimelineView");
  * DataZoom component entry
  */
 echarts.registerPreprocessor(preprocessor);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./timeline/preprocessor":"node_modules/echarts/lib/component/timeline/preprocessor.js","./timeline/typeDefaulter":"node_modules/echarts/lib/component/timeline/typeDefaulter.js","./timeline/timelineAction":"node_modules/echarts/lib/component/timeline/timelineAction.js","./timeline/SliderTimelineModel":"node_modules/echarts/lib/component/timeline/SliderTimelineModel.js","./timeline/SliderTimelineView":"node_modules/echarts/lib/component/timeline/SliderTimelineView.js"}],"node_modules/echarts/lib/component/marker/MarkerModel.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./timeline/preprocessor":"../node_modules/echarts/lib/component/timeline/preprocessor.js","./timeline/typeDefaulter":"../node_modules/echarts/lib/component/timeline/typeDefaulter.js","./timeline/timelineAction":"../node_modules/echarts/lib/component/timeline/timelineAction.js","./timeline/SliderTimelineModel":"../node_modules/echarts/lib/component/timeline/SliderTimelineModel.js","./timeline/SliderTimelineView":"../node_modules/echarts/lib/component/timeline/SliderTimelineView.js"}],"../node_modules/echarts/lib/component/marker/MarkerModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -92842,7 +92842,7 @@ var MarkerModel = echarts.extendComponentModel({
 zrUtil.mixin(MarkerModel, dataFormatMixin);
 var _default = MarkerModel;
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"node_modules/zrender/lib/core/env.js","../../util/model":"node_modules/echarts/lib/util/model.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../model/mixin/dataFormat":"node_modules/echarts/lib/model/mixin/dataFormat.js"}],"node_modules/echarts/lib/component/marker/MarkPointModel.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js","../../util/model":"../node_modules/echarts/lib/util/model.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../model/mixin/dataFormat":"../node_modules/echarts/lib/model/mixin/dataFormat.js"}],"../node_modules/echarts/lib/component/marker/MarkPointModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -92911,7 +92911,7 @@ var _default = MarkerModel.extend({
 });
 
 module.exports = _default;
-},{"./MarkerModel":"node_modules/echarts/lib/component/marker/MarkerModel.js"}],"node_modules/echarts/lib/component/marker/markerHelper.js":[function(require,module,exports) {
+},{"./MarkerModel":"../node_modules/echarts/lib/component/marker/MarkerModel.js"}],"../node_modules/echarts/lib/component/marker/markerHelper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -93166,7 +93166,7 @@ exports.getAxisInfo = getAxisInfo;
 exports.dataFilter = dataFilter;
 exports.dimValueGetter = dimValueGetter;
 exports.numCalculate = numCalculate;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../data/helper/dataStackHelper":"node_modules/echarts/lib/data/helper/dataStackHelper.js"}],"node_modules/echarts/lib/component/marker/MarkerView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../data/helper/dataStackHelper":"../node_modules/echarts/lib/data/helper/dataStackHelper.js"}],"../node_modules/echarts/lib/component/marker/MarkerView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -93237,7 +93237,7 @@ var _default = echarts.extendComponentView({
 });
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/component/marker/MarkPointView.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/component/marker/MarkPointView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -93433,7 +93433,7 @@ function createList(coordSys, seriesModel, mpModel) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../chart/helper/SymbolDraw":"node_modules/echarts/lib/chart/helper/SymbolDraw.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../data/List":"node_modules/echarts/lib/data/List.js","./markerHelper":"node_modules/echarts/lib/component/marker/markerHelper.js","./MarkerView":"node_modules/echarts/lib/component/marker/MarkerView.js"}],"node_modules/echarts/lib/component/markPoint.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../chart/helper/SymbolDraw":"../node_modules/echarts/lib/chart/helper/SymbolDraw.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../data/List":"../node_modules/echarts/lib/data/List.js","./markerHelper":"../node_modules/echarts/lib/component/marker/markerHelper.js","./MarkerView":"../node_modules/echarts/lib/component/marker/MarkerView.js"}],"../node_modules/echarts/lib/component/markPoint.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -93483,7 +93483,7 @@ echarts.registerPreprocessor(function (opt) {
   // Make sure markPoint component is enabled
   opt.markPoint = opt.markPoint || {};
 });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./marker/MarkPointModel":"node_modules/echarts/lib/component/marker/MarkPointModel.js","./marker/MarkPointView":"node_modules/echarts/lib/component/marker/MarkPointView.js"}],"node_modules/echarts/lib/component/marker/MarkLineModel.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./marker/MarkPointModel":"../node_modules/echarts/lib/component/marker/MarkPointModel.js","./marker/MarkPointView":"../node_modules/echarts/lib/component/marker/MarkPointView.js"}],"../node_modules/echarts/lib/component/marker/MarkLineModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -93557,7 +93557,7 @@ var _default = MarkerModel.extend({
 });
 
 module.exports = _default;
-},{"./MarkerModel":"node_modules/echarts/lib/component/marker/MarkerModel.js"}],"node_modules/echarts/lib/component/marker/MarkLineView.js":[function(require,module,exports) {
+},{"./MarkerModel":"../node_modules/echarts/lib/component/marker/MarkerModel.js"}],"../node_modules/echarts/lib/component/marker/MarkLineView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -93924,7 +93924,7 @@ function createList(coordSys, seriesModel, mlModel) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../data/List":"node_modules/echarts/lib/data/List.js","../../util/number":"node_modules/echarts/lib/util/number.js","./markerHelper":"node_modules/echarts/lib/component/marker/markerHelper.js","../../chart/helper/LineDraw":"node_modules/echarts/lib/chart/helper/LineDraw.js","./MarkerView":"node_modules/echarts/lib/component/marker/MarkerView.js","../../data/helper/dataStackHelper":"node_modules/echarts/lib/data/helper/dataStackHelper.js"}],"node_modules/echarts/lib/component/markLine.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../data/List":"../node_modules/echarts/lib/data/List.js","../../util/number":"../node_modules/echarts/lib/util/number.js","./markerHelper":"../node_modules/echarts/lib/component/marker/markerHelper.js","../../chart/helper/LineDraw":"../node_modules/echarts/lib/chart/helper/LineDraw.js","./MarkerView":"../node_modules/echarts/lib/component/marker/MarkerView.js","../../data/helper/dataStackHelper":"../node_modules/echarts/lib/data/helper/dataStackHelper.js"}],"../node_modules/echarts/lib/component/markLine.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -93973,7 +93973,7 @@ echarts.registerPreprocessor(function (opt) {
   // Make sure markLine component is enabled
   opt.markLine = opt.markLine || {};
 });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./marker/MarkLineModel":"node_modules/echarts/lib/component/marker/MarkLineModel.js","./marker/MarkLineView":"node_modules/echarts/lib/component/marker/MarkLineView.js"}],"node_modules/echarts/lib/component/marker/MarkAreaModel.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./marker/MarkLineModel":"../node_modules/echarts/lib/component/marker/MarkLineModel.js","./marker/MarkLineView":"../node_modules/echarts/lib/component/marker/MarkLineView.js"}],"../node_modules/echarts/lib/component/marker/MarkAreaModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -94045,7 +94045,7 @@ var _default = MarkerModel.extend({
 });
 
 module.exports = _default;
-},{"./MarkerModel":"node_modules/echarts/lib/component/marker/MarkerModel.js"}],"node_modules/echarts/lib/component/marker/MarkAreaView.js":[function(require,module,exports) {
+},{"./MarkerModel":"../node_modules/echarts/lib/component/marker/MarkerModel.js"}],"../node_modules/echarts/lib/component/marker/MarkAreaView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -94365,7 +94365,7 @@ function createList(coordSys, seriesModel, maModel) {
   areaData.hasItemOption = true;
   return areaData;
 }
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/tool/color":"node_modules/zrender/lib/tool/color.js","../../data/List":"node_modules/echarts/lib/data/List.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","./markerHelper":"node_modules/echarts/lib/component/marker/markerHelper.js","./MarkerView":"node_modules/echarts/lib/component/marker/MarkerView.js"}],"node_modules/echarts/lib/component/markArea.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/tool/color":"../node_modules/zrender/lib/tool/color.js","../../data/List":"../node_modules/echarts/lib/data/List.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","./markerHelper":"../node_modules/echarts/lib/component/marker/markerHelper.js","./MarkerView":"../node_modules/echarts/lib/component/marker/MarkerView.js"}],"../node_modules/echarts/lib/component/markArea.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -94414,7 +94414,7 @@ echarts.registerPreprocessor(function (opt) {
   // Make sure markArea component is enabled
   opt.markArea = opt.markArea || {};
 });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./marker/MarkAreaModel":"node_modules/echarts/lib/component/marker/MarkAreaModel.js","./marker/MarkAreaView":"node_modules/echarts/lib/component/marker/MarkAreaView.js"}],"node_modules/echarts/lib/component/legend/LegendModel.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./marker/MarkAreaModel":"../node_modules/echarts/lib/component/marker/MarkAreaModel.js","./marker/MarkAreaView":"../node_modules/echarts/lib/component/marker/MarkAreaView.js"}],"../node_modules/echarts/lib/component/legend/LegendModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -94766,7 +94766,7 @@ var LegendModel = echarts.extendComponentModel({
 });
 var _default = LegendModel;
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../model/Model":"node_modules/echarts/lib/model/Model.js","../../util/model":"node_modules/echarts/lib/util/model.js","../../lang":"node_modules/echarts/lib/lang.js"}],"node_modules/echarts/lib/component/legend/legendAction.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../model/Model":"../node_modules/echarts/lib/model/Model.js","../../util/model":"../node_modules/echarts/lib/util/model.js","../../lang":"../node_modules/echarts/lib/lang.js"}],"../node_modules/echarts/lib/component/legend/legendAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -94882,7 +94882,7 @@ echarts.registerAction('legendSelect', 'legendselected', zrUtil.curry(legendSele
  */
 
 echarts.registerAction('legendUnSelect', 'legendunselected', zrUtil.curry(legendSelectActionHandler, 'unSelect'));
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/component/legend/LegendView.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/component/legend/LegendView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -95367,7 +95367,7 @@ function dispatchDownplayAction(seriesName, dataName, api, excludeSeriesId) {
 }
 
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/symbol":"node_modules/echarts/lib/util/symbol.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../helper/listComponent":"node_modules/echarts/lib/component/helper/listComponent.js","../../util/layout":"node_modules/echarts/lib/util/layout.js"}],"node_modules/echarts/lib/component/legend/legendFilter.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/symbol":"../node_modules/echarts/lib/util/symbol.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../helper/listComponent":"../node_modules/echarts/lib/component/helper/listComponent.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js"}],"../node_modules/echarts/lib/component/legend/legendFilter.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -95427,7 +95427,7 @@ function _default(ecModel) {
 }
 
 module.exports = _default;
-},{}],"node_modules/echarts/lib/component/legend.js":[function(require,module,exports) {
+},{}],"../node_modules/echarts/lib/component/legend.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -95485,7 +95485,7 @@ Component.registerSubTypeDefaulter('legend', function () {
   // Default 'plain' when no type specified.
   return 'plain';
 });
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./legend/LegendModel":"node_modules/echarts/lib/component/legend/LegendModel.js","./legend/legendAction":"node_modules/echarts/lib/component/legend/legendAction.js","./legend/LegendView":"node_modules/echarts/lib/component/legend/LegendView.js","./legend/legendFilter":"node_modules/echarts/lib/component/legend/legendFilter.js","../model/Component":"node_modules/echarts/lib/model/Component.js"}],"node_modules/echarts/lib/component/legend/ScrollableLegendModel.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./legend/LegendModel":"../node_modules/echarts/lib/component/legend/LegendModel.js","./legend/legendAction":"../node_modules/echarts/lib/component/legend/legendAction.js","./legend/LegendView":"../node_modules/echarts/lib/component/legend/LegendView.js","./legend/legendFilter":"../node_modules/echarts/lib/component/legend/legendFilter.js","../model/Component":"../node_modules/echarts/lib/model/Component.js"}],"../node_modules/echarts/lib/component/legend/ScrollableLegendModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -95592,7 +95592,7 @@ function mergeAndNormalizeLayoutParams(legendModel, target, raw) {
 
 var _default = ScrollableLegendModel;
 module.exports = _default;
-},{"./LegendModel":"node_modules/echarts/lib/component/legend/LegendModel.js","../../util/layout":"node_modules/echarts/lib/util/layout.js"}],"node_modules/echarts/lib/component/legend/ScrollableLegendView.js":[function(require,module,exports) {
+},{"./LegendModel":"../node_modules/echarts/lib/component/legend/LegendModel.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js"}],"../node_modules/echarts/lib/component/legend/ScrollableLegendView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -96040,7 +96040,7 @@ var ScrollableLegendView = LegendView.extend({
 });
 var _default = ScrollableLegendView;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","./LegendView":"node_modules/echarts/lib/component/legend/LegendView.js"}],"node_modules/echarts/lib/component/legend/scrollableLegendAction.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","./LegendView":"../node_modules/echarts/lib/component/legend/LegendView.js"}],"../node_modules/echarts/lib/component/legend/scrollableLegendAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -96098,7 +96098,7 @@ echarts.registerAction('legendScroll', 'legendscroll', function (payload, ecMode
     legendModel.setScrollDataIndex(scrollDataIndex);
   });
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js"}],"node_modules/echarts/lib/component/legendScroll.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js"}],"../node_modules/echarts/lib/component/legendScroll.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -96126,7 +96126,7 @@ require("./legend/ScrollableLegendModel");
 require("./legend/ScrollableLegendView");
 
 require("./legend/scrollableLegendAction");
-},{"./legend":"node_modules/echarts/lib/component/legend.js","./legend/ScrollableLegendModel":"node_modules/echarts/lib/component/legend/ScrollableLegendModel.js","./legend/ScrollableLegendView":"node_modules/echarts/lib/component/legend/ScrollableLegendView.js","./legend/scrollableLegendAction":"node_modules/echarts/lib/component/legend/scrollableLegendAction.js"}],"node_modules/echarts/lib/component/dataZoom/SliderZoomModel.js":[function(require,module,exports) {
+},{"./legend":"../node_modules/echarts/lib/component/legend.js","./legend/ScrollableLegendModel":"../node_modules/echarts/lib/component/legend/ScrollableLegendModel.js","./legend/ScrollableLegendView":"../node_modules/echarts/lib/component/legend/ScrollableLegendView.js","./legend/scrollableLegendAction":"../node_modules/echarts/lib/component/legend/scrollableLegendAction.js"}],"../node_modules/echarts/lib/component/dataZoom/SliderZoomModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -96239,7 +96239,7 @@ var SliderZoomModel = DataZoomModel.extend({
 });
 var _default = SliderZoomModel;
 module.exports = _default;
-},{"./DataZoomModel":"node_modules/echarts/lib/component/dataZoom/DataZoomModel.js"}],"node_modules/echarts/lib/component/dataZoom/SliderZoomView.js":[function(require,module,exports) {
+},{"./DataZoomModel":"../node_modules/echarts/lib/component/dataZoom/DataZoomModel.js"}],"../node_modules/echarts/lib/component/dataZoom/SliderZoomView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -96990,7 +96990,7 @@ function getCursor(orient) {
 
 var _default = SliderZoomView;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/event":"node_modules/zrender/lib/core/event.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/throttle":"node_modules/echarts/lib/util/throttle.js","./DataZoomView":"node_modules/echarts/lib/component/dataZoom/DataZoomView.js","../../util/number":"node_modules/echarts/lib/util/number.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","../helper/sliderMove":"node_modules/echarts/lib/component/helper/sliderMove.js"}],"node_modules/echarts/lib/component/dataZoomSlider.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/event":"../node_modules/zrender/lib/core/event.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/throttle":"../node_modules/echarts/lib/util/throttle.js","./DataZoomView":"../node_modules/echarts/lib/component/dataZoom/DataZoomView.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","../helper/sliderMove":"../node_modules/echarts/lib/component/helper/sliderMove.js"}],"../node_modules/echarts/lib/component/dataZoomSlider.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -97024,7 +97024,7 @@ require("./dataZoom/SliderZoomView");
 require("./dataZoom/dataZoomProcessor");
 
 require("./dataZoom/dataZoomAction");
-},{"./dataZoom/typeDefaulter":"node_modules/echarts/lib/component/dataZoom/typeDefaulter.js","./dataZoom/DataZoomModel":"node_modules/echarts/lib/component/dataZoom/DataZoomModel.js","./dataZoom/DataZoomView":"node_modules/echarts/lib/component/dataZoom/DataZoomView.js","./dataZoom/SliderZoomModel":"node_modules/echarts/lib/component/dataZoom/SliderZoomModel.js","./dataZoom/SliderZoomView":"node_modules/echarts/lib/component/dataZoom/SliderZoomView.js","./dataZoom/dataZoomProcessor":"node_modules/echarts/lib/component/dataZoom/dataZoomProcessor.js","./dataZoom/dataZoomAction":"node_modules/echarts/lib/component/dataZoom/dataZoomAction.js"}],"node_modules/echarts/lib/component/dataZoom/InsideZoomModel.js":[function(require,module,exports) {
+},{"./dataZoom/typeDefaulter":"../node_modules/echarts/lib/component/dataZoom/typeDefaulter.js","./dataZoom/DataZoomModel":"../node_modules/echarts/lib/component/dataZoom/DataZoomModel.js","./dataZoom/DataZoomView":"../node_modules/echarts/lib/component/dataZoom/DataZoomView.js","./dataZoom/SliderZoomModel":"../node_modules/echarts/lib/component/dataZoom/SliderZoomModel.js","./dataZoom/SliderZoomView":"../node_modules/echarts/lib/component/dataZoom/SliderZoomView.js","./dataZoom/dataZoomProcessor":"../node_modules/echarts/lib/component/dataZoom/dataZoomProcessor.js","./dataZoom/dataZoomAction":"../node_modules/echarts/lib/component/dataZoom/dataZoomAction.js"}],"../node_modules/echarts/lib/component/dataZoom/InsideZoomModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -97087,7 +97087,7 @@ var _default = DataZoomModel.extend({
 });
 
 module.exports = _default;
-},{"./DataZoomModel":"node_modules/echarts/lib/component/dataZoom/DataZoomModel.js"}],"node_modules/echarts/lib/component/dataZoom/roams.js":[function(require,module,exports) {
+},{"./DataZoomModel":"../node_modules/echarts/lib/component/dataZoom/DataZoomModel.js"}],"../node_modules/echarts/lib/component/dataZoom/roams.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -97322,7 +97322,7 @@ function mergeControllerParams(dataZoomInfos) {
 exports.register = register;
 exports.unregister = unregister;
 exports.generateCoordId = generateCoordId;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../component/helper/RoamController":"node_modules/echarts/lib/component/helper/RoamController.js","../../util/throttle":"node_modules/echarts/lib/util/throttle.js"}],"node_modules/echarts/lib/component/dataZoom/InsideZoomView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../component/helper/RoamController":"../node_modules/echarts/lib/component/helper/RoamController.js","../../util/throttle":"../node_modules/echarts/lib/util/throttle.js"}],"../node_modules/echarts/lib/component/dataZoom/InsideZoomView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -97570,7 +97570,7 @@ var getDirectionInfo = {
 };
 var _default = InsideZoomView;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./DataZoomView":"node_modules/echarts/lib/component/dataZoom/DataZoomView.js","../helper/sliderMove":"node_modules/echarts/lib/component/helper/sliderMove.js","./roams":"node_modules/echarts/lib/component/dataZoom/roams.js"}],"node_modules/echarts/lib/component/dataZoomInside.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./DataZoomView":"../node_modules/echarts/lib/component/dataZoom/DataZoomView.js","../helper/sliderMove":"../node_modules/echarts/lib/component/helper/sliderMove.js","./roams":"../node_modules/echarts/lib/component/dataZoom/roams.js"}],"../node_modules/echarts/lib/component/dataZoomInside.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -97604,7 +97604,7 @@ require("./dataZoom/InsideZoomView");
 require("./dataZoom/dataZoomProcessor");
 
 require("./dataZoom/dataZoomAction");
-},{"./dataZoom/typeDefaulter":"node_modules/echarts/lib/component/dataZoom/typeDefaulter.js","./dataZoom/DataZoomModel":"node_modules/echarts/lib/component/dataZoom/DataZoomModel.js","./dataZoom/DataZoomView":"node_modules/echarts/lib/component/dataZoom/DataZoomView.js","./dataZoom/InsideZoomModel":"node_modules/echarts/lib/component/dataZoom/InsideZoomModel.js","./dataZoom/InsideZoomView":"node_modules/echarts/lib/component/dataZoom/InsideZoomView.js","./dataZoom/dataZoomProcessor":"node_modules/echarts/lib/component/dataZoom/dataZoomProcessor.js","./dataZoom/dataZoomAction":"node_modules/echarts/lib/component/dataZoom/dataZoomAction.js"}],"node_modules/echarts/lib/component/dataZoom.js":[function(require,module,exports) {
+},{"./dataZoom/typeDefaulter":"../node_modules/echarts/lib/component/dataZoom/typeDefaulter.js","./dataZoom/DataZoomModel":"../node_modules/echarts/lib/component/dataZoom/DataZoomModel.js","./dataZoom/DataZoomView":"../node_modules/echarts/lib/component/dataZoom/DataZoomView.js","./dataZoom/InsideZoomModel":"../node_modules/echarts/lib/component/dataZoom/InsideZoomModel.js","./dataZoom/InsideZoomView":"../node_modules/echarts/lib/component/dataZoom/InsideZoomView.js","./dataZoom/dataZoomProcessor":"../node_modules/echarts/lib/component/dataZoom/dataZoomProcessor.js","./dataZoom/dataZoomAction":"../node_modules/echarts/lib/component/dataZoom/dataZoomAction.js"}],"../node_modules/echarts/lib/component/dataZoom.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -97628,7 +97628,7 @@ require("./dataZoom/dataZoomAction");
 require("./dataZoomSlider");
 
 require("./dataZoomInside");
-},{"./dataZoomSlider":"node_modules/echarts/lib/component/dataZoomSlider.js","./dataZoomInside":"node_modules/echarts/lib/component/dataZoomInside.js"}],"node_modules/echarts/lib/component/visualMap/preprocessor.js":[function(require,module,exports) {
+},{"./dataZoomSlider":"../node_modules/echarts/lib/component/dataZoomSlider.js","./dataZoomInside":"../node_modules/echarts/lib/component/dataZoomInside.js"}],"../node_modules/echarts/lib/component/visualMap/preprocessor.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -97712,7 +97712,7 @@ function has(obj, name) {
 }
 
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/component/visualMap/typeDefaulter.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/component/visualMap/typeDefaulter.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -97757,7 +97757,7 @@ Component.registerSubTypeDefaulter('visualMap', function (option) {
   // Compatible with ec2, when splitNumber === 0, continuous visualMap will be used.
   return !option.categories && (!(option.pieces ? option.pieces.length > 0 : option.splitNumber > 0) || option.calculable) ? 'continuous' : 'piecewise';
 });
-},{"../../model/Component":"node_modules/echarts/lib/model/Component.js"}],"node_modules/echarts/lib/component/visualMap/visualEncoding.js":[function(require,module,exports) {
+},{"../../model/Component":"../node_modules/echarts/lib/model/Component.js"}],"../node_modules/echarts/lib/component/visualMap/visualEncoding.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -97874,7 +97874,7 @@ function getColorVisual(seriesModel, visualMapModel, value, valueState) {
     resultVisual[key] = value;
   }
 }
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../visual/visualSolution":"node_modules/echarts/lib/visual/visualSolution.js","../../visual/VisualMapping":"node_modules/echarts/lib/visual/VisualMapping.js"}],"node_modules/echarts/lib/visual/visualDefault.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../visual/visualSolution":"../node_modules/echarts/lib/visual/visualSolution.js","../../visual/VisualMapping":"../node_modules/echarts/lib/visual/VisualMapping.js"}],"../node_modules/echarts/lib/visual/visualDefault.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -97964,7 +97964,7 @@ var defaultOption = {
 };
 var _default = visualDefault;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/echarts/lib/component/visualMap/VisualMapModel.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/echarts/lib/component/visualMap/VisualMapModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -98508,7 +98508,7 @@ var VisualMapModel = echarts.extendComponentModel({
 });
 var _default = VisualMapModel;
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"node_modules/zrender/lib/core/env.js","../../visual/visualDefault":"node_modules/echarts/lib/visual/visualDefault.js","../../visual/VisualMapping":"node_modules/echarts/lib/visual/VisualMapping.js","../../visual/visualSolution":"node_modules/echarts/lib/visual/visualSolution.js","../../util/model":"node_modules/echarts/lib/util/model.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/component/visualMap/ContinuousModel.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/core/env":"../node_modules/zrender/lib/core/env.js","../../visual/visualDefault":"../node_modules/echarts/lib/visual/visualDefault.js","../../visual/VisualMapping":"../node_modules/echarts/lib/visual/VisualMapping.js","../../visual/visualSolution":"../node_modules/echarts/lib/visual/visualSolution.js","../../util/model":"../node_modules/echarts/lib/util/model.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/component/visualMap/ContinuousModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -98783,7 +98783,7 @@ function getColorStopValues(visualMapModel, valueState, dataExtent) {
 
 var _default = ContinuousModel;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./VisualMapModel":"node_modules/echarts/lib/component/visualMap/VisualMapModel.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/component/visualMap/VisualMapView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./VisualMapModel":"../node_modules/echarts/lib/component/visualMap/VisualMapModel.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/component/visualMap/VisualMapView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -98975,7 +98975,7 @@ var _default = echarts.extendComponentView({
 });
 
 module.exports = _default;
-},{"../../echarts":"node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/format":"node_modules/echarts/lib/util/format.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","../../visual/VisualMapping":"node_modules/echarts/lib/visual/VisualMapping.js"}],"node_modules/echarts/lib/component/visualMap/helper.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/format":"../node_modules/echarts/lib/util/format.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","../../visual/VisualMapping":"../node_modules/echarts/lib/visual/VisualMapping.js"}],"../node_modules/echarts/lib/component/visualMap/helper.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -99075,7 +99075,7 @@ function makeHighDownBatch(batch, visualMapModel) {
 
 exports.getItemAlign = getItemAlign;
 exports.makeHighDownBatch = makeHighDownBatch;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","../../util/layout":"node_modules/echarts/lib/util/layout.js"}],"node_modules/echarts/lib/component/visualMap/ContinuousView.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js"}],"../node_modules/echarts/lib/component/visualMap/ContinuousView.js":[function(require,module,exports) {
 var global = arguments[3];
 
 /*
@@ -99873,7 +99873,7 @@ function getCursor(orient) {
 
 var _default = ContinuousView;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","zrender/lib/graphic/LinearGradient":"node_modules/zrender/lib/graphic/LinearGradient.js","zrender/lib/core/event":"node_modules/zrender/lib/core/event.js","./VisualMapView":"node_modules/echarts/lib/component/visualMap/VisualMapView.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/number":"node_modules/echarts/lib/util/number.js","../helper/sliderMove":"node_modules/echarts/lib/component/helper/sliderMove.js","./helper":"node_modules/echarts/lib/component/visualMap/helper.js","../../util/model":"node_modules/echarts/lib/util/model.js"}],"node_modules/echarts/lib/component/visualMap/visualMapAction.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","zrender/lib/graphic/LinearGradient":"../node_modules/zrender/lib/graphic/LinearGradient.js","zrender/lib/core/event":"../node_modules/zrender/lib/core/event.js","./VisualMapView":"../node_modules/echarts/lib/component/visualMap/VisualMapView.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/number":"../node_modules/echarts/lib/util/number.js","../helper/sliderMove":"../node_modules/echarts/lib/component/helper/sliderMove.js","./helper":"../node_modules/echarts/lib/component/visualMap/helper.js","../../util/model":"../node_modules/echarts/lib/util/model.js"}],"../node_modules/echarts/lib/component/visualMap/visualMapAction.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -99928,7 +99928,7 @@ echarts.registerAction(actionInfo, function (payload, ecModel) {
     model.setSelected(payload.selected);
   });
 });
-},{"../../echarts":"node_modules/echarts/lib/echarts.js"}],"node_modules/echarts/lib/component/visualMapContinuous.js":[function(require,module,exports) {
+},{"../../echarts":"../node_modules/echarts/lib/echarts.js"}],"../node_modules/echarts/lib/component/visualMapContinuous.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -99986,7 +99986,7 @@ require("./visualMap/visualMapAction");
  * DataZoom component entry
  */
 echarts.registerPreprocessor(preprocessor);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./visualMap/preprocessor":"node_modules/echarts/lib/component/visualMap/preprocessor.js","./visualMap/typeDefaulter":"node_modules/echarts/lib/component/visualMap/typeDefaulter.js","./visualMap/visualEncoding":"node_modules/echarts/lib/component/visualMap/visualEncoding.js","./visualMap/ContinuousModel":"node_modules/echarts/lib/component/visualMap/ContinuousModel.js","./visualMap/ContinuousView":"node_modules/echarts/lib/component/visualMap/ContinuousView.js","./visualMap/visualMapAction":"node_modules/echarts/lib/component/visualMap/visualMapAction.js"}],"node_modules/echarts/lib/component/visualMap/PiecewiseModel.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./visualMap/preprocessor":"../node_modules/echarts/lib/component/visualMap/preprocessor.js","./visualMap/typeDefaulter":"../node_modules/echarts/lib/component/visualMap/typeDefaulter.js","./visualMap/visualEncoding":"../node_modules/echarts/lib/component/visualMap/visualEncoding.js","./visualMap/ContinuousModel":"../node_modules/echarts/lib/component/visualMap/ContinuousModel.js","./visualMap/ContinuousView":"../node_modules/echarts/lib/component/visualMap/ContinuousView.js","./visualMap/visualMapAction":"../node_modules/echarts/lib/component/visualMap/visualMapAction.js"}],"../node_modules/echarts/lib/component/visualMap/PiecewiseModel.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -100527,7 +100527,7 @@ function normalizeReverse(thisOption, pieceList) {
 
 var _default = PiecewiseModel;
 module.exports = _default;
-},{"../../config":"node_modules/echarts/lib/config.js","zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./VisualMapModel":"node_modules/echarts/lib/component/visualMap/VisualMapModel.js","../../visual/VisualMapping":"node_modules/echarts/lib/visual/VisualMapping.js","../../visual/visualDefault":"node_modules/echarts/lib/visual/visualDefault.js","../../util/number":"node_modules/echarts/lib/util/number.js"}],"node_modules/echarts/lib/component/visualMap/PiecewiseView.js":[function(require,module,exports) {
+},{"../../config":"../node_modules/echarts/lib/config.js","zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./VisualMapModel":"../node_modules/echarts/lib/component/visualMap/VisualMapModel.js","../../visual/VisualMapping":"../node_modules/echarts/lib/visual/VisualMapping.js","../../visual/visualDefault":"../node_modules/echarts/lib/visual/visualDefault.js","../../util/number":"../node_modules/echarts/lib/util/number.js"}],"../node_modules/echarts/lib/component/visualMap/PiecewiseView.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -100767,7 +100767,7 @@ var PiecewiseVisualMapView = VisualMapView.extend({
 });
 var _default = PiecewiseVisualMapView;
 module.exports = _default;
-},{"zrender/lib/core/util":"node_modules/zrender/lib/core/util.js","./VisualMapView":"node_modules/echarts/lib/component/visualMap/VisualMapView.js","../../util/graphic":"node_modules/echarts/lib/util/graphic.js","../../util/symbol":"node_modules/echarts/lib/util/symbol.js","../../util/layout":"node_modules/echarts/lib/util/layout.js","./helper":"node_modules/echarts/lib/component/visualMap/helper.js"}],"node_modules/echarts/lib/component/visualMapPiecewise.js":[function(require,module,exports) {
+},{"zrender/lib/core/util":"../node_modules/zrender/lib/core/util.js","./VisualMapView":"../node_modules/echarts/lib/component/visualMap/VisualMapView.js","../../util/graphic":"../node_modules/echarts/lib/util/graphic.js","../../util/symbol":"../node_modules/echarts/lib/util/symbol.js","../../util/layout":"../node_modules/echarts/lib/util/layout.js","./helper":"../node_modules/echarts/lib/component/visualMap/helper.js"}],"../node_modules/echarts/lib/component/visualMapPiecewise.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -100825,7 +100825,7 @@ require("./visualMap/visualMapAction");
  * DataZoom component entry
  */
 echarts.registerPreprocessor(preprocessor);
-},{"../echarts":"node_modules/echarts/lib/echarts.js","./visualMap/preprocessor":"node_modules/echarts/lib/component/visualMap/preprocessor.js","./visualMap/typeDefaulter":"node_modules/echarts/lib/component/visualMap/typeDefaulter.js","./visualMap/visualEncoding":"node_modules/echarts/lib/component/visualMap/visualEncoding.js","./visualMap/PiecewiseModel":"node_modules/echarts/lib/component/visualMap/PiecewiseModel.js","./visualMap/PiecewiseView":"node_modules/echarts/lib/component/visualMap/PiecewiseView.js","./visualMap/visualMapAction":"node_modules/echarts/lib/component/visualMap/visualMapAction.js"}],"node_modules/echarts/lib/component/visualMap.js":[function(require,module,exports) {
+},{"../echarts":"../node_modules/echarts/lib/echarts.js","./visualMap/preprocessor":"../node_modules/echarts/lib/component/visualMap/preprocessor.js","./visualMap/typeDefaulter":"../node_modules/echarts/lib/component/visualMap/typeDefaulter.js","./visualMap/visualEncoding":"../node_modules/echarts/lib/component/visualMap/visualEncoding.js","./visualMap/PiecewiseModel":"../node_modules/echarts/lib/component/visualMap/PiecewiseModel.js","./visualMap/PiecewiseView":"../node_modules/echarts/lib/component/visualMap/PiecewiseView.js","./visualMap/visualMapAction":"../node_modules/echarts/lib/component/visualMap/visualMapAction.js"}],"../node_modules/echarts/lib/component/visualMap.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -100849,7 +100849,7 @@ echarts.registerPreprocessor(preprocessor);
 require("./visualMapContinuous");
 
 require("./visualMapPiecewise");
-},{"./visualMapContinuous":"node_modules/echarts/lib/component/visualMapContinuous.js","./visualMapPiecewise":"node_modules/echarts/lib/component/visualMapPiecewise.js"}],"node_modules/zrender/lib/vml/core.js":[function(require,module,exports) {
+},{"./visualMapContinuous":"../node_modules/echarts/lib/component/visualMapContinuous.js","./visualMapPiecewise":"../node_modules/echarts/lib/component/visualMapPiecewise.js"}],"../node_modules/zrender/lib/vml/core.js":[function(require,module,exports) {
 var env = require("../core/env");
 
 var urn = 'urn:schemas-microsoft-com:vml';
@@ -100898,7 +100898,7 @@ function initVML() {
 exports.doc = doc;
 exports.createNode = createNode;
 exports.initVML = initVML;
-},{"../core/env":"node_modules/zrender/lib/core/env.js"}],"node_modules/zrender/lib/vml/graphic.js":[function(require,module,exports) {
+},{"../core/env":"../node_modules/zrender/lib/core/env.js"}],"../node_modules/zrender/lib/vml/graphic.js":[function(require,module,exports) {
 var env = require("../core/env");
 
 var _vector = require("../core/vector");
@@ -101902,7 +101902,7 @@ if (!env.canvasSupported) {
     this.appendRectText(vmlRoot);
   };
 }
-},{"../core/env":"node_modules/zrender/lib/core/env.js","../core/vector":"node_modules/zrender/lib/core/vector.js","../core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../tool/color":"node_modules/zrender/lib/tool/color.js","../contain/text":"node_modules/zrender/lib/contain/text.js","../graphic/helper/text":"node_modules/zrender/lib/graphic/helper/text.js","../graphic/mixin/RectText":"node_modules/zrender/lib/graphic/mixin/RectText.js","../graphic/Displayable":"node_modules/zrender/lib/graphic/Displayable.js","../graphic/Image":"node_modules/zrender/lib/graphic/Image.js","../graphic/Text":"node_modules/zrender/lib/graphic/Text.js","../graphic/Path":"node_modules/zrender/lib/graphic/Path.js","../core/PathProxy":"node_modules/zrender/lib/core/PathProxy.js","../graphic/Gradient":"node_modules/zrender/lib/graphic/Gradient.js","./core":"node_modules/zrender/lib/vml/core.js"}],"node_modules/zrender/lib/vml/Painter.js":[function(require,module,exports) {
+},{"../core/env":"../node_modules/zrender/lib/core/env.js","../core/vector":"../node_modules/zrender/lib/core/vector.js","../core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../tool/color":"../node_modules/zrender/lib/tool/color.js","../contain/text":"../node_modules/zrender/lib/contain/text.js","../graphic/helper/text":"../node_modules/zrender/lib/graphic/helper/text.js","../graphic/mixin/RectText":"../node_modules/zrender/lib/graphic/mixin/RectText.js","../graphic/Displayable":"../node_modules/zrender/lib/graphic/Displayable.js","../graphic/Image":"../node_modules/zrender/lib/graphic/Image.js","../graphic/Text":"../node_modules/zrender/lib/graphic/Text.js","../graphic/Path":"../node_modules/zrender/lib/graphic/Path.js","../core/PathProxy":"../node_modules/zrender/lib/core/PathProxy.js","../graphic/Gradient":"../node_modules/zrender/lib/graphic/Gradient.js","./core":"../node_modules/zrender/lib/vml/core.js"}],"../node_modules/zrender/lib/vml/Painter.js":[function(require,module,exports) {
 var logError = require("../core/log");
 
 var vmlCore = require("./core");
@@ -102078,7 +102078,7 @@ each(['getLayer', 'insertLayer', 'eachLayer', 'eachBuiltinLayer', 'eachOtherLaye
 });
 var _default = VMLPainter;
 module.exports = _default;
-},{"../core/log":"node_modules/zrender/lib/core/log.js","./core":"node_modules/zrender/lib/vml/core.js","../core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/zrender/lib/vml/vml.js":[function(require,module,exports) {
+},{"../core/log":"../node_modules/zrender/lib/core/log.js","./core":"../node_modules/zrender/lib/vml/core.js","../core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/zrender/lib/vml/vml.js":[function(require,module,exports) {
 require("./graphic");
 
 var _zrender = require("../zrender");
@@ -102088,7 +102088,7 @@ var registerPainter = _zrender.registerPainter;
 var Painter = require("./Painter");
 
 registerPainter('vml', Painter);
-},{"./graphic":"node_modules/zrender/lib/vml/graphic.js","../zrender":"node_modules/zrender/lib/zrender.js","./Painter":"node_modules/zrender/lib/vml/Painter.js"}],"node_modules/zrender/lib/svg/core.js":[function(require,module,exports) {
+},{"./graphic":"../node_modules/zrender/lib/vml/graphic.js","../zrender":"../node_modules/zrender/lib/zrender.js","./Painter":"../node_modules/zrender/lib/vml/Painter.js"}],"../node_modules/zrender/lib/svg/core.js":[function(require,module,exports) {
 var svgURI = 'http://www.w3.org/2000/svg';
 
 function createElement(name) {
@@ -102096,7 +102096,7 @@ function createElement(name) {
 }
 
 exports.createElement = createElement;
-},{}],"node_modules/zrender/lib/svg/graphic.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/svg/graphic.js":[function(require,module,exports) {
 var _core = require("./core");
 
 var createElement = _core.createElement;
@@ -102620,7 +102620,7 @@ svgText.brush = function (el) {
 exports.path = svgPath;
 exports.image = svgImage;
 exports.text = svgText;
-},{"./core":"node_modules/zrender/lib/svg/core.js","../core/PathProxy":"node_modules/zrender/lib/core/PathProxy.js","../core/BoundingRect":"node_modules/zrender/lib/core/BoundingRect.js","../core/matrix":"node_modules/zrender/lib/core/matrix.js","../contain/text":"node_modules/zrender/lib/contain/text.js","../graphic/helper/text":"node_modules/zrender/lib/graphic/helper/text.js","../graphic/Text":"node_modules/zrender/lib/graphic/Text.js"}],"node_modules/zrender/lib/core/arrayDiff2.js":[function(require,module,exports) {
+},{"./core":"../node_modules/zrender/lib/svg/core.js","../core/PathProxy":"../node_modules/zrender/lib/core/PathProxy.js","../core/BoundingRect":"../node_modules/zrender/lib/core/BoundingRect.js","../core/matrix":"../node_modules/zrender/lib/core/matrix.js","../contain/text":"../node_modules/zrender/lib/contain/text.js","../graphic/helper/text":"../node_modules/zrender/lib/graphic/helper/text.js","../graphic/Text":"../node_modules/zrender/lib/graphic/Text.js"}],"../node_modules/zrender/lib/core/arrayDiff2.js":[function(require,module,exports) {
 // Myers' Diff Algorithm
 // Modified from https://github.com/kpdecker/jsdiff/blob/master/src/diff/base.js
 function Diff() {}
@@ -102819,7 +102819,7 @@ function _default(oldArr, newArr, callback) {
 }
 
 module.exports = _default;
-},{}],"node_modules/zrender/lib/svg/helper/Definable.js":[function(require,module,exports) {
+},{}],"../node_modules/zrender/lib/svg/helper/Definable.js":[function(require,module,exports) {
 var _core = require("../core");
 
 var createElement = _core.createElement;
@@ -103086,7 +103086,7 @@ Definable.prototype.getSvgElement = function (displayable) {
 
 var _default = Definable;
 module.exports = _default;
-},{"../core":"node_modules/zrender/lib/svg/core.js","../../core/util":"node_modules/zrender/lib/core/util.js","../../graphic/Path":"node_modules/zrender/lib/graphic/Path.js","../../graphic/Image":"node_modules/zrender/lib/graphic/Image.js","../../graphic/Text":"node_modules/zrender/lib/graphic/Text.js","../graphic":"node_modules/zrender/lib/svg/graphic.js"}],"node_modules/zrender/lib/svg/helper/GradientManager.js":[function(require,module,exports) {
+},{"../core":"../node_modules/zrender/lib/svg/core.js","../../core/util":"../node_modules/zrender/lib/core/util.js","../../graphic/Path":"../node_modules/zrender/lib/graphic/Path.js","../../graphic/Image":"../node_modules/zrender/lib/graphic/Image.js","../../graphic/Text":"../node_modules/zrender/lib/graphic/Text.js","../graphic":"../node_modules/zrender/lib/svg/graphic.js"}],"../node_modules/zrender/lib/svg/helper/GradientManager.js":[function(require,module,exports) {
 var Definable = require("./Definable");
 
 var zrUtil = require("../../core/util");
@@ -103295,7 +103295,7 @@ GradientManager.prototype.markUsed = function (displayable) {
 
 var _default = GradientManager;
 module.exports = _default;
-},{"./Definable":"node_modules/zrender/lib/svg/helper/Definable.js","../../core/util":"node_modules/zrender/lib/core/util.js","../../core/log":"node_modules/zrender/lib/core/log.js","../../tool/color":"node_modules/zrender/lib/tool/color.js"}],"node_modules/zrender/lib/svg/helper/ClippathManager.js":[function(require,module,exports) {
+},{"./Definable":"../node_modules/zrender/lib/svg/helper/Definable.js","../../core/util":"../node_modules/zrender/lib/core/util.js","../../core/log":"../node_modules/zrender/lib/core/log.js","../../tool/color":"../node_modules/zrender/lib/tool/color.js"}],"../node_modules/zrender/lib/svg/helper/ClippathManager.js":[function(require,module,exports) {
 var Definable = require("./Definable");
 
 var zrUtil = require("../../core/util");
@@ -103452,7 +103452,7 @@ ClippathManager.prototype.markUsed = function (displayable) {
 
 var _default = ClippathManager;
 module.exports = _default;
-},{"./Definable":"node_modules/zrender/lib/svg/helper/Definable.js","../../core/util":"node_modules/zrender/lib/core/util.js","../../core/matrix":"node_modules/zrender/lib/core/matrix.js"}],"node_modules/zrender/lib/svg/helper/ShadowManager.js":[function(require,module,exports) {
+},{"./Definable":"../node_modules/zrender/lib/svg/helper/Definable.js","../../core/util":"../node_modules/zrender/lib/core/util.js","../../core/matrix":"../node_modules/zrender/lib/core/matrix.js"}],"../node_modules/zrender/lib/svg/helper/ShadowManager.js":[function(require,module,exports) {
 var Definable = require("./Definable");
 
 var zrUtil = require("../../core/util");
@@ -103640,7 +103640,7 @@ function hasShadow(style) {
 
 var _default = ShadowManager;
 module.exports = _default;
-},{"./Definable":"node_modules/zrender/lib/svg/helper/Definable.js","../../core/util":"node_modules/zrender/lib/core/util.js"}],"node_modules/zrender/lib/svg/Painter.js":[function(require,module,exports) {
+},{"./Definable":"../node_modules/zrender/lib/svg/helper/Definable.js","../../core/util":"../node_modules/zrender/lib/core/util.js"}],"../node_modules/zrender/lib/svg/Painter.js":[function(require,module,exports) {
 var _core = require("./core");
 
 var createElement = _core.createElement;
@@ -104043,7 +104043,7 @@ util.each(['getLayer', 'insertLayer', 'eachLayer', 'eachBuiltinLayer', 'eachOthe
 });
 var _default = SVGPainter;
 module.exports = _default;
-},{"./core":"node_modules/zrender/lib/svg/core.js","../core/util":"node_modules/zrender/lib/core/util.js","../core/log":"node_modules/zrender/lib/core/log.js","../graphic/Path":"node_modules/zrender/lib/graphic/Path.js","../graphic/Image":"node_modules/zrender/lib/graphic/Image.js","../graphic/Text":"node_modules/zrender/lib/graphic/Text.js","../core/arrayDiff2":"node_modules/zrender/lib/core/arrayDiff2.js","./helper/GradientManager":"node_modules/zrender/lib/svg/helper/GradientManager.js","./helper/ClippathManager":"node_modules/zrender/lib/svg/helper/ClippathManager.js","./helper/ShadowManager":"node_modules/zrender/lib/svg/helper/ShadowManager.js","./graphic":"node_modules/zrender/lib/svg/graphic.js"}],"node_modules/zrender/lib/svg/svg.js":[function(require,module,exports) {
+},{"./core":"../node_modules/zrender/lib/svg/core.js","../core/util":"../node_modules/zrender/lib/core/util.js","../core/log":"../node_modules/zrender/lib/core/log.js","../graphic/Path":"../node_modules/zrender/lib/graphic/Path.js","../graphic/Image":"../node_modules/zrender/lib/graphic/Image.js","../graphic/Text":"../node_modules/zrender/lib/graphic/Text.js","../core/arrayDiff2":"../node_modules/zrender/lib/core/arrayDiff2.js","./helper/GradientManager":"../node_modules/zrender/lib/svg/helper/GradientManager.js","./helper/ClippathManager":"../node_modules/zrender/lib/svg/helper/ClippathManager.js","./helper/ShadowManager":"../node_modules/zrender/lib/svg/helper/ShadowManager.js","./graphic":"../node_modules/zrender/lib/svg/graphic.js"}],"../node_modules/zrender/lib/svg/svg.js":[function(require,module,exports) {
 require("./graphic");
 
 var _zrender = require("../zrender");
@@ -104053,7 +104053,7 @@ var registerPainter = _zrender.registerPainter;
 var Painter = require("./Painter");
 
 registerPainter('svg', Painter);
-},{"./graphic":"node_modules/zrender/lib/svg/graphic.js","../zrender":"node_modules/zrender/lib/zrender.js","./Painter":"node_modules/zrender/lib/svg/Painter.js"}],"node_modules/echarts/index.js":[function(require,module,exports) {
+},{"./graphic":"../node_modules/zrender/lib/svg/graphic.js","../zrender":"../node_modules/zrender/lib/zrender.js","./Painter":"../node_modules/zrender/lib/svg/Painter.js"}],"../node_modules/echarts/index.js":[function(require,module,exports) {
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -104189,7 +104189,7 @@ require("./lib/component/visualMapPiecewise");
 require("zrender/lib/vml/vml");
 
 require("zrender/lib/svg/svg");
-},{"./lib/echarts":"node_modules/echarts/lib/echarts.js","./lib/export":"node_modules/echarts/lib/export.js","./lib/component/dataset":"node_modules/echarts/lib/component/dataset.js","./lib/chart/line":"node_modules/echarts/lib/chart/line.js","./lib/chart/bar":"node_modules/echarts/lib/chart/bar.js","./lib/chart/pie":"node_modules/echarts/lib/chart/pie.js","./lib/chart/scatter":"node_modules/echarts/lib/chart/scatter.js","./lib/chart/radar":"node_modules/echarts/lib/chart/radar.js","./lib/chart/map":"node_modules/echarts/lib/chart/map.js","./lib/chart/tree":"node_modules/echarts/lib/chart/tree.js","./lib/chart/treemap":"node_modules/echarts/lib/chart/treemap.js","./lib/chart/graph":"node_modules/echarts/lib/chart/graph.js","./lib/chart/gauge":"node_modules/echarts/lib/chart/gauge.js","./lib/chart/funnel":"node_modules/echarts/lib/chart/funnel.js","./lib/chart/parallel":"node_modules/echarts/lib/chart/parallel.js","./lib/chart/sankey":"node_modules/echarts/lib/chart/sankey.js","./lib/chart/boxplot":"node_modules/echarts/lib/chart/boxplot.js","./lib/chart/candlestick":"node_modules/echarts/lib/chart/candlestick.js","./lib/chart/effectScatter":"node_modules/echarts/lib/chart/effectScatter.js","./lib/chart/lines":"node_modules/echarts/lib/chart/lines.js","./lib/chart/heatmap":"node_modules/echarts/lib/chart/heatmap.js","./lib/chart/pictorialBar":"node_modules/echarts/lib/chart/pictorialBar.js","./lib/chart/themeRiver":"node_modules/echarts/lib/chart/themeRiver.js","./lib/chart/sunburst":"node_modules/echarts/lib/chart/sunburst.js","./lib/chart/custom":"node_modules/echarts/lib/chart/custom.js","./lib/component/grid":"node_modules/echarts/lib/component/grid.js","./lib/component/polar":"node_modules/echarts/lib/component/polar.js","./lib/component/geo":"node_modules/echarts/lib/component/geo.js","./lib/component/singleAxis":"node_modules/echarts/lib/component/singleAxis.js","./lib/component/parallel":"node_modules/echarts/lib/component/parallel.js","./lib/component/calendar":"node_modules/echarts/lib/component/calendar.js","./lib/component/graphic":"node_modules/echarts/lib/component/graphic.js","./lib/component/toolbox":"node_modules/echarts/lib/component/toolbox.js","./lib/component/tooltip":"node_modules/echarts/lib/component/tooltip.js","./lib/component/axisPointer":"node_modules/echarts/lib/component/axisPointer.js","./lib/component/brush":"node_modules/echarts/lib/component/brush.js","./lib/component/title":"node_modules/echarts/lib/component/title.js","./lib/component/timeline":"node_modules/echarts/lib/component/timeline.js","./lib/component/markPoint":"node_modules/echarts/lib/component/markPoint.js","./lib/component/markLine":"node_modules/echarts/lib/component/markLine.js","./lib/component/markArea":"node_modules/echarts/lib/component/markArea.js","./lib/component/legendScroll":"node_modules/echarts/lib/component/legendScroll.js","./lib/component/legend":"node_modules/echarts/lib/component/legend.js","./lib/component/dataZoom":"node_modules/echarts/lib/component/dataZoom.js","./lib/component/dataZoomInside":"node_modules/echarts/lib/component/dataZoomInside.js","./lib/component/dataZoomSlider":"node_modules/echarts/lib/component/dataZoomSlider.js","./lib/component/visualMap":"node_modules/echarts/lib/component/visualMap.js","./lib/component/visualMapContinuous":"node_modules/echarts/lib/component/visualMapContinuous.js","./lib/component/visualMapPiecewise":"node_modules/echarts/lib/component/visualMapPiecewise.js","zrender/lib/vml/vml":"node_modules/zrender/lib/vml/vml.js","zrender/lib/svg/svg":"node_modules/zrender/lib/svg/svg.js"}],"main.js":[function(require,module,exports) {
+},{"./lib/echarts":"../node_modules/echarts/lib/echarts.js","./lib/export":"../node_modules/echarts/lib/export.js","./lib/component/dataset":"../node_modules/echarts/lib/component/dataset.js","./lib/chart/line":"../node_modules/echarts/lib/chart/line.js","./lib/chart/bar":"../node_modules/echarts/lib/chart/bar.js","./lib/chart/pie":"../node_modules/echarts/lib/chart/pie.js","./lib/chart/scatter":"../node_modules/echarts/lib/chart/scatter.js","./lib/chart/radar":"../node_modules/echarts/lib/chart/radar.js","./lib/chart/map":"../node_modules/echarts/lib/chart/map.js","./lib/chart/tree":"../node_modules/echarts/lib/chart/tree.js","./lib/chart/treemap":"../node_modules/echarts/lib/chart/treemap.js","./lib/chart/graph":"../node_modules/echarts/lib/chart/graph.js","./lib/chart/gauge":"../node_modules/echarts/lib/chart/gauge.js","./lib/chart/funnel":"../node_modules/echarts/lib/chart/funnel.js","./lib/chart/parallel":"../node_modules/echarts/lib/chart/parallel.js","./lib/chart/sankey":"../node_modules/echarts/lib/chart/sankey.js","./lib/chart/boxplot":"../node_modules/echarts/lib/chart/boxplot.js","./lib/chart/candlestick":"../node_modules/echarts/lib/chart/candlestick.js","./lib/chart/effectScatter":"../node_modules/echarts/lib/chart/effectScatter.js","./lib/chart/lines":"../node_modules/echarts/lib/chart/lines.js","./lib/chart/heatmap":"../node_modules/echarts/lib/chart/heatmap.js","./lib/chart/pictorialBar":"../node_modules/echarts/lib/chart/pictorialBar.js","./lib/chart/themeRiver":"../node_modules/echarts/lib/chart/themeRiver.js","./lib/chart/sunburst":"../node_modules/echarts/lib/chart/sunburst.js","./lib/chart/custom":"../node_modules/echarts/lib/chart/custom.js","./lib/component/grid":"../node_modules/echarts/lib/component/grid.js","./lib/component/polar":"../node_modules/echarts/lib/component/polar.js","./lib/component/geo":"../node_modules/echarts/lib/component/geo.js","./lib/component/singleAxis":"../node_modules/echarts/lib/component/singleAxis.js","./lib/component/parallel":"../node_modules/echarts/lib/component/parallel.js","./lib/component/calendar":"../node_modules/echarts/lib/component/calendar.js","./lib/component/graphic":"../node_modules/echarts/lib/component/graphic.js","./lib/component/toolbox":"../node_modules/echarts/lib/component/toolbox.js","./lib/component/tooltip":"../node_modules/echarts/lib/component/tooltip.js","./lib/component/axisPointer":"../node_modules/echarts/lib/component/axisPointer.js","./lib/component/brush":"../node_modules/echarts/lib/component/brush.js","./lib/component/title":"../node_modules/echarts/lib/component/title.js","./lib/component/timeline":"../node_modules/echarts/lib/component/timeline.js","./lib/component/markPoint":"../node_modules/echarts/lib/component/markPoint.js","./lib/component/markLine":"../node_modules/echarts/lib/component/markLine.js","./lib/component/markArea":"../node_modules/echarts/lib/component/markArea.js","./lib/component/legendScroll":"../node_modules/echarts/lib/component/legendScroll.js","./lib/component/legend":"../node_modules/echarts/lib/component/legend.js","./lib/component/dataZoom":"../node_modules/echarts/lib/component/dataZoom.js","./lib/component/dataZoomInside":"../node_modules/echarts/lib/component/dataZoomInside.js","./lib/component/dataZoomSlider":"../node_modules/echarts/lib/component/dataZoomSlider.js","./lib/component/visualMap":"../node_modules/echarts/lib/component/visualMap.js","./lib/component/visualMapContinuous":"../node_modules/echarts/lib/component/visualMapContinuous.js","./lib/component/visualMapPiecewise":"../node_modules/echarts/lib/component/visualMapPiecewise.js","zrender/lib/vml/vml":"../node_modules/zrender/lib/vml/vml.js","zrender/lib/svg/svg":"../node_modules/zrender/lib/svg/svg.js"}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _echarts = _interopRequireDefault(require("echarts"));
@@ -104307,7 +104307,7 @@ myChart.on("click", function (e) {
   console.log(e.dataindex);
   console.log(e.data);
 });
-},{"echarts":"node_modules/echarts/index.js"}],"../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"echarts":"../node_modules/echarts/index.js"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -104335,7 +104335,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54245" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53378" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -104511,5 +104511,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
+},{}]},{},["../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
 //# sourceMappingURL=/main.1f19ae8e.js.map
