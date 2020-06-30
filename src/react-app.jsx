@@ -34,20 +34,24 @@ export function ReactApp() {
   })
 
   const onClick = ()=>{
-    setOption(
-      {
-        // 只需要传你要改的哪两个key(这里为xAxis和series),但是数据包含之前的
-        xAxis: {
-          // type: 'category',
-          data: ['2020-1-1','2020-1-2','2020-1-3']
-        },
-        series: [
-          {
-            data: [1,2,3]
-          }
-        ]
-      }
-    )
+    setTimeout(()=>{
+      setOption(
+        {
+          // 只需要传你要改的哪两个key(这里为xAxis和series),但是数据包含之前的
+          xAxis: {
+            // type: 'category',
+            data: ['2020-1-1','2020-1-2','2020-1-3']
+          },
+          series: [
+            {
+              data: [1,2,3]
+            }
+          ]
+        }
+      )
+    },1000)
+
+
   }
   return(
     <div>
