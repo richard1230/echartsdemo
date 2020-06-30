@@ -2,8 +2,8 @@ import React, {useEffect, useRef} from "react";
 import echarts from "echarts"
 
 export function ReactEcharts(props) {
-  //接受option传过来的数据
-  const {option} = props
+  //接受option传过来的数据,接受loading传过来的值
+  const {option,loading} = props
   //怎么获取div,初始值为null
   const container = useRef(null)
   const chart = useRef(null)
@@ -23,7 +23,15 @@ export function ReactEcharts(props) {
   useEffect(()=>{
     chart.current.setOption(option)
   },[option])
-
+//loading一变化就去设置
+  useEffect(
+    ()=>{
+       if(loading){
+         chart.current.showLoading()
+       }else {
+         chart.current.hideLoading()
+       }
+    },[loading])//when loading changes
   return(
     <div ref={container}/>
 

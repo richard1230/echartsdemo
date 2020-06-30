@@ -32,9 +32,16 @@ export function ReactApp() {
       type: 'line'
     }]
   })
-
+  //loading初始化
+  const [loading,setLoading] = useState(false)
   const onClick = ()=>{
+    //一开始为true
+    setLoading(true)
+
+
     setTimeout(()=>{
+      // 发请求成功设为false
+      setLoading(false)
       setOption(
         {
           // 只需要传你要改的哪两个key(这里为xAxis和series),但是数据包含之前的
@@ -57,7 +64,7 @@ export function ReactApp() {
     <div>
       <h1>我来在react里面使用 Echarts</h1>
       {/*将option传给echarts*/}
-      <ReactEcharts option={option}/>
+      <ReactEcharts option={option} loading={loading}/>
       {/*更改options*/}
       <button onClick={onClick} >点击加载更多</button>
     </div>
