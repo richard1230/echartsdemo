@@ -1,7 +1,9 @@
 import React, {useEffect, useRef} from "react";
 import echarts from "echarts"
 
-export function ReactEcharts() {
+export function ReactEcharts(props) {
+  //接受option传过来的数据
+  const {option} = props
   //怎么获取div,初始值为null
   const container = useRef(null)
   const chart = useRef(null)
@@ -16,6 +18,12 @@ export function ReactEcharts() {
     chart.current= echarts.init(container.current,'dark')
 
   },[])
+
+  //怎么传option,在option变化的时候,将option传到current
+  useEffect(()=>{
+    chart.current.setOption(option)
+  },[option])
+
   return(
     <div ref={container}/>
 
