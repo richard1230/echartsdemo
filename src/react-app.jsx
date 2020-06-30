@@ -35,6 +35,9 @@ export function ReactApp() {
   //loading初始化
   const [loading,setLoading] = useState(false)
   const onClick = ()=>{
+    if(loading){
+      return;
+    }
     //一开始为true
     setLoading(true)
 
